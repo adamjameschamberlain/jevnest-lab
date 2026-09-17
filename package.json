@@ -19,7 +19,10 @@
     "questions:prepare": "node scripts/jev-question-study.cjs prepare",
     "questions:collect": "node scripts/jev-question-study.cjs collect",
     "questions:score": "node scripts/jev-question-study.cjs score",
-    "test:questions": "node --test tests/jev-questions.test.cjs"
+    "test:questions": "node --test tests/jev-questions.test.cjs",
+    "questions:routes": "node scripts/jev-route-study.cjs prepare",
+    "questions:routes:report": "node scripts/jev-route-study.cjs report",
+    "test:routes": "node --test tests/jev-routes.test.cjs"
   },
   "engines": {
     "node": ">=20"

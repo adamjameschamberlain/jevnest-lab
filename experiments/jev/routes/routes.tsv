@@ -1,0 +1,201 @@
+family	id	hook	intervention
+stopping	plateau	stop polishing a nest that has stopped improving	Jev chooses whether to end a search window from incumbent improvements, evaluation costs, and stagnation history.
+stopping	marginal_return	quit when the next second is unlikely to pay	Jev predicts marginal material gain per additional second and chooses between stopping and another fixed window.
+stopping	target_satisfied	finish as soon as the result is useful enough	Jev predicts whether further search is worthwhile after an explicit production quality target is reached.
+stopping	gap_bound	stop when there is hardly any room left to win	Jev uses a deterministic lower bound and search history to choose whether to continue; the bound itself is computed exactly.
+stopping	deadline_tail	avoid starting work that will finish after the deadline	Jev chooses which complete-layout attempts can repay their cost within the remaining wall-time budget.
+stopping	stale_family	stop retrying a family of moves that keeps failing	Jev suspends an operator family after its recent validated outcomes show little benefit.
+stopping	periodic_check	ask whether to stop only at useful moments	Jev schedules the next stopping checkpoint using observed improvement intervals and decision overhead.
+stopping	last_sheet	stop rearranging full sheets when only the last one matters	Jev freezes settled sheets and allocates remaining search to the final incomplete sheet, subject to full quality comparison.
+stopping	stop_confidence	spend another check only when stopping is genuinely uncertain	Jev routes uncertain stop decisions to a short exact continuation before committing to stop.
+stopping	completion_bound	abandon branches that are heading for an avoidable extra sheet	Jev predicts an uncompetitive completion from a partial layout; rejected branches are audited and exact bounds remain separate.
+restarts	restart_seed	start again instead of digging the same hole	Jev chooses a fresh deterministic seed versus continuing the current search for an equal time window.
+restarts	select_restart	pick a restart that actually changes the search	Jev selects a restart schedule from candidates with measured geometric and ordering diversity.
+restarts	stagnation_budget	give promising stalls longer and hopeless stalls less	Jev chooses continuation-window length from the current incumbent and recent search trajectory.
+restarts	keep_scaffold	start over without throwing away the good bit	Jev selects a validated subset of the incumbent to preserve while restarting the remaining parts.
+restarts	bad_generation	reset a population that is agreeing on the wrong answer	Jev triggers a GA population reset using diversity and improvement history.
+restarts	switch_order	change the ordering rule when the current one stops paying	Jev chooses the next part-order heuristic from measured results of earlier fixed windows.
+restarts	switch_rotation	change rotation strategy when reordering is getting nowhere	Jev switches between permitted orientation-search strategies using outcome history.
+restarts	restart_pool	remember useful abandoned starts	Jev selects a previously saved exact search checkpoint for a fresh bounded continuation.
+restarts	failure_restart	restart only the region causing the trouble	Jev identifies a recorded failure region and chooses local restart versus whole-layout restart.
+restarts	deadline_restart	avoid a restart that spends the whole remaining budget warming up	Jev evaluates restart setup cost against the remaining deadline before choosing a restart plan.
+branch_pruning	cheap_prefix	throw away bad starts before completing them	Jev ranks candidate schedules using a measured inexpensive prefix and selects a subset for full completion.
+branch_pruning	multi_depth	look a little deeper only where it changes the choice	Jev chooses whether each candidate needs another prefix depth before being kept or discarded.
+branch_pruning	pairwise	compare two live options directly	Jev chooses between two candidates using the same incumbent, constraints, and evidence rather than independent absolute scores.
+branch_pruning	relative_best	judge against what we already have	Jev predicts improvement relative to the current valid incumbent instead of generic compactness.
+branch_pruning	reject_redundant	avoid completing several versions of the same idea	Jev groups similar search proposals and chooses representative candidates for expensive completion.
+branch_pruning	keep_outlier	keep an odd-looking branch that might be the escape route	Jev retains one geometrically different candidate alongside the candidates preferred by the cheap score.
+branch_pruning	tail_predict	spot the ugly ending behind a pretty beginning	Jev uses remaining-part composition and exact gap evidence to predict downstream completion quality.
+branch_pruning	cost_aware_rank	finish the useful cheap candidates first	Jev ranks candidates by expected quality gain and measured completion cost rather than quality alone.
+branch_pruning	adaptive_keep	keep fewer branches when the choice looks clear	Jev chooses how many candidates survive a batch, with a fixed audit fraction of rejected branches.
+branch_pruning	counterexample	look twice at the candidate the cheap rule dislikes	Jev nominates a cheap-rule rejection for a bounded exact completion to seek missed improvements.
+part_order	constrained_first	get the awkward parts out of the way	Jev prioritises parts with few permitted orientations or few measured feasible placement regions.
+part_order	fillers_later	save the little gap-fillers for later	Jev chooses which small parts to defer until larger constrained parts are placed.
+part_order	interleave	mix big and small pieces instead of forming long blocks	Jev chooses a size-interleaving recipe from explicit part quantities and geometric summaries.
+part_order	family_split	break up identical-part blocks that hurt the nest	Jev selects where to split repeated-part runs in the placement order.
+part_order	complement_pair	put shapes that help each other next to each other	Jev chooses candidate complementary pairs for exact adjacency trials.
+part_order	remaining_risk	deal with the most dangerous leftovers first	Jev reprioritises the remaining queue using exact fit witnesses and current residual regions.
+part_order	narrow_first	place narrow awkward shapes before their corridors disappear	Jev chooses whether elongated parts should precede broader parts in the supplied partial state.
+part_order	quantity_balance	avoid spending all of one useful shape too early	Jev adjusts the next batch composition based on remaining quantities and possible filler roles.
+part_order	due_date_ties	use ordering freedom among equally urgent jobs	Jev ranks legal order permutations within fixed deadline and production-priority constraints.
+part_order	lookahead_order	choose the next small group rather than one part at a time	Jev selects a short sequence from exact legal candidate groups and a remaining-part summary.
+rotations	angle_shortlist	try the few angles that look worth trying	Jev shortlists allowed rotations before exact placement evaluation, with omitted-angle audits.
+rotations	family_orientation	learn one orientation preference for repeated copies	Jev selects a family-level rotation preference to test across identical parts.
+rotations	alternate_orientation	alternate orientations when repeats can interlock	Jev chooses a permitted alternating-orientation pattern for exact repeated-block construction.
+rotations	context_rotation	turn a piece to suit the current gap	Jev ranks allowed rotations using current cavity descriptors before exact fit checks.
+rotations	rotation_budget	spend angle search where it has a chance to matter	Jev allocates an orientation-evaluation budget among remaining part families.
+rotations	fine_angles	try fine angle steps only for the difficult pieces	Jev selects families for denser sampling within the production job's allowed rotation set.
+rotations	global_alignment	use one shared direction when it simplifies the job	Jev chooses a global allowed-orientation bias to compare with independent per-part angles.
+rotations	unlock_rotation	stop forcing a rotation pattern once it becomes a burden	Jev drops a learned orientation preference when later exact outcomes indicate loss of packing quality.
+rotations	angle_pair	choose the orientation of a pair together	Jev shortlists joint allowed rotations for two complementary shapes before exact pair packing.
+rotations	rotation_transfer	carry useful angle preferences to a similar job	Jev chooses whether a past job's rotation policy is worth testing under the new job's explicit constraints.
+gaps	reserve_cavity	keep a useful gap open for the right part	Jev chooses between reserving a measured cavity and filling it with the currently available legal part.
+gaps	ignore_sliver	stop chasing scraps that cost more than they save	Jev chooses whether to abandon search in a small residual region while retaining all required parts elsewhere.
+gaps	open_frontier	leave a useful open edge instead of squeezing everything tight	Jev ranks legal placements by their future frontier structure and remaining-part opportunities.
+gaps	seal_pocket	fill a pocket now before the entrance closes	Jev chooses when to use a currently accessible region based on exact feasible-region evidence.
+gaps	corridor	protect a corridor needed by an awkward part	Jev flags placements that consume a narrow region needed by a nominated remaining part.
+gaps	gap_matching	match leftovers to holes before trying every combination	Jev shortlists part-family and cavity pairs for exact containment and collision checks.
+gaps	merge_gaps	move a blocker to make two useless gaps into one useful space	Jev selects a local blocker-removal action for exact repair and full validation.
+gaps	gap_priority	work on the gap with the largest realistic payoff	Jev ranks residual regions by prospective usable material recovery and expected exact-search cost.
+gaps	sheet_close	know when to move on to the next sheet	Jev chooses between more filling attempts and opening the next sheet under the fixed objective.
+gaps	future_gap	judge a gap by what remains rather than by its area	Jev scores residual regions using remaining quantities, contours, allowed angles, and exact sampled fits.
+local_repair	swap_two	try the swap that is most likely to matter	Jev selects a two-part order or placement swap from explicitly executable repair candidates.
+local_repair	remove_blocker	move the part that is blocking everyone else	Jev nominates a placed part for removal and reinsertion using local exact geometry evidence.
+local_repair	neighbourhood	unpack a small bad patch instead of the whole sheet	Jev selects a bounded connected neighbourhood for exact removal and reinsertion.
+local_repair	last_parts	fix the last few parts that force an extra sheet	Jev selects trailing parts and their candidate blockers for a targeted complete repair.
+local_repair	move_cluster	move a useful group together	Jev selects a rigid validated cluster for relocation, followed by exact collision and containment checks.
+local_repair	change_reinsert	change the order used when putting removed parts back	Jev chooses a reinsertion order for a fixed removal set.
+local_repair	repair_radius	stop making repairs either too tiny or too expensive	Jev selects the number of parts in the next repair neighbourhood from measured repair costs and gains.
+local_repair	accept_detour	allow a temporary worsening that may lead somewhere better	Jev chooses a bounded repair path permitted to worsen intermediate quality while always retaining the valid incumbent.
+local_repair	undo_bad_move	roll back a move whose downstream effects look costly	Jev selects a saved exact checkpoint before a nominated placement for bounded alternative continuation.
+local_repair	repair_stop	stop repairing a region that is not improving	Jev ends a local repair sequence and reallocates its time to another measured region.
+large_neighbourhood	destroy_size	pull out the right amount of the nest	Jev chooses the removal fraction for a large-neighbourhood search step.
+large_neighbourhood	destroy_shape	remove parts by shape difficulty rather than at random	Jev selects a shape-based removal set under a fixed reinsertion budget.
+large_neighbourhood	destroy_region	remove the geometric region causing the waste	Jev chooses a spatial region for removal using residual area and adjacency evidence.
+large_neighbourhood	destroy_sheet	try to empty the weakest sheet	Jev selects a sheet whose parts will be redistributed by exact placement under a fixed deadline.
+large_neighbourhood	cross_sheet	trade parts between sheets to eliminate one	Jev selects cross-sheet exchange candidates for exact full-layout repair.
+large_neighbourhood	chain_move	choose a short chain of moves that frees useful space	Jev selects among explicit bounded relocation chains, with every intermediate placement checked exactly.
+large_neighbourhood	operator_mix	change the mix of big repair operators as the job evolves	Jev allocates trials among preimplemented destroy-and-repair operators from their measured recent outcomes.
+large_neighbourhood	repair_restart	choose a disruptive repair instead of a full restart	Jev compares a supplied large-neighbourhood action with an equal-budget fresh restart.
+large_neighbourhood	retain_elites	keep several good structures while rebuilding the rest	Jev chooses non-overlapping validated sublayouts to preserve during a large reconstruction.
+large_neighbourhood	adaptive_accept	accept a different layout when it opens future options	Jev chooses between equal-material validated layouts using a bounded follow-up search comparison.
+repeated_patterns	pair_tile	make a reusable tile from two shapes	Jev chooses candidate pairs for exact compact tile construction and repeated placement.
+repeated_patterns	row_template	solve one good row and repeat it	Jev selects a row-template strategy for repeated quantities, with exact checks at every boundary.
+repeated_patterns	strip_template	reuse a good strip along the roll	Jev selects a validated strip pattern and repetition count before packing the leftovers.
+repeated_patterns	mixed_tile	build a repeating block from several part families	Jev chooses a small mixed-family composition for exact block construction.
+repeated_patterns	template_tail	use a template for the bulk and search only the tail	Jev chooses the quantity assigned to repeated templates versus residual exact search.
+repeated_patterns	pattern_break	know when another repetition starts wasting material	Jev predicts when to stop repeating a validated block and switch to individual placement.
+repeated_patterns	pattern_library	start with a useful pattern from a previous job	Jev retrieves a candidate pattern by summaries; exact contour, spacing, and angle compatibility are verified before reuse.
+repeated_patterns	quantity_ratio	choose patterns that consume the quantities we actually have	Jev selects among validated patterns using remaining family counts and residual packing estimates.
+repeated_patterns	superpart	treat a useful group as one part during search	Jev selects exact validated clusters to temporarily search as rigid superparts and later verify in full.
+repeated_patterns	pattern_discovery	spend pattern-search time only on jobs that can repay it	Jev chooses whether to attempt pattern discovery from quantity repetition and measured setup costs.
+cache_reuse	nfp_prefetch	calculate the shape pairs we will probably need next	Jev shortlists exact NFP cache keys to precompute while search proceeds; unused work is charged.
+cache_reuse	nfp_retention	keep expensive geometry that is likely to be reused	Jev chooses cache-retention priorities from exact keys, recurrence history, and compute cost.
+cache_reuse	prefix_reuse	do not rebuild a common prefix for every candidate	Jev groups proposals by reusable prefixes; an exact checkpoint engine verifies identity before resuming.
+cache_reuse	failed_fit_cache	remember exact failed fits so we do not ask again	Jev prioritises which negative geometric results to retain; reuse requires deterministic state and key equality.
+cache_reuse	partial_layout_library	reuse a good partial layout when a job comes back	Jev selects stored sublayouts for exact compatibility and validity checks on a new job.
+cache_reuse	warm_population	start the search from useful previous populations	Jev selects a stored schedule population using job similarity before repairing and validating it.
+cache_reuse	incremental_quantity	add the extra copies without starting from scratch	Jev chooses between incremental extension of a validated nest and full renesting after quantity changes.
+cache_reuse	incremental_delete	remove cancelled copies without rebuilding everything	Jev chooses a local repair plan after deletions while preserving exact placements where possible.
+cache_reuse	media_change	adapt a previous nest to a new usable width	Jev chooses between exact repair of a previous layout and a fresh search after media-width changes.
+cache_reuse	cache_bypass	avoid paying for a clever cache decision when LRU is enough	Jev decides when a cheap deterministic cache policy should handle the workload without further model decisions.
+geometry_budget	pair_shortlist	avoid constructing geometry for hopeless pairings	Jev ranks candidate part pairs for exact geometric evaluation while omitted pairs remain eligible for audits.
+geometry_budget	candidate_shortlist	check the most promising legal-placement regions first	Jev orders candidate-region exploration before expensive exact candidate enumeration.
+geometry_budget	convex_first	use the easy geometric checks before the hard ones	Jev chooses a cascade of bounding-box, convex, and exact checks; only deterministic checks may prove rejection.
+geometry_budget	precision_schedule	use cheap previews and exact geometry for acceptance	Jev selects when a coarse approximation deserves exact refinement; every accepted layout uses original precision and contours.
+geometry_budget	edge_subset	look at the relevant boundary edges first	Jev prioritises edges for candidate generation while the exact fallback preserves access to omitted possibilities.
+geometry_budget	decomposition	choose a useful decomposition for a difficult outline	Jev selects among validated decomposition strategies for exact geometry operations.
+geometry_budget	fit_sampling	spend fit probes on the shapes that reveal the most	Jev chooses which remaining families receive exact feasible-region probes.
+geometry_budget	region_sampling	probe the informative empty regions first	Jev selects residual regions for exact exploratory fit computations.
+geometry_budget	geometry_timeout	stop expensive geometric exploration without blocking the whole search	Jev allocates interruptible exploration budgets; incomplete geometry never counts as a valid placement or impossibility proof.
+geometry_budget	geometry_route	choose the right exact geometry implementation for the shape pair	Jev selects between equivalent validated exact algorithms using contour complexity and measured cost history.
+search_portfolio	ga_or_greedy	know when a quick ordinary heuristic is enough	Jev chooses a fixed-budget greedy or GA strategy using job features and historical validated results.
+search_portfolio	beam_width	keep just enough alternatives alive	Jev chooses the width of a beam search from measured diversity, cost, and incumbent quality.
+search_portfolio	population_size	avoid making the genetic population larger than useful	Jev selects GA population size under a fixed wall-time and memory budget.
+search_portfolio	mutation_strength	shake the search harder only when it needs it	Jev selects mutation strength from recent population diversity and objective improvements.
+search_portfolio	crossover_pair	combine parents that bring different useful structures	Jev ranks eligible parent pairs for a deterministic crossover and exact offspring evaluation.
+search_portfolio	operator_bandit	put more attempts into the operators that suit this job	Jev allocates operator trials from measured reward and cost histories, compared against a cheap bandit controller.
+search_portfolio	portfolio_switch	switch methods when another one is likely to take over	Jev reallocates a fixed search budget among greedy, GA, beam, and repair methods at measured checkpoints.
+search_portfolio	tabu_tenure	stop cycling without banning useful moves for too long	Jev selects a tabu-search tenure from repeated-state and improvement histories.
+search_portfolio	annealing_schedule	allow escape moves at the moments they might help	Jev adjusts a preimplemented annealing schedule while retaining the best valid incumbent.
+search_portfolio	seed_selection	start from seeds that cover different possibilities	Jev selects initial deterministic schedules to maximise useful diversity under the same start-up budget.
+parallel_workers	worker_split	give workers different useful jobs	Jev allocates a fixed number of geometry workers among independent strategies.
+parallel_workers	duplicate_workers	stop workers repeating the same search	Jev detects likely redundancy from compact worker histories and proposes a diversified allocation.
+parallel_workers	speculate_wait	keep geometry busy while waiting for the model	Jev ranks speculative tasks in advance; independent workers execute them during API waits and wasted work is charged.
+parallel_workers	straggler_cancel	stop a slow worker when its result is unlikely to matter	Jev nominates an interruptible task for cancellation while preserving all completed valid incumbents.
+parallel_workers	work_stealing	move spare compute to the branch that can use it	Jev prioritises queued independent tasks for idle workers based on measured costs and possible gain.
+parallel_workers	shared_incumbent	share the useful discoveries without synchronising constantly	Jev chooses when to broadcast incumbent or pattern updates among workers under measured communication costs.
+parallel_workers	batch_size	ask about enough candidates to keep workers fed	Jev selects the proposal batch size given actual API latency and geometry throughput.
+parallel_workers	cpu_vs_api	spend the next slot on computation or another model judgment	Jev selects between supplied CPU and inference tasks under an explicit fixed resource budget.
+parallel_workers	contention	avoid parallelism that fights over the same resources	Jev chooses concurrency from observed CPU, memory, cache, and latency contention measurements.
+parallel_workers	deadline_race	let several methods race to a useful answer	Jev selects a fixed-worker portfolio that terminates once an exact validated target is reached.
+evidence_timing	prefix_depth	ask after enough of the nest is visible	Jev chooses the prefix depth at which a branch-selection question is worth asking.
+evidence_timing	bottleneck_probe	look at the troublesome part rather than the easy beginning	Jev chooses a targeted bottleneck probe instead of a longer initial prefix.
+evidence_timing	outcome_history	show the model what has actually been working	Jev uses past valid move outcomes available before the decision to choose the next search action.
+evidence_timing	contour_view	give the model the shape information the summaries hide	Jev ranks actions from supported contour descriptors or explicit coordinates, compared against identical questions using only aggregates.
+evidence_timing	cavity_view	describe the holes we can really use	Jev receives exact residual-region descriptors and sampled legal fits before choosing a branch or repair.
+evidence_timing	normalise_units	remove distracting scale and units from the question	Jev ranks identical decisions using consistently normalised geometric features, with an exact mapping back to original units.
+evidence_timing	quantity_view	show the model how many awkward pieces remain	Jev receives exact remaining multiplicities and restrictions rather than only total part count.
+evidence_timing	uncertainty_probe	buy another measurement only when it can change the action	Jev chooses a predeclared exact probe from its cost and the current ambiguity between candidate actions.
+evidence_timing	event_trigger	ask on meaningful changes rather than every iteration	Jev is invoked at detected stagnation, new-sheet, major-gap, or incumbent-change events instead of a fixed frequency.
+evidence_timing	compact_history	keep the useful history without drowning the decision in data	Jev compares actions using a frozen compact history representation against a longer record with the same time cutoff.
+question_design	direct_pair	ask which option wins rather than whether each looks good	Jev answers a direct pairwise choice with explicit targets, then candidates are compared by a fixed tournament rule.
+question_design	regret_question	ask how costly it would be to skip this option	Jev predicts whether discarding a candidate would miss a defined material or time improvement.
+question_design	falsify_favourite	ask what could make the obvious favourite lose	Jev judges supplied concrete failure hypotheses for the cheap rule's favourite before deciding on extra evaluation.
+question_design	separate_cost_quality	ask about time and quality separately	Jev supplies independent outcome and runtime judgments combined by a frozen, evaluated decision rule.
+question_design	relative_delta	ask about the improvement instead of absolute goodness	Jev predicts a candidate's gain relative to the current incumbent at an explicit deadline.
+question_design	casual_only	let the question sound like an experienced operator	Jev receives a concise casual question with a fixed shared objective, compared with equivalent technical wording.
+question_design	negative_framing	ask whether this is a waste of time	Jev predicts an explicit bad-outcome event instead of its positive complement, with disagreement measured against outcomes.
+question_design	abstention	let the model admit when the cheap rule should decide	Jev selects an explicit defer option, evaluated for useful coverage and errors on the remaining decisions.
+question_design	few_shot_outcomes	show a few real successes and failures from different jobs	Jev receives a fixed development-only set of labelled examples before answering held-out job decisions.
+question_design	blind_identifiers	hide labels that might steer the answer	Jev ranks anonymised candidates with rotated presentation order, testing sensitivity without changing their geometry.
+job_decomposition	shape_clusters	split the job into groups that really pack together	Jev proposes a grouping from contour compatibility and quantities before exact subproblem packing and merging.
+job_decomposition	large_small	pack a backbone of large parts then use small fillers	Jev chooses a large-part backbone and a filler allocation before exact complete placement.
+job_decomposition	width_lanes	use lanes when the shapes naturally support them	Jev selects candidate lane widths and family allocations for exact packing at fixed media width.
+job_decomposition	independent_regions	solve separate regions without losing useful interactions	Jev chooses a spatial partition for exact subproblem search, compared with unrestricted search.
+job_decomposition	sheet_assignment	decide which parts share a sheet before placing them	Jev ranks legal part-to-sheet assignments before exact within-sheet nesting.
+job_decomposition	quantity_chunks	solve useful quantity chunks instead of every copy together	Jev chooses repeatable count blocks for exact subproblem solution and remainder handling.
+job_decomposition	mixed_complexity	separate the hard shapes from the easy volume	Jev assigns different exact-search budgets to high-complexity and simple families before full validated merging.
+job_decomposition	merge_subnests	choose which solved groups are worth combining	Jev shortlists pairs of validated subnests for exact merge and boundary repair.
+job_decomposition	decompose_or_not	avoid dividing a job that benefits from mixing everything	Jev chooses decomposition versus a whole-job search from measured interaction evidence.
+job_decomposition	boundary_repair	spend effort where the independently packed groups meet	Jev allocates exact repair windows to interfaces between validated subnests.
+roll_specific	frontier_band	work on the advancing edge rather than the whole roll	Jev selects an active frontier band and freezes earlier validated placements subject to measured quality loss.
+roll_specific	length_target	search toward a concrete shorter cut length	Jev selects branches likely to complete within a declared roll-length target.
+roll_specific	tail_compaction	attack the few parts making the roll longer	Jev nominates the trailing parts and blockers for exact tail-compaction repairs.
+roll_specific	cross_width	use the full width before extending the roll	Jev ranks legal placements by measured cross-web opportunities and remaining shapes.
+roll_specific	strip_exchange	trade parts between neighbouring strips	Jev chooses neighbouring roll segments for an exact bounded exchange and repair.
+roll_specific	cutline_boundary	avoid awkward gaps around required cut lines	Jev chooses placements and repairs subject to fixed production cut-line constraints.
+roll_specific	rolling_window	adjust how far back the search is allowed to rearrange	Jev selects a bounded rolling search window from observed compaction gains and runtime.
+roll_specific	short_piece	keep the final roll segment practical without hiding material cost	Jev selects among valid equal-priority layouts using an explicit usable-remnant objective alongside consumed length.
+roll_specific	pattern_seams	fix the waste between repeated strips	Jev chooses seam repairs between validated repeated patterns before final exact validation.
+roll_specific	stream_arrivals	adapt the open end when more jobs arrive	Jev chooses exact extension versus bounded renesting after new parts arrive, without moving already committed production.
+sheet_specific	eliminate_sheet	focus on the one sheet we might get rid of	Jev ranks candidate sheets for exact evacuation of all their parts into the remaining sheets.
+sheet_specific	balance_density	avoid one awkward sheet spoiling the whole result	Jev selects cross-sheet redistributions from occupancy, shape mix, and exact feasible-space evidence.
+sheet_specific	last_sheet_fill	use the spare room on the final sheet intelligently	Jev selects legal remaining parts and repair actions for the last open sheet.
+sheet_specific	sheet_order	choose which sheet to fill next	Jev ranks open sheets for a nominated remaining part before exact placement search.
+sheet_specific	fixed_count	search directly for a fit into one fewer sheet	Jev chooses continuations in a fixed-sheet-count feasibility search while preserving the best complete incumbent.
+sheet_specific	remnant_value	leave one useful remnant rather than scattered scraps	Jev selects among equal-sheet-count candidates using an explicit reusable-remnant target.
+sheet_specific	media_catalogue	choose among the media sizes that are actually allowed	Jev shortlists approved sheet sizes for exact matched nesting; material area and practical constraints remain explicit.
+sheet_specific	group_constraints	pack required groups without wasting search on forbidden mixes	Jev selects strategies within hard grouping constraints; deterministic checks enforce membership.
+sheet_specific	sheet_template	copy successful sheet patterns and repair the remainder	Jev selects validated whole-sheet templates and counts for exact reuse plus residual packing.
+sheet_specific	multi_sheet_move	try a coordinated exchange that a one-sheet repair misses	Jev chooses bounded three-sheet exchange actions for exact full-layout validation.
+robustness_transfer	job_similarity	use past jobs only when they are relevant	Jev selects reference jobs for strategy transfer from frozen summaries, with family-separated evaluation.
+robustness_transfer	quantity_shift	keep a useful strategy when the mix changes a little	Jev chooses whether to reuse or replace a policy after explicit quantity perturbations.
+robustness_transfer	contour_shift	notice when a small outline change breaks the old trick	Jev flags strategy or template transfer for re-evaluation after contour changes; exact reuse still requires validation.
+robustness_transfer	constraint_shift	change strategy when the permitted rotations or spacing change	Jev selects a new search policy after hard-constraint changes while exact checks remain authoritative.
+robustness_transfer	machine_shift	adapt the plan to the machine that is actually running it	Jev chooses a search and inference allocation using measured hardware-specific operation costs.
+robustness_transfer	calibrated_gate	use outcome-calibrated probabilities instead of a blind fifty-percent cutoff	Jev predictions pass through a development-fitted calibration and decision rule evaluated on untouched families.
+robustness_transfer	uncertain_audit	keep checking the decisions the model is most likely to get wrong	Jev allocates a bounded rejected-branch audit budget using prediction uncertainty and potential regret.
+robustness_transfer	drift_alarm	notice when yesterday's useful rule stops working	Jev chooses whether a policy needs re-evaluation using recent measured errors and job-distribution changes.
+robustness_transfer	worst_case_guard	avoid a fast average that creates terrible occasional jobs	Jev routes suspected difficult jobs to a conservative exact-search portfolio, measured by tail time and quality.
+robustness_transfer	transfer_repair	reuse the kind of repair that worked on similar failures	Jev selects a repair operator using a development-only library of validated failure-and-repair examples.
+production_objectives	throughput_target	optimise for jobs finished per hour rather than pretty layouts	Jev selects a search stopping and allocation policy under a declared throughput objective and material-loss limit.
+production_objectives	deadline_priority	spend search time on the jobs that still have time to benefit	Jev allocates a fixed shared compute budget across jobs with explicit deadlines and quality floors.
+production_objectives	material_threshold	avoid searching for savings too small to change production	Jev chooses when further search can cross an explicit sheet, roll-length, or reusable-remnant threshold.
+production_objectives	operator_wait	get a useful first answer quickly while improving in the background	Jev chooses an anytime search portfolio with separately measured first-valid time and later quality.
+production_objectives	queue_batching	choose when compatible queued jobs should be nested together	Jev ranks permitted batching windows using actual arrival history, deadlines, and exact nesting outcomes.
+production_objectives	filler_admission	admit fillers only when they help the primary work	Jev ranks eligible filler jobs for exact trials under hard primary-job, media, and deadline rules.
+production_objectives	cut_complexity	avoid saving material by creating a much slower cutting job	Jev selects among valid layouts using an explicit measured cutting-time model and material objective.
+production_objectives	print_grouping	respect production compatibility while choosing useful combinations	Jev ranks legal job groups under fixed media, ink, side, and finishing constraints before exact nesting.
+production_objectives	changeover_cost	avoid a nesting improvement that causes expensive setup changes	Jev selects among permitted production plans using measured changeover cost plus exact nesting results.
+production_objectives	commit_boundary	freeze what is already committed and improve what is still flexible	Jev chooses bounded renesting actions only for uncommitted parts when production starts or new jobs arrive.
