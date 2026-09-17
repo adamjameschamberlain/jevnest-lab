@@ -281,3 +281,10 @@ The new live model integration is not yet empirically verified; run it using the
 credential on the user's PC, then assess development outcomes before freezing the
 policy and spending on the 66-job held-out suite. A working typed API is not a
 claim that the resulting search policy improves packing or runtime.
+
+
+## Question-discovery bank (v1)
+
+Added `experiments/jev/questions/QUESTIONS.md` and `bank.json`: 60 falsifiable hypotheses with paired casual/technical wording (120 Noul questions). Covers branch quality/cost, pair comparisons, probe depth, stopping/restarting, repair, part order, cavity decisions, reuse, resource allocation, job strategy and trust checks.
+
+`questions:prepare`, `questions:collect`, and `questions:score` prepare bounded parallel request batches, retain real receipts, and score separately supplied measured labels. Existing four-job logs yield 16 pre-decision candidate cases and 160 applicable judgments in four requests, without geometry reruns. The other question families require additional evidence/interventions; those are specified, not silently simulated or claimed implemented. No question-bank live calls or speedup results exist yet. Current nesting policies are unchanged. See `experiments/jev/questions/README.md` for the experiment design, censoring, held-out evaluation, costs, and Windows commands.

@@ -15,7 +15,11 @@
     "benchmark:jev": "node scripts/full-jev-benchmark.cjs --live",
     "test:jev-full": "node --test tests/jev-full.test.cjs",
     "benchmark:production": "node scripts/production-jev-benchmark.cjs",
-    "test:production": "node --test tests/jev-production.test.cjs"
+    "test:production": "node --test tests/jev-production.test.cjs",
+    "questions:prepare": "node scripts/jev-question-study.cjs prepare",
+    "questions:collect": "node scripts/jev-question-study.cjs collect",
+    "questions:score": "node scripts/jev-question-study.cjs score",
+    "test:questions": "node --test tests/jev-questions.test.cjs"
   },
   "engines": {
     "node": ">=20"

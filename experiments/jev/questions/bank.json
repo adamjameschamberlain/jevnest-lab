@@ -1,0 +1,2366 @@
+{
+  "version": "question-discovery-v1",
+  "hypotheses": 60,
+  "questions": [
+    {
+      "id": "branch_quality_beat_best_casual",
+      "hypothesis": "branch_quality_beat_best",
+      "family": "branch_quality",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is this one worth chasing \u2014 will it beat what we already have?",
+      "when": "Choose a branch before its expensive completion",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "Completed branch beats the frozen incumbent using the declared objective comparator.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_quality_beat_best_technical",
+      "hypothesis": "branch_quality_beat_best",
+      "family": "branch_quality",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will completing this branch produce a valid layout better than the current incumbent?",
+      "when": "Choose a branch before its expensive completion",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "Completed branch beats the frozen incumbent using the declared objective comparator.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_quality_save_material_casual",
+      "hypothesis": "branch_quality_save_material",
+      "family": "branch_quality",
+      "style": "casual",
+      "type": "noul",
+      "question": "Will this actually save material, or just shuffle things around?",
+      "when": "Choose a branch before its expensive completion",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "Valid completion reduces the primary material objective by at least objective.materialThreshold; compactness alone does not count.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_quality_save_material_technical",
+      "hypothesis": "branch_quality_save_material",
+      "family": "branch_quality",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will this branch reduce sheet count or consumed roll length by the declared material threshold?",
+      "when": "Choose a branch before its expensive completion",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "Valid completion reduces the primary material objective by at least objective.materialThreshold; compactness alone does not count.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_quality_small_win_casual",
+      "hypothesis": "branch_quality_small_win",
+      "family": "branch_quality",
+      "style": "casual",
+      "type": "noul",
+      "question": "Could this give us a small but useful win?",
+      "when": "Choose a branch before its expensive completion",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "Valid completion achieves objective.minimumUsefulGain under the frozen comparator.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_quality_small_win_technical",
+      "hypothesis": "branch_quality_small_win",
+      "family": "branch_quality",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will this branch improve the incumbent by at least the minimum useful gain?",
+      "when": "Choose a branch before its expensive completion",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "Valid completion achieves objective.minimumUsefulGain under the frozen comparator.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_quality_hit_target_casual",
+      "hypothesis": "branch_quality_hit_target",
+      "family": "branch_quality",
+      "style": "casual",
+      "type": "noul",
+      "question": "Can this get us over the finish line?",
+      "when": "Choose a branch before its expensive completion",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "Valid completion meets objective.target within completionProtocol.deadlineMs.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_quality_hit_target_technical",
+      "hypothesis": "branch_quality_hit_target",
+      "family": "branch_quality",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will this branch reach the explicitly supplied target layout quality?",
+      "when": "Choose a branch before its expensive completion",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "Valid completion meets objective.target within completionProtocol.deadlineMs.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_quality_avoid_bad_tail_casual",
+      "hypothesis": "branch_quality_avoid_bad_tail",
+      "family": "branch_quality",
+      "style": "casual",
+      "type": "noul",
+      "question": "Does this start well but leave us with a nasty pile of leftovers?",
+      "when": "Choose a branch before its expensive completion",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "Valid full completion is worse than the frozen incumbent despite the observed prefix; a timeout is censored, not a positive label.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_quality_avoid_bad_tail_technical",
+      "hypothesis": "branch_quality_avoid_bad_tail",
+      "family": "branch_quality",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the unseen remainder force a final layout worse than the incumbent?",
+      "when": "Choose a branch before its expensive completion",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "Valid full completion is worse than the frozen incumbent despite the observed prefix; a timeout is censored, not a positive label.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_cost_time_sink_casual",
+      "hypothesis": "branch_cost_time_sink",
+      "family": "branch_cost",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is this going to eat our time?",
+      "when": "Allocate time before a rollout",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "costHistory",
+        "thresholds"
+      ],
+      "labelDefinition": "Measured completion time exceeds thresholds.slowMs; right-censored runs shorter than that threshold remain unknown.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_cost_time_sink_technical",
+      "hypothesis": "branch_cost_time_sink",
+      "family": "branch_cost",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will full completion exceed the supplied slow-completion threshold?",
+      "when": "Allocate time before a rollout",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "costHistory",
+        "thresholds"
+      ],
+      "labelDefinition": "Measured completion time exceeds thresholds.slowMs; right-censored runs shorter than that threshold remain unknown.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_cost_cheap_win_casual",
+      "hypothesis": "branch_cost_cheap_win",
+      "family": "branch_cost",
+      "style": "casual",
+      "type": "noul",
+      "question": "Can we get a useful win out of this quickly?",
+      "when": "Allocate time before a rollout",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "costHistory",
+        "thresholds"
+      ],
+      "labelDefinition": "Valid completion improves the incumbent by objective.minimumUsefulGain within thresholds.quickMs.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_cost_cheap_win_technical",
+      "hypothesis": "branch_cost_cheap_win",
+      "family": "branch_cost",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will this branch reach the minimum useful gain before the quick-win deadline?",
+      "when": "Allocate time before a rollout",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "costHistory",
+        "thresholds"
+      ],
+      "labelDefinition": "Valid completion improves the incumbent by objective.minimumUsefulGain within thresholds.quickMs.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_cost_worth_seconds_casual",
+      "hypothesis": "branch_cost_worth_seconds",
+      "family": "branch_cost",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is the likely saving worth the seconds we would spend?",
+      "when": "Allocate time before a rollout",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "costHistory",
+        "thresholds"
+      ],
+      "labelDefinition": "Measured material gain divided by end-to-end incremental seconds exceeds thresholds.gainPerSecond; include evidence and API costs for a deployed policy.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_cost_worth_seconds_technical",
+      "hypothesis": "branch_cost_worth_seconds",
+      "family": "branch_cost",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will this branch exceed the required material improvement per elapsed second?",
+      "when": "Allocate time before a rollout",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "costHistory",
+        "thresholds"
+      ],
+      "labelDefinition": "Measured material gain divided by end-to-end incremental seconds exceeds thresholds.gainPerSecond; include evidence and API costs for a deployed policy.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_cost_deadline_waste_casual",
+      "hypothesis": "branch_cost_deadline_waste",
+      "family": "branch_cost",
+      "style": "casual",
+      "type": "noul",
+      "question": "Are we starting something we will not finish in time?",
+      "when": "Allocate time before a rollout",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "costHistory",
+        "thresholds"
+      ],
+      "labelDefinition": "No validated complete result is available at completionProtocol.deadlineMs; log timeout and invalidity separately.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_cost_deadline_waste_technical",
+      "hypothesis": "branch_cost_deadline_waste",
+      "family": "branch_cost",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will this branch fail to return a valid complete layout before the remaining deadline?",
+      "when": "Allocate time before a rollout",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "costHistory",
+        "thresholds"
+      ],
+      "labelDefinition": "No validated complete result is available at completionProtocol.deadlineMs; log timeout and invalidity separately.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_cost_cheap_reject_casual",
+      "hypothesis": "branch_cost_cheap_reject",
+      "family": "branch_cost",
+      "style": "casual",
+      "type": "noul",
+      "question": "Could we cheaply find out that this is a dud?",
+      "when": "Allocate time before a rollout",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "costHistory",
+        "thresholds"
+      ],
+      "labelDefinition": "The predeclared probeRule rejects, full completion does not beat incumbent, and probe cost is below thresholds.probeFraction of completion cost.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "branch_cost_cheap_reject_technical",
+      "hypothesis": "branch_cost_cheap_reject",
+      "family": "branch_cost",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied short probe reject a non-improving branch at lower cost than completing it?",
+      "when": "Allocate time before a rollout",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "costHistory",
+        "thresholds"
+      ],
+      "labelDefinition": "The predeclared probeRule rejects, full completion does not beat incumbent, and probe cost is below thresholds.probeFraction of completion cost.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "head_to_head_better_final_casual",
+      "hypothesis": "head_to_head_better_final",
+      "family": "head_to_head",
+      "style": "casual",
+      "type": "noul",
+      "question": "If we can only finish one, should it be A?",
+      "when": "Choose between two executable alternatives",
+      "requires": [
+        "subject",
+        "alternative",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "A and B are both completed under the same protocol; A beats B by the objective comparator. A tie is false; an unresolved timeout is unknown.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "head_to_head_better_final_technical",
+      "hypothesis": "head_to_head_better_final",
+      "family": "head_to_head",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will branch A finish with better layout quality than branch B?",
+      "when": "Choose between two executable alternatives",
+      "requires": [
+        "subject",
+        "alternative",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "A and B are both completed under the same protocol; A beats B by the objective comparator. A tie is false; an unresolved timeout is unknown.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "head_to_head_faster_target_casual",
+      "hypothesis": "head_to_head_faster_target",
+      "family": "head_to_head",
+      "style": "casual",
+      "type": "noul",
+      "question": "Which gets us a good enough nest sooner \u2014 is it A?",
+      "when": "Choose between two executable alternatives",
+      "requires": [
+        "subject",
+        "alternative",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "A first reaches objective.target earlier than B, counting preparation and inference allocation; neither reaching is false, incomplete observation is censored.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "head_to_head_faster_target_technical",
+      "hypothesis": "head_to_head_faster_target",
+      "family": "head_to_head",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will A reach the supplied quality target sooner than B?",
+      "when": "Choose between two executable alternatives",
+      "requires": [
+        "subject",
+        "alternative",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "A first reaches objective.target earlier than B, counting preparation and inference allocation; neither reaching is false, incomplete observation is censored.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "head_to_head_value_first_casual",
+      "hypothesis": "head_to_head_value_first",
+      "family": "head_to_head",
+      "style": "casual",
+      "type": "noul",
+      "question": "Should A get the next chunk of compute?",
+      "when": "Choose between two executable alternatives",
+      "requires": [
+        "subject",
+        "alternative",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "Matched windows produce greater valid material improvement from A; same starting incumbent and declared window.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "head_to_head_value_first_technical",
+      "hypothesis": "head_to_head_value_first",
+      "family": "head_to_head",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will spending the fixed compute window on A deliver more material improvement than spending it on B?",
+      "when": "Choose between two executable alternatives",
+      "requires": [
+        "subject",
+        "alternative",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "Matched windows produce greater valid material improvement from A; same starting incumbent and declared window.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "head_to_head_boring_winner_casual",
+      "hypothesis": "head_to_head_boring_winner",
+      "family": "head_to_head",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is the boring-looking option A actually the better bet?",
+      "when": "Choose between two executable alternatives",
+      "requires": [
+        "subject",
+        "alternative",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "A has the worse local score and the better completed objective; otherwise false. Local score is supplied as evidence, not as a label.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "head_to_head_boring_winner_technical",
+      "hypothesis": "head_to_head_boring_winner",
+      "family": "head_to_head",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will A outperform B despite B having the better supplied local heuristic score?",
+      "when": "Choose between two executable alternatives",
+      "requires": [
+        "subject",
+        "alternative",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "A has the worse local score and the better completed objective; otherwise false. Local score is supplied as evidence, not as a label.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "head_to_head_second_chance_casual",
+      "hypothesis": "head_to_head_second_chance",
+      "family": "head_to_head",
+      "style": "casual",
+      "type": "noul",
+      "question": "Are we about to throw away the better option A?",
+      "when": "Choose between two executable alternatives",
+      "requires": [
+        "subject",
+        "alternative",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "A is rejected by the frozen rule and beats selected B after matched full completion; no retrospective relabelling of A.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "head_to_head_second_chance_technical",
+      "hypothesis": "head_to_head_second_chance",
+      "family": "head_to_head",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the candidate rejected by the fixed arithmetic rule outperform its selected alternative?",
+      "when": "Choose between two executable alternatives",
+      "requires": [
+        "subject",
+        "alternative",
+        "incumbent",
+        "objective",
+        "completionProtocol"
+      ],
+      "labelDefinition": "A is rejected by the frozen rule and beats selected B after matched full completion; no retrospective relabelling of A.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "probe_timing_enough_already_casual",
+      "hypothesis": "probe_timing_enough_already",
+      "family": "probe_timing",
+      "style": "casual",
+      "type": "noul",
+      "question": "Have we seen enough to make the call now?",
+      "when": "Decide how much evidence to buy",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "probePlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Current frozen selector chooses a candidate within objective.regretTolerance of the fully completed best candidate.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "probe_timing_enough_already_technical",
+      "hypothesis": "probe_timing_enough_already",
+      "family": "probe_timing",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the frozen decision using current evidence match the decision after all candidate completions?",
+      "when": "Decide how much evidence to buy",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "probePlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Current frozen selector chooses a candidate within objective.regretTolerance of the fully completed best candidate.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "probe_timing_look_longer_casual",
+      "hypothesis": "probe_timing_look_longer",
+      "family": "probe_timing",
+      "style": "casual",
+      "type": "noul",
+      "question": "Would watching a bit more save us from a bad decision?",
+      "when": "Decide how much evidence to buy",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "probePlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Predeclared deeper probe changes the frozen selection, reduces regret by thresholds.regretReduction, and pays back added probe time under the evaluation protocol.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "probe_timing_look_longer_technical",
+      "hypothesis": "probe_timing_look_longer",
+      "family": "probe_timing",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the next probe depth change the selected branch and reduce final regret enough to justify its cost?",
+      "when": "Decide how much evidence to buy",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "probePlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Predeclared deeper probe changes the frozen selection, reduces regret by thresholds.regretReduction, and pays back added probe time under the evaluation protocol.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "probe_timing_late_surprise_casual",
+      "hypothesis": "probe_timing_late_surprise",
+      "family": "probe_timing",
+      "style": "casual",
+      "type": "noul",
+      "question": "Could this ugly start turn into the winner later?",
+      "when": "Decide how much evidence to buy",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "probePlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Below-median current rank and top-quartile completed objective, with frozen tie handling; requires the complete batch.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "probe_timing_late_surprise_technical",
+      "hypothesis": "probe_timing_late_surprise",
+      "family": "probe_timing",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will a branch currently below the median prefix ranking finish in the top quartile?",
+      "when": "Decide how much evidence to buy",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "probePlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Below-median current rank and top-quartile completed objective, with frozen tie handling; requires the complete batch.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "probe_timing_probe_wrong_place_casual",
+      "hypothesis": "probe_timing_probe_wrong_place",
+      "family": "probe_timing",
+      "style": "casual",
+      "type": "noul",
+      "question": "Are we staring at the easy bit and missing the trouble later on?",
+      "when": "Decide how much evidence to buy",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "probePlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Matched-cost bottleneck and prefix probes feed the same frozen selector; bottleneck probe yields lower completed regret.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "probe_timing_probe_wrong_place_technical",
+      "hypothesis": "probe_timing_probe_wrong_place",
+      "family": "probe_timing",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will probing the supplied later bottleneck distinguish final outcomes better than extending the current prefix?",
+      "when": "Decide how much evidence to buy",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "probePlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Matched-cost bottleneck and prefix probes feed the same frozen selector; bottleneck probe yields lower completed regret.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "probe_timing_skip_probe_casual",
+      "hypothesis": "probe_timing_skip_probe",
+      "family": "probe_timing",
+      "style": "casual",
+      "type": "noul",
+      "question": "Can we skip this extra inspection without losing anything useful?",
+      "when": "Decide how much evidence to buy",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "probePlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Without-probe selected result stays within objective.regretTolerance of with-probe result and has lower end-to-end selection time.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "probe_timing_skip_probe_technical",
+      "hypothesis": "probe_timing_skip_probe",
+      "family": "probe_timing",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will omitting the proposed additional probe preserve acceptable selection quality while reducing elapsed time?",
+      "when": "Decide how much evidence to buy",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "probePlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Without-probe selected result stays within objective.regretTolerance of with-probe result and has lower end-to-end selection time.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "stop_restart_stop_now_casual",
+      "hypothesis": "stop_restart_stop_now",
+      "family": "stop_restart",
+      "style": "casual",
+      "type": "noul",
+      "question": "Are we just burning time now?",
+      "when": "After a measured search window",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "continuationPlan",
+        "restartPlan",
+        "thresholds"
+      ],
+      "labelDefinition": "Continuation from the checkpoint produces no valid improvement of objective.minimumUsefulGain within thresholds.windowMs.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "stop_restart_stop_now_technical",
+      "hypothesis": "stop_restart_stop_now",
+      "family": "stop_restart",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will another fixed search window fail to deliver the minimum useful improvement?",
+      "when": "After a measured search window",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "continuationPlan",
+        "restartPlan",
+        "thresholds"
+      ],
+      "labelDefinition": "Continuation from the checkpoint produces no valid improvement of objective.minimumUsefulGain within thresholds.windowMs.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "stop_restart_restart_casual",
+      "hypothesis": "stop_restart_restart",
+      "family": "stop_restart",
+      "style": "casual",
+      "type": "noul",
+      "question": "Should we stop fiddling with this and start somewhere else?",
+      "when": "After a measured search window",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "continuationPlan",
+        "restartPlan",
+        "thresholds"
+      ],
+      "labelDefinition": "Matched restart and continuation windows begin from the same incumbent; restart produces better valid quality.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "stop_restart_restart_technical",
+      "hypothesis": "stop_restart_restart",
+      "family": "stop_restart",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied restart outperform continuing the current search for the same time?",
+      "when": "After a measured search window",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "continuationPlan",
+        "restartPlan",
+        "thresholds"
+      ],
+      "labelDefinition": "Matched restart and continuation windows begin from the same incumbent; restart produces better valid quality.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "stop_restart_nearly_done_casual",
+      "hypothesis": "stop_restart_nearly_done",
+      "family": "stop_restart",
+      "style": "casual",
+      "type": "noul",
+      "question": "Are we already close enough that more searching is pointless?",
+      "when": "After a measured search window",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "continuationPlan",
+        "restartPlan",
+        "thresholds"
+      ],
+      "labelDefinition": "Incumbent is within objective.acceptableGap of an independent long-run reference or certified bound, with reference type reported; reference is withheld from the model.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "stop_restart_nearly_done_technical",
+      "hypothesis": "stop_restart_nearly_done",
+      "family": "stop_restart",
+      "style": "technical",
+      "type": "noul",
+      "question": "Is the incumbent within the accepted tolerance of the predeclared reference quality?",
+      "when": "After a measured search window",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "continuationPlan",
+        "restartPlan",
+        "thresholds"
+      ],
+      "labelDefinition": "Incumbent is within objective.acceptableGap of an independent long-run reference or certified bound, with reference type reported; reference is withheld from the model.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "stop_restart_one_more_casual",
+      "hypothesis": "stop_restart_one_more",
+      "family": "stop_restart",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is one more round likely to pay off?",
+      "when": "After a measured search window",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "continuationPlan",
+        "restartPlan",
+        "thresholds"
+      ],
+      "labelDefinition": "Continuation yields a valid improvement of objective.minimumUsefulGain within thresholds.windowMs.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "stop_restart_one_more_technical",
+      "hypothesis": "stop_restart_one_more",
+      "family": "stop_restart",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the next fixed search window produce the minimum useful improvement?",
+      "when": "After a measured search window",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "continuationPlan",
+        "restartPlan",
+        "thresholds"
+      ],
+      "labelDefinition": "Continuation yields a valid improvement of objective.minimumUsefulGain within thresholds.windowMs.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "stop_restart_patient_casual",
+      "hypothesis": "stop_restart_patient",
+      "family": "stop_restart",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is this a slow burner that deserves a longer chance?",
+      "when": "After a measured search window",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "continuationPlan",
+        "restartPlan",
+        "thresholds"
+      ],
+      "labelDefinition": "Predeclared long continuation beats the named alternative by objective.minimumUsefulGain; charge additional elapsed time and report the short-window opportunity cost.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "stop_restart_patient_technical",
+      "hypothesis": "stop_restart_patient",
+      "family": "stop_restart",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will extending this stalled search beat the short-window alternative by the required gain?",
+      "when": "After a measured search window",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "continuationPlan",
+        "restartPlan",
+        "thresholds"
+      ],
+      "labelDefinition": "Predeclared long continuation beats the named alternative by objective.minimumUsefulGain; charge additional elapsed time and report the short-window opportunity cost.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "repair_operator_swap_casual",
+      "hypothesis": "repair_operator_swap",
+      "family": "repair_operator",
+      "style": "casual",
+      "type": "noul",
+      "question": "Would swapping these two get us unstuck?",
+      "when": "Choose a local repair before executing it",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Execute actions.swap and validate; result beats unchanged incumbent under actionProtocol.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "repair_operator_swap_technical",
+      "hypothesis": "repair_operator_swap",
+      "family": "repair_operator",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied two-part swap improve the layout within the action budget?",
+      "when": "Choose a local repair before executing it",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Execute actions.swap and validate; result beats unchanged incumbent under actionProtocol.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "repair_operator_rotate_casual",
+      "hypothesis": "repair_operator_rotate",
+      "family": "repair_operator",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is turning this awkward piece the move we are missing?",
+      "when": "Choose a local repair before executing it",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Execute actions.rotate with allowed angles and matched repair budget; valid result beats unchanged incumbent.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "repair_operator_rotate_technical",
+      "hypothesis": "repair_operator_rotate",
+      "family": "repair_operator",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied allowed rotation and repair improve the layout?",
+      "when": "Choose a local repair before executing it",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Execute actions.rotate with allowed angles and matched repair budget; valid result beats unchanged incumbent.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "repair_operator_unpack_casual",
+      "hypothesis": "repair_operator_unpack",
+      "family": "repair_operator",
+      "style": "casual",
+      "type": "noul",
+      "question": "Should we pull this little area apart and try it again?",
+      "when": "Choose a local repair before executing it",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Execute actions.repackNeighbourhood under actionProtocol; valid final result beats incumbent including all removed parts.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "repair_operator_unpack_technical",
+      "hypothesis": "repair_operator_unpack",
+      "family": "repair_operator",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied neighbourhood removal and reinsertion improve the incumbent?",
+      "when": "Choose a local repair before executing it",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Execute actions.repackNeighbourhood under actionProtocol; valid final result beats incumbent including all removed parts.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "repair_operator_move_blocker_casual",
+      "hypothesis": "repair_operator_move_blocker",
+      "family": "repair_operator",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is this piece hogging the space everyone else needs?",
+      "when": "Choose a local repair before executing it",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Execute actions.moveBlocker and complete the repair; valid material gain reaches objective.minimumUsefulGain.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "repair_operator_move_blocker_technical",
+      "hypothesis": "repair_operator_move_blocker",
+      "family": "repair_operator",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will relocating the nominated blocker yield the minimum useful improvement?",
+      "when": "Choose a local repair before executing it",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Execute actions.moveBlocker and complete the repair; valid material gain reaches objective.minimumUsefulGain.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "repair_operator_big_change_casual",
+      "hypothesis": "repair_operator_big_change",
+      "family": "repair_operator",
+      "style": "casual",
+      "type": "noul",
+      "question": "Does this need a big reshuffle rather than another tiny tweak?",
+      "when": "Choose a local repair before executing it",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Matched actions.largePerturbation and actions.smallPerturbation; large gives better valid objective.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "repair_operator_big_change_technical",
+      "hypothesis": "repair_operator_big_change",
+      "family": "repair_operator",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied large perturbation beat the supplied small perturbation under equal time?",
+      "when": "Choose a local repair before executing it",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Matched actions.largePerturbation and actions.smallPerturbation; large gives better valid objective.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "part_strategy_awkward_first_casual",
+      "hypothesis": "part_strategy_awkward_first",
+      "family": "part_strategy",
+      "style": "casual",
+      "type": "noul",
+      "question": "Should we deal with this pain of a piece before we use up its options?",
+      "when": "Choose the next part-order intervention",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.constrainedFirst beats unchanged order after matched completions.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "part_strategy_awkward_first_technical",
+      "hypothesis": "part_strategy_awkward_first",
+      "family": "part_strategy",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will placing the nominated constrained part earlier improve the completed layout?",
+      "when": "Choose the next part-order intervention",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.constrainedFirst beats unchanged order after matched completions.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "part_strategy_save_fillers_casual",
+      "hypothesis": "part_strategy_save_fillers",
+      "family": "part_strategy",
+      "style": "casual",
+      "type": "noul",
+      "question": "Are we spending our useful little gap-fillers too soon?",
+      "when": "Choose the next part-order intervention",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.deferFillers beats unchanged order under the same completion protocol.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "part_strategy_save_fillers_technical",
+      "hypothesis": "part_strategy_save_fillers",
+      "family": "part_strategy",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will deferring the nominated filler parts improve the completed layout?",
+      "when": "Choose the next part-order intervention",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.deferFillers beats unchanged order under the same completion protocol.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "part_strategy_mix_sizes_casual",
+      "hypothesis": "part_strategy_mix_sizes",
+      "family": "part_strategy",
+      "style": "casual",
+      "type": "noul",
+      "question": "Would mixing big and small pieces help here?",
+      "when": "Choose the next part-order intervention",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.interleaveSizes beats unchanged grouped order after matched completion.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "part_strategy_mix_sizes_technical",
+      "hypothesis": "part_strategy_mix_sizes",
+      "family": "part_strategy",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied interleaved size order outperform the current grouped order?",
+      "when": "Choose the next part-order intervention",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.interleaveSizes beats unchanged grouped order after matched completion.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "part_strategy_keep_pair_casual",
+      "hypothesis": "part_strategy_keep_pair",
+      "family": "part_strategy",
+      "style": "casual",
+      "type": "noul",
+      "question": "Do these two belong together?",
+      "when": "Choose the next part-order intervention",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.pairTogether beats actions.pairSeparate after full valid completion by the declared material threshold.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "part_strategy_keep_pair_technical",
+      "hypothesis": "part_strategy_keep_pair",
+      "family": "part_strategy",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will placing the supplied complementary pair consecutively improve material use?",
+      "when": "Choose the next part-order intervention",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.pairTogether beats actions.pairSeparate after full valid completion by the declared material threshold.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "part_strategy_break_family_casual",
+      "hypothesis": "part_strategy_break_family",
+      "family": "part_strategy",
+      "style": "casual",
+      "type": "noul",
+      "question": "Are we making life harder by keeping identical pieces together?",
+      "when": "Choose the next part-order intervention",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.splitFamilyBlock beats unchanged schedule after matched completion.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "part_strategy_break_family_technical",
+      "hypothesis": "part_strategy_break_family",
+      "family": "part_strategy",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will breaking the supplied repeated-part block improve the completed layout?",
+      "when": "Choose the next part-order intervention",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.splitFamilyBlock beats unchanged schedule after matched completion.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "gap_strategy_trap_casual",
+      "hypothesis": "gap_strategy_trap",
+      "family": "gap_strategy",
+      "style": "casual",
+      "type": "noul",
+      "question": "Does this cheap-looking move paint us into a corner?",
+      "when": "Judge the consequence of a legal placement",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Complete both legal placements with the same remaining policy; nominated placement loses.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "gap_strategy_trap_technical",
+      "hypothesis": "gap_strategy_trap",
+      "family": "gap_strategy",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the nominated legal placement lead to worse completed quality than the supplied alternative?",
+      "when": "Judge the consequence of a legal placement",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Complete both legal placements with the same remaining policy; nominated placement loses.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "gap_strategy_save_gap_casual",
+      "hypothesis": "gap_strategy_save_gap",
+      "family": "gap_strategy",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is this gap worth protecting for something still in the queue?",
+      "when": "Judge the consequence of a legal placement",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.reserveCavity beats actions.fillCavity after matched full completion; all required parts retained.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "gap_strategy_save_gap_technical",
+      "hypothesis": "gap_strategy_save_gap",
+      "family": "gap_strategy",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will reserving the nominated cavity outperform filling it with the currently proposed part?",
+      "when": "Judge the consequence of a legal placement",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.reserveCavity beats actions.fillCavity after matched full completion; all required parts retained.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "gap_strategy_ignore_gap_casual",
+      "hypothesis": "gap_strategy_ignore_gap",
+      "family": "gap_strategy",
+      "style": "casual",
+      "type": "noul",
+      "question": "Should we stop trying to rescue this little hole?",
+      "when": "Judge the consequence of a legal placement",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.ignoreCavity is within objective.regretTolerance of actions.fillCavity and reaches that quality sooner.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "gap_strategy_ignore_gap_technical",
+      "hypothesis": "gap_strategy_ignore_gap",
+      "family": "gap_strategy",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will ignoring the nominated cavity achieve acceptable quality faster than attempting to fill it?",
+      "when": "Judge the consequence of a legal placement",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.ignoreCavity is within objective.regretTolerance of actions.fillCavity and reaches that quality sooner.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "gap_strategy_open_space_casual",
+      "hypothesis": "gap_strategy_open_space",
+      "family": "gap_strategy",
+      "style": "casual",
+      "type": "noul",
+      "question": "Would leaving one useful open area beat squeezing everything tight right now?",
+      "when": "Judge the consequence of a legal placement",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Matched completion of actions.openFrontier beats actions.tightPlacement on the final objective.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "gap_strategy_open_space_technical",
+      "hypothesis": "gap_strategy_open_space",
+      "family": "gap_strategy",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied open-frontier placement outperform the tighter local placement?",
+      "when": "Judge the consequence of a legal placement",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Matched completion of actions.openFrontier beats actions.tightPlacement on the final objective.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "gap_strategy_close_sheet_casual",
+      "hypothesis": "gap_strategy_close_sheet",
+      "family": "gap_strategy",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is it time to close this sheet and move on?",
+      "when": "Judge the consequence of a legal placement",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.openNextSheet reaches a layout within objective.regretTolerance of actions.keepFilling sooner; report sheet-count losses separately.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "gap_strategy_close_sheet_technical",
+      "hypothesis": "gap_strategy_close_sheet",
+      "family": "gap_strategy",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will opening a new sheet now reach acceptable final quality sooner than attempting further filling?",
+      "when": "Judge the consequence of a legal placement",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "geometryEvidence",
+        "remainingParts",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.openNextSheet reaches a layout within objective.regretTolerance of actions.keepFilling sooner; report sheet-count losses separately.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "reuse_template_casual",
+      "hypothesis": "reuse_template",
+      "family": "reuse",
+      "style": "casual",
+      "type": "noul",
+      "question": "Have we basically solved this bit already?",
+      "when": "Avoid repeated geometry or search work",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "reuseEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.reuseTemplate validates all copies and constraints, stays within objective.regretTolerance of recomputation, and reduces end-to-end time.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "reuse_template_technical",
+      "hypothesis": "reuse_template",
+      "family": "reuse",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will reusing the supplied validated placement template preserve acceptable quality and reduce time?",
+      "when": "Avoid repeated geometry or search work",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "reuseEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.reuseTemplate validates all copies and constraints, stays within objective.regretTolerance of recomputation, and reduces end-to-end time.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "reuse_repeat_block_casual",
+      "hypothesis": "reuse_repeat_block",
+      "family": "reuse",
+      "style": "casual",
+      "type": "noul",
+      "question": "Can we stamp out this block instead of solving every copy again?",
+      "when": "Avoid repeated geometry or search work",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "reuseEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.repeatBlock produces a fully valid nest within objective.regretTolerance of individual placement and takes less elapsed time.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "reuse_repeat_block_technical",
+      "hypothesis": "reuse_repeat_block",
+      "family": "reuse",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied repeated-block construction outperform individual placement in time at acceptable quality?",
+      "when": "Avoid repeated geometry or search work",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "reuseEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.repeatBlock produces a fully valid nest within objective.regretTolerance of individual placement and takes less elapsed time.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "reuse_same_branch_casual",
+      "hypothesis": "reuse_same_branch",
+      "family": "reuse",
+      "style": "casual",
+      "type": "noul",
+      "question": "Are these two searches going to tell us the same thing?",
+      "when": "Avoid repeated geometry or search work",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "reuseEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Both completions differ by at most objective.equivalenceTolerance; this predicts redundancy, not exact geometric identity or permission to skip validity checks.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "reuse_same_branch_technical",
+      "hypothesis": "reuse_same_branch",
+      "family": "reuse",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied branches produce equivalent layout quality within tolerance?",
+      "when": "Avoid repeated geometry or search work",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "reuseEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Both completions differ by at most objective.equivalenceTolerance; this predicts redundancy, not exact geometric identity or permission to skip validity checks.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "reuse_reuse_rotation_casual",
+      "hypothesis": "reuse_reuse_rotation",
+      "family": "reuse",
+      "style": "casual",
+      "type": "noul",
+      "question": "Can we carry over what we learned about that orientation?",
+      "when": "Avoid repeated geometry or search work",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "reuseEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.reuseOrientation stays within objective.regretTolerance of fresh orientation search while reducing elapsed time.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "reuse_reuse_rotation_technical",
+      "hypothesis": "reuse_reuse_rotation",
+      "family": "reuse",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will reusing the supplied rotation preference preserve acceptable quality and save search time?",
+      "when": "Avoid repeated geometry or search work",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "reuseEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "actions.reuseOrientation stays within objective.regretTolerance of fresh orientation search while reducing elapsed time.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "reuse_cache_value_casual",
+      "hypothesis": "reuse_cache_value",
+      "family": "reuse",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is keeping this expensive result around going to pay for itself?",
+      "when": "Avoid repeated geometry or search work",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "reuseEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Future requests under the frozen workload reuse the exact keyed result; measured saved compute exceeds actionProtocol.retentionCostMs. Exact-key validity remains deterministic.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "reuse_cache_value_technical",
+      "hypothesis": "reuse_cache_value",
+      "family": "reuse",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will retaining the nominated cache entry save more compute than its declared retention overhead?",
+      "when": "Avoid repeated geometry or search work",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "reuseEvidence",
+        "actions",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Future requests under the frozen workload reuse the exact keyed result; measured saved compute exceeds actionProtocol.retentionCostMs. Exact-key validity remains deterministic.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "portfolio_explore_casual",
+      "hypothesis": "portfolio_explore",
+      "family": "portfolio",
+      "style": "casual",
+      "type": "noul",
+      "question": "Should we try something genuinely different now?",
+      "when": "Allocate workers and diversity",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "alternatives",
+        "allocationPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Matched actions defined in allocationPlans.explore and exploit; explore gives better valid quality with equal wall time and worker count.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "portfolio_explore_technical",
+      "hypothesis": "portfolio_explore",
+      "family": "portfolio",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied exploratory allocation beat exploitation for the same resource budget?",
+      "when": "Allocate workers and diversity",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "alternatives",
+        "allocationPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Matched actions defined in allocationPlans.explore and exploit; explore gives better valid quality with equal wall time and worker count.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "portfolio_diversify_casual",
+      "hypothesis": "portfolio_diversify",
+      "family": "portfolio",
+      "style": "casual",
+      "type": "noul",
+      "question": "Are we paying several workers to make the same mistake?",
+      "when": "Allocate workers and diversity",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "alternatives",
+        "allocationPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Equal-worker, equal-wall-time portfolios; diverse allocation reaches better quality. Also report CPU-seconds and API use.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "portfolio_diversify_technical",
+      "hypothesis": "portfolio_diversify",
+      "family": "portfolio",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied diverse portfolio outperform the current similar-worker portfolio?",
+      "when": "Allocate workers and diversity",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "alternatives",
+        "allocationPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Equal-worker, equal-wall-time portfolios; diverse allocation reaches better quality. Also report CPU-seconds and API use.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "portfolio_runner_up_casual",
+      "hypothesis": "portfolio_runner_up",
+      "family": "portfolio",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is the runner-up worth keeping alive?",
+      "when": "Allocate workers and diversity",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "alternatives",
+        "allocationPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Matched allocationPlans.keepRunnerUp beats allocationPlans.leaderOnly on completed objective.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "portfolio_runner_up_technical",
+      "hypothesis": "portfolio_runner_up",
+      "family": "portfolio",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will retaining the supplied runner-up improve final quality compared with allocating all resources to the leader?",
+      "when": "Allocate workers and diversity",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "alternatives",
+        "allocationPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Matched allocationPlans.keepRunnerUp beats allocationPlans.leaderOnly on completed objective.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "portfolio_geometry_parallel_casual",
+      "hypothesis": "portfolio_geometry_parallel",
+      "family": "portfolio",
+      "style": "casual",
+      "type": "noul",
+      "question": "Would another geometry worker help more than another opinion?",
+      "when": "Allocate workers and diversity",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "alternatives",
+        "allocationPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Compare the named plans under the same declared monetary or compute constraint; geometry plan reaches target sooner. Report resource mismatch if budgets cannot be matched.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "portfolio_geometry_parallel_technical",
+      "hypothesis": "portfolio_geometry_parallel",
+      "family": "portfolio",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied additional-geometry allocation beat the additional-model-evidence allocation?",
+      "when": "Allocate workers and diversity",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "alternatives",
+        "allocationPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Compare the named plans under the same declared monetary or compute constraint; geometry plan reaches target sooner. Report resource mismatch if budgets cannot be matched.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "portfolio_overlap_wait_casual",
+      "hypothesis": "portfolio_overlap_wait",
+      "family": "portfolio",
+      "style": "casual",
+      "type": "noul",
+      "question": "Can we get useful work done while Jev is thinking?",
+      "when": "Allocate workers and diversity",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "alternatives",
+        "allocationPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Actual concurrent execution reduces end-to-end target time versus sequential execution with identical work, worker limits and quality; include contention and discarded work.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "portfolio_overlap_wait_technical",
+      "hypothesis": "portfolio_overlap_wait",
+      "family": "portfolio",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will executing the supplied independent geometry task during the model wait reduce time to the target?",
+      "when": "Allocate workers and diversity",
+      "requires": [
+        "incumbent",
+        "objective",
+        "searchHistory",
+        "alternatives",
+        "allocationPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Actual concurrent execution reduces end-to-end target time versus sequential execution with identical work, worker limits and quality; include contention and discarded work.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "job_strategy_greedy_enough_casual",
+      "hypothesis": "job_strategy_greedy_enough",
+      "family": "job_strategy",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is this one simple enough that a quick sensible arrangement will do?",
+      "when": "Choose the initial strategy from job evidence",
+      "requires": [
+        "jobEvidence",
+        "objective",
+        "strategyPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Fast strategy is within objective.acceptableGap of the independent reference under the stated constraints; reference outcomes withheld.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "job_strategy_greedy_enough_technical",
+      "hypothesis": "job_strategy_greedy_enough",
+      "family": "job_strategy",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied fast deterministic strategy achieve acceptable reference quality?",
+      "when": "Choose the initial strategy from job evidence",
+      "requires": [
+        "jobEvidence",
+        "objective",
+        "strategyPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Fast strategy is within objective.acceptableGap of the independent reference under the stated constraints; reference outcomes withheld.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "job_strategy_ga_worth_it_casual",
+      "hypothesis": "job_strategy_ga_worth_it",
+      "family": "job_strategy",
+      "style": "casual",
+      "type": "noul",
+      "question": "Does this job actually need a proper search?",
+      "when": "Choose the initial strategy from job evidence",
+      "requires": [
+        "jobEvidence",
+        "objective",
+        "strategyPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "GA reaches objective.minimumUsefulGain over fast baseline within actionProtocol.deadlineMs; also report time-to-target and CPU-seconds.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "job_strategy_ga_worth_it_technical",
+      "hypothesis": "job_strategy_ga_worth_it",
+      "family": "job_strategy",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied GA search improve enough over the fast baseline to justify its cost?",
+      "when": "Choose the initial strategy from job evidence",
+      "requires": [
+        "jobEvidence",
+        "objective",
+        "strategyPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "GA reaches objective.minimumUsefulGain over fast baseline within actionProtocol.deadlineMs; also report time-to-target and CPU-seconds.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "job_strategy_order_matters_casual",
+      "hypothesis": "job_strategy_order_matters",
+      "family": "job_strategy",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is getting the queue in the right order the main thing here?",
+      "when": "Choose the initial strategy from job evidence",
+      "requires": [
+        "jobEvidence",
+        "objective",
+        "strategyPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Matched strategyPlans.orderOnly beats strategyPlans.rotationOnly on final valid objective.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "job_strategy_order_matters_technical",
+      "hypothesis": "job_strategy_order_matters",
+      "family": "job_strategy",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied order-only strategy outperform the rotation-only strategy under equal budget?",
+      "when": "Choose the initial strategy from job evidence",
+      "requires": [
+        "jobEvidence",
+        "objective",
+        "strategyPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Matched strategyPlans.orderOnly beats strategyPlans.rotationOnly on final valid objective.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "job_strategy_rotation_matters_casual",
+      "hypothesis": "job_strategy_rotation_matters",
+      "family": "job_strategy",
+      "style": "casual",
+      "type": "noul",
+      "question": "Are we wasting time shuffling when turning the pieces is what matters?",
+      "when": "Choose the initial strategy from job evidence",
+      "requires": [
+        "jobEvidence",
+        "objective",
+        "strategyPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Matched strategyPlans.rotationOnly beats strategyPlans.orderOnly; allowed rotations identical across strategies.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "job_strategy_rotation_matters_technical",
+      "hypothesis": "job_strategy_rotation_matters",
+      "family": "job_strategy",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied rotation-only strategy outperform the order-only strategy under equal budget?",
+      "when": "Choose the initial strategy from job evidence",
+      "requires": [
+        "jobEvidence",
+        "objective",
+        "strategyPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "Matched strategyPlans.rotationOnly beats strategyPlans.orderOnly; allowed rotations identical across strategies.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "job_strategy_repeat_job_casual",
+      "hypothesis": "job_strategy_repeat_job",
+      "family": "job_strategy",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is this really a repeat-pattern job wearing a complicated disguise?",
+      "when": "Choose the initial strategy from job evidence",
+      "requires": [
+        "jobEvidence",
+        "objective",
+        "strategyPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "strategyPlans.pattern reaches quality within objective.regretTolerance of general search sooner, including pattern discovery and validation costs.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "job_strategy_repeat_job_technical",
+      "hypothesis": "job_strategy_repeat_job",
+      "family": "job_strategy",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied repeated-pattern strategy beat the general search at acceptable quality?",
+      "when": "Choose the initial strategy from job evidence",
+      "requires": [
+        "jobEvidence",
+        "objective",
+        "strategyPlans",
+        "actionProtocol"
+      ],
+      "labelDefinition": "strategyPlans.pattern reaches quality within objective.regretTolerance of general search sooner, including pattern discovery and validation costs.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "trust_checks_fragile_casual",
+      "hypothesis": "trust_checks_fragile",
+      "family": "trust_checks",
+      "style": "casual",
+      "type": "noul",
+      "question": "Would a tiny change knock this apparent winner off its perch?",
+      "when": "Decide whether to trust or defer a prediction",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "robustnessPlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Winner changes in at least thresholds.reversalFraction of the predeclared perturbations after matched completions.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "trust_checks_fragile_technical",
+      "hypothesis": "trust_checks_fragile",
+      "family": "trust_checks",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied legal perturbation set reverse the nominated winner frequently?",
+      "when": "Decide whether to trust or defer a prediction",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "robustnessPlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Winner changes in at least thresholds.reversalFraction of the predeclared perturbations after matched completions.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "trust_checks_missing_clue_casual",
+      "hypothesis": "trust_checks_missing_clue",
+      "family": "trust_checks",
+      "style": "casual",
+      "type": "noul",
+      "question": "Are we missing the one bit of information that could change the call?",
+      "when": "Decide whether to trust or defer a prediction",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "robustnessPlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Predeclared evidence ablation yields a changed selection and regret reduction of at least thresholds.regretReduction; future outcomes never enter the added evidence.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "trust_checks_missing_clue_technical",
+      "hypothesis": "trust_checks_missing_clue",
+      "family": "trust_checks",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will adding the specified withheld evidence change the frozen selection and reduce regret?",
+      "when": "Decide whether to trust or defer a prediction",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "robustnessPlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Predeclared evidence ablation yields a changed selection and regret reduction of at least thresholds.regretReduction; future outcomes never enter the added evidence.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "trust_checks_trust_arithmetic_casual",
+      "hypothesis": "trust_checks_trust_arithmetic",
+      "family": "trust_checks",
+      "style": "casual",
+      "type": "noul",
+      "question": "Should we just trust the cheap rule on this one?",
+      "when": "Decide whether to trust or defer a prediction",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "robustnessPlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Arithmetic-selected candidate is within objective.regretTolerance of the fully completed candidate set.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "trust_checks_trust_arithmetic_technical",
+      "hypothesis": "trust_checks_trust_arithmetic",
+      "family": "trust_checks",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the supplied arithmetic choice finish within tolerance of the best candidate?",
+      "when": "Decide whether to trust or defer a prediction",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "robustnessPlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Arithmetic-selected candidate is within objective.regretTolerance of the fully completed candidate set.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "trust_checks_trust_model_casual",
+      "hypothesis": "trust_checks_trust_model",
+      "family": "trust_checks",
+      "style": "casual",
+      "type": "noul",
+      "question": "Is this one where Jev can spot something the cheap rule misses?",
+      "when": "Decide whether to trust or defer a prediction",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "robustnessPlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Separately frozen selector predictions, made without these diagnostic answers, are scored on all completed branches; model regret is lower by thresholds.regretReduction.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "trust_checks_trust_model_technical",
+      "hypothesis": "trust_checks_trust_model",
+      "family": "trust_checks",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the separately frozen model selector outperform the arithmetic selector on this state?",
+      "when": "Decide whether to trust or defer a prediction",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "robustnessPlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Separately frozen selector predictions, made without these diagnostic answers, are scored on all completed branches; model regret is lower by thresholds.regretReduction.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "trust_checks_order_bias_casual",
+      "hypothesis": "trust_checks_order_bias",
+      "family": "trust_checks",
+      "style": "casual",
+      "type": "noul",
+      "question": "Would changing the order we show the options change the answer?",
+      "when": "Decide whether to trust or defer a prediction",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "robustnessPlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Run the same question with anonymised identifiers and permutations; a changed semantic choice is true. Report outcome regret separately; disagreement alone is not a quality loss.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    },
+    {
+      "id": "trust_checks_order_bias_technical",
+      "hypothesis": "trust_checks_order_bias",
+      "family": "trust_checks",
+      "style": "technical",
+      "type": "noul",
+      "question": "Will the frozen selector change its semantic choice under the supplied option permutations?",
+      "when": "Decide whether to trust or defer a prediction",
+      "requires": [
+        "subject",
+        "incumbent",
+        "objective",
+        "completionProtocol",
+        "robustnessPlans",
+        "thresholds"
+      ],
+      "labelDefinition": "Run the same question with anonymised identifiers and permutations; a changed semantic choice is true. Report outcome regret separately; disagreement alone is not a quality loss.",
+      "decisionRole": "Research prediction only; thresholds and actions must be frozen before evaluation. Never override geometry validity.",
+      "evidenceView": "Required fields only; no outcomes or future observations."
+    }
+  ]
+}
