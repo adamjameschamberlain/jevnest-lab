@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path'),cp=require('node:child_process');
-const {routes,questions,buildPack}=require('../experiments/jev/routes/bank.cjs');
+const {parseRoutes,routes,questions,buildPack}=require('../experiments/jev/routes/bank.cjs');
 const {digest}=require('../experiments/jev/offline.cjs');
 const profile={source:'Test fixture, not experimental data',observedRuns:[{job:'fixture',policy:'control',runtimeMs:1000}],limitations:['No geometry or new intervention results supplied.']};
 test('exactly 2000 unique questions, 200 routes, twenty balanced families',()=>{
@@ -24,4 +24,12 @@ test('partial reporting keeps missing IDs visible and creates ZIP without claimi
   const result=cp.spawnSync(process.execPath,[path.join(__dirname,'../scripts/jev-route-study.cjs'),'report','--study',dir],{encoding:'utf8'});assert.equal(result.status,0,result.stderr);
   const report=JSON.parse(fs.readFileSync(path.join(dir,'route-screening.json')));assert.equal(report.answered,Object.keys(p.request.questions).length);assert.equal(report.missingQuestionIds.length,2000-report.answered);assert.deepEqual(report.measuredSpeedups,[]);assert.ok(fs.existsSync(path.join(dir,'results.zip')));
  }finally{fs.rmSync(dir,{recursive:true,force:true});}
+});
+
+test('Windows CRLF and optional UTF-8 BOM produce identical route definitions',()=>{
+ const lf=fs.readFileSync(path.join(__dirname,'../experiments/jev/routes/routes.tsv'),'utf8').replace(/\r\n/g,'\n');
+ const crlf=lf.replace(/\n/g,'\r\n');
+ assert.deepEqual(parseRoutes(crlf),parseRoutes(lf));assert.deepEqual(parseRoutes('\uFEFF'+crlf),parseRoutes(lf));
+ assert.throws(()=>parseRoutes(lf.replace('intervention','bad_header')),/header/);
+ assert.throws(()=>parseRoutes(lf.replace('stopping\tplateau','stopping')),/columns/);
 });

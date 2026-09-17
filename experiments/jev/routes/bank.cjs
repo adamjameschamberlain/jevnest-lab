@@ -36,13 +36,15 @@ const FAMILY_NEEDS={
  robustness_transfer:'Untouched eligible families, declared perturbations, frozen controller and measured transfer performance.',
  production_objectives:'Real production targets, deadlines, compatibility and commitment rules plus measured process costs.'
 };
-function routes(){
- const lines=fs.readFileSync(path.join(__dirname,'routes.tsv'),'utf8').trim().split('\n');const headers=lines.shift().split('\t');
- const rows=lines.map(line=>Object.fromEntries(line.split('\t').map((s,i)=>[headers[i],s])));
+function parseRoutes(text){
+ const lines=text.replace(/^\uFEFF/,'').trim().split(/\r?\n/),headers=lines.shift().split('\t');
+ assert.deepEqual(headers,['family','id','hook','intervention'],'Invalid routes.tsv header');
+ const rows=lines.map((line,index)=>{const fields=line.split('\t');assert.equal(fields.length,headers.length,'Invalid routes.tsv columns at line '+(index+2));return Object.fromEntries(fields.map((s,i)=>[headers[i],s]));});
  assert.equal(rows.length,200);assert.equal(new Set(rows.map(r=>r.family+'_'+r.id)).size,200);
  for(const r of rows){assert.ok(FAMILY_NEEDS[r.family]);assert.ok(r.hook&&r.intervention);}
  return rows.map(r=>({...r,routeId:r.family+'_'+r.id,requiredStudyEvidence:FAMILY_NEEDS[r.family],implementationStatus:'Proposed route. This pack does not execute or validate the intervention.'}));
 }
+function routes(){return parseRoutes(fs.readFileSync(path.join(__dirname,'routes.tsv'),'utf8'));}
 function questions(){return routes().flatMap(r=>LENSES.map(l=>({id:r.routeId+'_'+l.id,routeId:r.routeId,family:r.family,lens:l.id,type:'noul',question:l.ask(r.hook),event:l.event})));}
 function buildPack(profile,{maxBytes=60000}={}){
  assert.ok(profile?.source&&profile?.observedRuns?.length,'A measured production profile is required');
@@ -62,4 +64,4 @@ function buildPack(profile,{maxBytes=60000}={}){
  const ids=packetList.flatMap(p=>Object.keys(p.request.questions));assert.equal(ids.length,2000);assert.equal(new Set(ids).size,2000);
  return {version:VERSION,mode:'research_route_screening',bankHash:digest({allRoutes,questions:bank}),profileHash:digest(profile),packets:packetList,skipped:[],questionCount:ids.length,coverage:{routes:200,families:20,lenses:10,requested:2000,packed:ids.length,missingQuestionIds:bank.map(q=>q.id).filter(id=>!ids.includes(id)),performanceValidatedRoutes:0},interpretation:'All 2000 are research judgments. Application-state prediction and performance tests require the additional evidence and executable interventions listed per route.'};
 }
-module.exports={VERSION,LENSES,routes,questions,buildPack};
+module.exports={VERSION,LENSES,parseRoutes,routes,questions,buildPack};
