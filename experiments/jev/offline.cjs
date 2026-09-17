@@ -80,7 +80,13 @@ function validateResponse(body,request) {
   assert.ok(withinTolerance || roundingCompatible,
     'Probabilities do not sum to one beyond rounding bounds (sum='+sum+', options='+ids.length+')');
   const probabilityDiagnostics = {sum,normalisation:withinTolerance ? 'within-tolerance' : 'compatible-with-2dp-rounding'};
-  assert.ok(answer.probabilities[answer.choice]+1e-6 >= max,'Choice is not a highest-probability candidate');
+  // The live service has returned an explicit legal choice below its reported
+  // probability maximum. The experiment measures that explicit choice; never
+  // substitute an argmax choice or silently discard this service inconsistency.
+  probabilityDiagnostics.choiceProbability = answer.probabilities[answer.choice];
+  probabilityDiagnostics.maxProbability = max;
+  probabilityDiagnostics.choiceIsArgmax = answer.probabilities[answer.choice]+1e-6 >= max;
+  probabilityDiagnostics.argmaxCandidates = ids.filter(id => answer.probabilities[id]+1e-6 >= max);
   finite(answer.confidence,'confidence');
   assert.ok(answer.confidence >= 0 && answer.confidence <= 1,'Confidence outside [0,1]');
   for(const name of ['input_tokens','output_tokens']) assert.ok(Number.isInteger(body.usage?.[name]) && body.usage[name] >= 0,'Missing/invalid '+name);

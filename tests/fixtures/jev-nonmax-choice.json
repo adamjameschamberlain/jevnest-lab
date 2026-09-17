@@ -1,0 +1,1007 @@
+{
+  "receipt": {
+    "key": "d31:0:0:a02c08116b60b30aff108c376a121370062e99702f4c5229e9afb85bb0eae1a1",
+    "body": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "placement": {
+          "type": "choice",
+          "choice": "d31:c1",
+          "confidence": 0.1,
+          "probabilities": {
+            "d31:c6": 0.01,
+            "d31:c10": 0.03,
+            "d31:c17": 0.07,
+            "d31:c16": 0,
+            "d31:c5": 0.01,
+            "d31:c9": 0.02,
+            "d31:c0": 0.09,
+            "d31:c20": 0.01,
+            "d31:c4": 0.02,
+            "d31:c1": 0.14,
+            "d31:c12": 0.01,
+            "d31:c2": 0.01,
+            "d31:c18": 0.15000000000000002,
+            "d31:c22": 0.01,
+            "d31:c21": 0.01,
+            "d31:c15": 0.02,
+            "d31:c13": 0.02,
+            "d31:c3": 0.05,
+            "d31:c11": 0.12,
+            "d31:c8": 0.05,
+            "d31:c14": 0.01,
+            "d31:c7": 0.01,
+            "d31:c19": 0.13
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 4127,
+        "output_tokens": 287
+      }
+    },
+    "attempts": 1,
+    "latencyMs": 224.01679999998305
+  },
+  "request": {
+    "model": "jev-1.13.0",
+    "state": {
+      "representation": "full-concave-v1",
+      "units": "SVG units, x right and y down. Polygon coordinates already rotated; candidate x/y is translation.",
+      "sheet": [
+        150,
+        159
+      ],
+      "binIndex": 2,
+      "currentPartId": 39,
+      "currentPart": [
+        [
+          0,
+          0
+        ],
+        [
+          -33,
+          0
+        ],
+        [
+          -33,
+          -43
+        ],
+        [
+          -26,
+          -43
+        ],
+        [
+          -26,
+          -13
+        ],
+        [
+          -7,
+          -13
+        ],
+        [
+          -7,
+          -43
+        ],
+        [
+          0,
+          -43
+        ]
+      ],
+      "placed": [
+        [
+          [
+            90,
+            141.5
+          ],
+          [
+            103.415,
+            137.493
+          ],
+          [
+            98.787,
+            129.126
+          ],
+          [
+            112.286,
+            130.636
+          ],
+          [
+            120,
+            124
+          ],
+          [
+            126.246,
+            132.704
+          ],
+          [
+            141.213,
+            129.126
+          ],
+          [
+            137.036,
+            137.384
+          ],
+          [
+            150,
+            141.5
+          ],
+          [
+            137.87,
+            145.818
+          ],
+          [
+            141.213,
+            153.874
+          ],
+          [
+            127.587,
+            152.184
+          ],
+          [
+            120,
+            159
+          ],
+          [
+            112.381,
+            152.23
+          ],
+          [
+            98.787,
+            153.874
+          ],
+          [
+            100.743,
+            146.153
+          ]
+        ],
+        [
+          [
+            35,
+            159
+          ],
+          [
+            0,
+            159
+          ],
+          [
+            0,
+            139
+          ],
+          [
+            27,
+            139
+          ],
+          [
+            27,
+            100
+          ],
+          [
+            35,
+            100
+          ]
+        ],
+        [
+          [
+            57,
+            123
+          ],
+          [
+            51.855,
+            112.987
+          ],
+          [
+            41.444,
+            116.263
+          ],
+          [
+            43.362,
+            105.906
+          ],
+          [
+            35,
+            100
+          ],
+          [
+            43.184,
+            94.017
+          ],
+          [
+            41.444,
+            83.737
+          ],
+          [
+            51.262,
+            85.518
+          ],
+          [
+            57,
+            77
+          ],
+          [
+            61.267,
+            89.231
+          ],
+          [
+            72.556,
+            83.737
+          ],
+          [
+            68.431,
+            95.05
+          ],
+          [
+            79,
+            100
+          ],
+          [
+            70.441,
+            105.82
+          ],
+          [
+            72.556,
+            116.263
+          ],
+          [
+            62.026,
+            112.685
+          ]
+        ],
+        [
+          [
+            35,
+            159
+          ],
+          [
+            35,
+            128
+          ],
+          [
+            49,
+            128
+          ],
+          [
+            49,
+            137
+          ],
+          [
+            88,
+            137
+          ],
+          [
+            88,
+            150
+          ],
+          [
+            49,
+            150
+          ],
+          [
+            49,
+            159
+          ]
+        ],
+        [
+          [
+            46,
+            30
+          ],
+          [
+            10,
+            30
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            36,
+            0
+          ],
+          [
+            36,
+            23
+          ],
+          [
+            46,
+            23
+          ]
+        ],
+        [
+          [
+            150,
+            25
+          ],
+          [
+            98,
+            25
+          ],
+          [
+            98,
+            0
+          ],
+          [
+            114,
+            0
+          ],
+          [
+            114,
+            20
+          ],
+          [
+            134,
+            20
+          ],
+          [
+            134,
+            0
+          ],
+          [
+            150,
+            0
+          ]
+        ],
+        [
+          [
+            106,
+            38
+          ],
+          [
+            80,
+            38
+          ],
+          [
+            80,
+            11
+          ],
+          [
+            72,
+            11
+          ],
+          [
+            72,
+            0
+          ],
+          [
+            98,
+            0
+          ],
+          [
+            98,
+            27
+          ],
+          [
+            106,
+            27
+          ]
+        ]
+      ],
+      "remaining": [
+        {
+          "id": 3,
+          "area": 843,
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              -29,
+              0
+            ],
+            [
+              -29,
+              -12
+            ],
+            [
+              -7,
+              -12
+            ],
+            [
+              -7,
+              -33
+            ],
+            [
+              -29,
+              -33
+            ],
+            [
+              -29,
+              -45
+            ],
+            [
+              0,
+              -45
+            ]
+          ]
+        },
+        {
+          "id": 10,
+          "area": 790,
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              -42,
+              0
+            ],
+            [
+              -42,
+              -10
+            ],
+            [
+              -10,
+              -10
+            ],
+            [
+              -10,
+              -47
+            ],
+            [
+              0,
+              -47
+            ]
+          ]
+        },
+        {
+          "id": 30,
+          "area": 738,
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              31,
+              0
+            ],
+            [
+              31,
+              9
+            ],
+            [
+              10,
+              9
+            ],
+            [
+              10,
+              27
+            ],
+            [
+              31,
+              27
+            ],
+            [
+              31,
+              36
+            ],
+            [
+              0,
+              36
+            ]
+          ]
+        },
+        {
+          "id": 25,
+          "area": 710,
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              -49,
+              0
+            ],
+            [
+              -49,
+              -10
+            ],
+            [
+              -10,
+              -10
+            ],
+            [
+              -10,
+              -32
+            ],
+            [
+              0,
+              -32
+            ]
+          ]
+        },
+        {
+          "id": 26,
+          "area": 680,
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              -25,
+              0
+            ],
+            [
+              -25,
+              -16
+            ],
+            [
+              -8,
+              -16
+            ],
+            [
+              -8,
+              -51
+            ],
+            [
+              0,
+              -51
+            ]
+          ]
+        },
+        {
+          "id": 23,
+          "area": 625,
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              32
+            ],
+            [
+              -9,
+              32
+            ],
+            [
+              -9,
+              7
+            ],
+            [
+              -16,
+              7
+            ],
+            [
+              -16,
+              32
+            ],
+            [
+              -25,
+              32
+            ],
+            [
+              -25,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "area": 588,
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              -30,
+              0
+            ],
+            [
+              -30,
+              -10
+            ],
+            [
+              -8,
+              -10
+            ],
+            [
+              -8,
+              -46
+            ],
+            [
+              0,
+              -46
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "area": 528,
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              -26,
+              0
+            ],
+            [
+              -26,
+              -12
+            ],
+            [
+              -17,
+              -12
+            ],
+            [
+              -17,
+              -39
+            ],
+            [
+              -9,
+              -39
+            ],
+            [
+              -9,
+              -12
+            ],
+            [
+              0,
+              -12
+            ]
+          ]
+        }
+      ],
+      "freeSpaceGrid": [
+        "#####.....#####...##",
+        ".####......####...##",
+        ".####......####...##",
+        ".#####.....###......",
+        "...........###......",
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        ".......#............",
+        "......###...........",
+        ".....#####..........",
+        "....#.###...........",
+        "....#..#.#..........",
+        "....#...............",
+        "....###......####.#.",
+        "############.######.",
+        "############.#####..",
+        "#######........##..."
+      ],
+      "gridLegend": "20x20 cell-centre samples. # occupied, . free. Approximate: narrow gaps and small cavities can be missed. Region metrics are approximate, not fit guarantees.",
+      "candidateColumns": [
+        "id",
+        "x",
+        "y",
+        "width",
+        "height",
+        "boundingScore",
+        "contactLength",
+        "freeRegions",
+        "largestFreeRegionArea",
+        "tinyFreeArea"
+      ],
+      "candidates": [
+        [
+          "d31:c0",
+          150,
+          124,
+          150,
+          159,
+          459,
+          43,
+          3,
+          15741,
+          59.625
+        ],
+        [
+          "d31:c1",
+          120,
+          124,
+          150,
+          159,
+          459,
+          0,
+          1,
+          16218,
+          0
+        ],
+        [
+          "d31:c2",
+          114.0413,
+          129.126,
+          150,
+          159,
+          459,
+          0,
+          1,
+          16456.5,
+          0
+        ],
+        [
+          "d31:c3",
+          112,
+          129.126,
+          150,
+          159,
+          459,
+          0,
+          1,
+          16695,
+          0
+        ],
+        [
+          "d31:c4",
+          112,
+          100,
+          150,
+          159,
+          459,
+          0,
+          1,
+          16456.5,
+          0
+        ],
+        [
+          "d31:c5",
+          105.556,
+          96.9819,
+          150,
+          159,
+          459,
+          0,
+          1,
+          16456.5,
+          0
+        ],
+        [
+          "d31:c6",
+          105.556,
+          83.737,
+          150,
+          159,
+          459,
+          0,
+          2,
+          15741,
+          0
+        ],
+        [
+          "d31:c7",
+          92.3503,
+          83.737,
+          150,
+          159,
+          459,
+          0,
+          2,
+          9182.25,
+          0
+        ],
+        [
+          "d31:c8",
+          91.3955,
+          81,
+          150,
+          159,
+          459,
+          7,
+          2,
+          9420.75,
+          0
+        ],
+        [
+          "d31:c9",
+          139,
+          81,
+          150,
+          159,
+          459,
+          0,
+          1,
+          16396.875,
+          0
+        ],
+        [
+          "d31:c10",
+          139,
+          68,
+          150,
+          159,
+          459,
+          25,
+          2,
+          14846.625,
+          0
+        ],
+        [
+          "d31:c11",
+          150,
+          68,
+          150,
+          159,
+          459,
+          57,
+          1,
+          16218,
+          0
+        ],
+        [
+          "d31:c12",
+          80,
+          77,
+          150,
+          159,
+          459,
+          4,
+          3,
+          9718.875,
+          0
+        ],
+        [
+          "d31:c13",
+          57,
+          77,
+          150,
+          159,
+          459,
+          0,
+          2,
+          12819.375,
+          0
+        ],
+        [
+          "d31:c14",
+          52.4617,
+          83.737,
+          150,
+          159,
+          459,
+          0,
+          1,
+          16218,
+          0
+        ],
+        [
+          "d31:c15",
+          41.444,
+          83.737,
+          150,
+          159,
+          459,
+          0,
+          1,
+          16098.75,
+          0
+        ],
+        [
+          "d31:c16",
+          41.444,
+          95.289,
+          150,
+          159,
+          459,
+          0,
+          1,
+          16218,
+          0
+        ],
+        [
+          "d31:c17",
+          35,
+          100,
+          150,
+          159,
+          459,
+          8,
+          2,
+          15144.75,
+          0
+        ],
+        [
+          "d31:c18",
+          33,
+          100,
+          150,
+          159,
+          459,
+          49,
+          2,
+          15264,
+          0
+        ],
+        [
+          "d31:c19",
+          33,
+          73,
+          150,
+          159,
+          459,
+          50,
+          3,
+          15800.625,
+          0
+        ],
+        [
+          "d31:c20",
+          79,
+          73,
+          150,
+          159,
+          459,
+          0,
+          2,
+          14369.625,
+          0
+        ],
+        [
+          "d31:c21",
+          79,
+          54,
+          150,
+          159,
+          459,
+          14,
+          2,
+          14965.875,
+          0
+        ],
+        [
+          "d31:c22",
+          80,
+          54,
+          150,
+          159,
+          459,
+          34,
+          2,
+          14965.875,
+          0
+        ]
+      ]
+    },
+    "questions": {
+      "placement": {
+        "type": "choice",
+        "instructions": "Choose the legal placement most likely to minimise final sheet count for ALL remaining parts, then occupied width. Every option is geometrically legal. Preserve usable space for the actual remaining outlines; consider interlocking concavities, contact length, compactness and fragmentation together. A lower bounding score is only a greedy proxy and may be worse long term. Grid-derived metrics are approximate. Do not judge geometric validity or invent coordinates. Pick exactly one supplied ID.",
+        "criteria": {
+          "d31:c0": "Place at candidate d31:c0; see its feature row and the shared geometry.",
+          "d31:c1": "Place at candidate d31:c1; see its feature row and the shared geometry.",
+          "d31:c2": "Place at candidate d31:c2; see its feature row and the shared geometry.",
+          "d31:c3": "Place at candidate d31:c3; see its feature row and the shared geometry.",
+          "d31:c4": "Place at candidate d31:c4; see its feature row and the shared geometry.",
+          "d31:c5": "Place at candidate d31:c5; see its feature row and the shared geometry.",
+          "d31:c6": "Place at candidate d31:c6; see its feature row and the shared geometry.",
+          "d31:c7": "Place at candidate d31:c7; see its feature row and the shared geometry.",
+          "d31:c8": "Place at candidate d31:c8; see its feature row and the shared geometry.",
+          "d31:c9": "Place at candidate d31:c9; see its feature row and the shared geometry.",
+          "d31:c10": "Place at candidate d31:c10; see its feature row and the shared geometry.",
+          "d31:c11": "Place at candidate d31:c11; see its feature row and the shared geometry.",
+          "d31:c12": "Place at candidate d31:c12; see its feature row and the shared geometry.",
+          "d31:c13": "Place at candidate d31:c13; see its feature row and the shared geometry.",
+          "d31:c14": "Place at candidate d31:c14; see its feature row and the shared geometry.",
+          "d31:c15": "Place at candidate d31:c15; see its feature row and the shared geometry.",
+          "d31:c16": "Place at candidate d31:c16; see its feature row and the shared geometry.",
+          "d31:c17": "Place at candidate d31:c17; see its feature row and the shared geometry.",
+          "d31:c18": "Place at candidate d31:c18; see its feature row and the shared geometry.",
+          "d31:c19": "Place at candidate d31:c19; see its feature row and the shared geometry.",
+          "d31:c20": "Place at candidate d31:c20; see its feature row and the shared geometry.",
+          "d31:c21": "Place at candidate d31:c21; see its feature row and the shared geometry.",
+          "d31:c22": "Place at candidate d31:c22; see its feature row and the shared geometry."
+        }
+      }
+    }
+  }
+}

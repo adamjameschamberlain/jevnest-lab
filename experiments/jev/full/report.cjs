@@ -16,14 +16,14 @@ function aggregate(out,metadata) {
    jevRuntimeMs:t.jev.runtimeMs,classicGaTimeToJevQualityMs:t.ga.timeToJevQualityMs,apiMs:t.jev.apiMs,calls:t.jev.calls}));
  const perJob=Object.values(Object.groupBy ? Object.groupBy(pairs,p=>p.job) : pairs.reduce((o,p)=>((o[p.job]??=[]).push(p),o),{})).map(rows=>mean(rows.map(r=>r.utilisationDeltaPoints)));
  let ci=null;
- if(perJob.length>=2) {const random=rng(99),samples=Array.from({length:2000},()=>mean(perJob.map(()=>perJob[Math.floor(random()*perJob.length)]))).sort((a,b)=>a-b);ci=[samples[49],samples[1949]];}
+ if(live.length===metadata.expectedTrials && perJob.length>=10) {const random=rng(99),samples=Array.from({length:2000},()=>mean(perJob.map(()=>perJob[Math.floor(random()*perJob.length)]))).sort((a,b)=>a-b);ci=[samples[49],samples[1949]];}
  const totalScore=trials.reduce((s,t)=>s+t.classic.profile.scoreLoopsMs,0),totalClassic=trials.reduce((s,t)=>s+t.classic.runtimeMs,0);
  const summary={status:live.length===metadata.expectedTrials?'complete-live-comparison':live.length?'partial-live-comparison':'classic-only-no-model-conclusion',expectedTrials:metadata.expectedTrials,completedTrials:trials.length,
   completedNests:trials.reduce((s,t)=>s+2+t.ga.evaluations+(t.jev?1:0),0),policies,
   profiling:{classicMeanNfpMs:mean(trials.map(t=>t.classic.profile.nfpMs)),classicMeanScoreLoopMs:mean(trials.map(t=>t.classic.profile.scoreLoopsMs)),
     classicMeanEvaluationMs:mean(trials.map(t=>t.classic.profile.evaluationMs)),scoreLoopShareOfColdRuntime:totalScore/totalClassic,
     theoreticalSpeedupRemovingWholeScoreLoop:totalClassic/(totalClassic-totalScore),note:'Score loop includes bounding-box construction and comparison. Jev still needs candidate features, so this zero-cost removal ceiling is optimistic. Runtime includes VM setup; GA is stock algorithm in Node, without browser worker parallelism.'},
-  pairedAgainstGaAtJevBudget:{n:pairs.length,wins:pairs.filter(p=>p.outcome<0).length,ties:pairs.filter(p=>p.outcome===0).length,losses:pairs.filter(p=>p.outcome>0).length,meanUtilisationDeltaPoints:mean(pairs.map(p=>p.utilisationDeltaPoints)),jobClusterBootstrap95Percent:ci,
+  pairedAgainstGaAtJevBudget:{n:pairs.length,wins:pairs.filter(p=>p.outcome<0).length,ties:pairs.filter(p=>p.outcome===0).length,losses:pairs.filter(p=>p.outcome>0).length,meanUtilisationDeltaPoints:mean(pairs.map(p=>p.utilisationDeltaPoints)),jobClusterBootstrap95Percent:ci,intervalStatus:ci?'available':'Requires the complete live suite and at least 10 independent jobs',
    fasterToSameQuality:pairs.filter(p=>p.classicGaTimeToJevQualityMs!==null&&p.jevRuntimeMs<p.classicGaTimeToJevQualityMs).length,
    gaDidNotReachJevQuality:pairs.filter(p=>p.classicGaTimeToJevQualityMs===null).length},
   proceedDecision:live.length!==metadata.expectedTrials?'INCOMPLETE: no proceed/stop conclusion until the full live suite finishes.':ci&&ci[0]>0?'Promising quality signal against equal-time GA; confirm on real production jobs before proceeding.':'No established equal-time quality advantage on this suite; inspect runtime-to-quality and failure cases before further investment.',

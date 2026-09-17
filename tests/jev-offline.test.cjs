@@ -61,7 +61,9 @@ test('only legal candidate IDs with complete sane distributions are accepted',()
   const confidence = response();confidence.answers.placement.confidence = 2;
   assert.throws(() => validateResponse(confidence,request),/Confidence/);
   const wrongMax = response();wrongMax.answers.placement.choice = decision.candidates[1].id;
-  assert.throws(() => validateResponse(wrongMax,request),/highest-probability/);
+  const mismatch=validateResponse(wrongMax,request);
+  assert.equal(mismatch.choice,wrongMax.answers.placement.choice);
+  assert.equal(mismatch.probabilityDiagnostics.choiceIsArgmax,false);
 });
 test('HTTP request uses documented schema and bounded rate-limit retry',async () => {
   let calls = 0;

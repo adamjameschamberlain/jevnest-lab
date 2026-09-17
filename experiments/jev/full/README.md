@@ -127,8 +127,9 @@ validation for every policy. No full live Jev outcome has been measured here.
 The adapter retains the API's reported probabilities unchanged. A sum outside
 0.001 tolerance is accepted only if the values are on a two-decimal grid and
 there exists a normalised distribution within their individual rounding bounds.
-The selected ID, option set, finite values, ranges and highest-probability choice
-are still validated. `probabilityDiagnostics` records the sum and acceptance rule.
+The selected ID, option set, finite values and ranges are still validated.
+The explicit API choice is preserved when it disagrees with the reported maximum;
+the discrepancy is recorded in `probabilityDiagnostics`, not silently corrected. `probabilityDiagnostics` records the sum and acceptance rule.
 This handles rounding-compatible responses; it does not prove that rounding was
 the cause of any particular failed response. Grossly invalid distributions stop.
 
@@ -142,3 +143,22 @@ configuration and all geometry/request sources match and no trial has completed.
 Both LF and Windows CRLF source hashes are supported. The previous hashes are
 retained in metadata's migration history. Other changes still require a new run
 directory. Decision traces are regenerated on resume, avoiding duplicate rows.
+
+## Explicit choice versus reported probabilities
+
+A real response in trial 15 selected `d31:c1` with probability 0.14 while reporting
+0.15 for `d31:c18`. This contradicts the documented argmax relationship. The
+benchmark follows the service's explicit legal `choice` and records
+`choiceIsArgmax`, `choiceProbability`, `maxProbability` and `argmaxCandidates`.
+It does not replace the selected ID, renormalise probabilities, or treat the
+inconsistent probabilities as calibrated evidence. Geometry validation remains
+unchanged. The raw response is retained.
+
+Runs from revision `930dfc7` can migrate with completed trials: the API choice,
+request representation and geometry remain unchanged, and the migration records
+previous hashes plus the number of completed trials retained. It rejects any
+configuration or geometry changes. The already-paid rejected response is recovered
+from `responses.ndjson`, so it does not require a replacement API call.
+
+Partial runs no longer display a bootstrap interval. The full live suite and at
+least ten independent jobs are required before displaying that interval.

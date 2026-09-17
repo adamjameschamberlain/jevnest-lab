@@ -1,0 +1,207 @@
+{
+  "status": "partial-live-comparison",
+  "expectedTrials": 100,
+  "completedTrials": 14,
+  "completedNests": 464,
+  "policies": {
+    "classic": {
+      "n": 14,
+      "meanUtilisation": 0.4946120407386355,
+      "meanBins": 3.2857142857142856,
+      "medianRuntimeMs": 1922.831050000008,
+      "allValid": true
+    },
+    "contact": {
+      "n": 14,
+      "meanUtilisation": 0.47383426530337125,
+      "meanBins": 3.4285714285714284,
+      "medianRuntimeMs": 1917.7367999999988,
+      "allValid": true
+    },
+    "ga": {
+      "n": 14,
+      "meanUtilisation": 0.5153898161738999,
+      "meanBins": 3.142857142857143,
+      "medianRuntimeMs": 12009.525549999991,
+      "allValid": true
+    },
+    "jev": {
+      "n": 14,
+      "meanUtilisation": 0.5153898161738999,
+      "meanBins": 3.142857142857143,
+      "medianRuntimeMs": 10832.532599999995,
+      "allValid": true
+    }
+  },
+  "profiling": {
+    "classicMeanNfpMs": 1451.601728571428,
+    "classicMeanScoreLoopMs": 2.4879928571674026,
+    "classicMeanEvaluationMs": 1497.090535714287,
+    "scoreLoopShareOfColdRuntime": 0.0016463293690695251,
+    "theoreticalSpeedupRemovingWholeScoreLoop": 1.0016490442390311,
+    "note": "Score loop includes bounding-box construction and comparison. Jev still needs candidate features, so this zero-cost removal ceiling is optimistic. Runtime includes VM setup; GA is stock algorithm in Node, without browser worker parallelism."
+  },
+  "pairedAgainstGaAtJevBudget": {
+    "n": 14,
+    "wins": 1,
+    "ties": 12,
+    "losses": 1,
+    "meanUtilisationDeltaPoints": 0,
+    "jobClusterBootstrap95Percent": [
+      0,
+      0
+    ],
+    "fasterToSameQuality": 0,
+    "gaDidNotReachJevQuality": 1
+  },
+  "proceedDecision": "INCOMPLETE: no proceed/stop conclusion until the full live suite finishes.",
+  "limitations": [
+    "Synthetic concave polygons, 90-degree rotations, zero spacing, no holes. Not evidence on all production jobs.",
+    "Full Jev rollout changes placement selection only; order and rotations match Classic first evaluation. GA may change both.",
+    "Candidate feature extraction and original score computation remain costs of the Jev policy.",
+    "API timeout/failure stops rather than silently substituting Classic. Successful calls are cached for resume; resumed timing reconstructs original API latency.",
+    "Any GA evaluation finishing after a deadline is excluded from that deadline comparison."
+  ],
+  "pairs": [
+    {
+      "job": "hard-01",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6757.764599999999,
+      "classicGaTimeToJevQualityMs": 146.01899999999978,
+      "apiMs": 6549.726399999999,
+      "calls": 20
+    },
+    {
+      "job": "hard-01",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 5401.127499999999,
+      "classicGaTimeToJevQualityMs": 145.01339999999982,
+      "apiMs": 5200.898800000001,
+      "calls": 20
+    },
+    {
+      "job": "hard-01",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 5665.1296,
+      "classicGaTimeToJevQualityMs": 150.91040000000066,
+      "apiMs": 5464.3836999999985,
+      "calls": 20
+    },
+    {
+      "job": "hard-01",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 5713.4259999999995,
+      "classicGaTimeToJevQualityMs": 143.97350000000006,
+      "apiMs": 5520.083099999989,
+      "calls": 20
+    },
+    {
+      "job": "hard-01",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 5610.369999999995,
+      "classicGaTimeToJevQualityMs": 147.03600000000006,
+      "apiMs": 5399.409399999997,
+      "calls": 20
+    },
+    {
+      "job": "hard-02",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 10693.355900000002,
+      "classicGaTimeToJevQualityMs": 3076.4925999999978,
+      "apiMs": 8216.561799999967,
+      "calls": 30
+    },
+    {
+      "job": "hard-02",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 10445.665599999993,
+      "classicGaTimeToJevQualityMs": 2473.032500000001,
+      "apiMs": 7972.561899999986,
+      "calls": 30
+    },
+    {
+      "job": "hard-02",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 11403.554899999988,
+      "classicGaTimeToJevQualityMs": 2425.3294999999925,
+      "apiMs": 8751.125599999985,
+      "calls": 30
+    },
+    {
+      "job": "hard-02",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 10971.709299999988,
+      "classicGaTimeToJevQualityMs": 2484.3406999999715,
+      "apiMs": 8105.48060000001,
+      "calls": 30
+    },
+    {
+      "job": "hard-02",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 11583.739499999996,
+      "classicGaTimeToJevQualityMs": 2652.11050000001,
+      "apiMs": 8833.34209999995,
+      "calls": 30
+    },
+    {
+      "job": "hard-03",
+      "seed": 1,
+      "outcome": -1,
+      "utilisationDeltaPoints": 15.460221361809928,
+      "jevRuntimeMs": 13585.567500000005,
+      "classicGaTimeToJevQualityMs": null,
+      "apiMs": 11541.086899999995,
+      "calls": 40
+    },
+    {
+      "job": "hard-03",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 13035.266999999993,
+      "classicGaTimeToJevQualityMs": 1884.059099999984,
+      "apiMs": 10999.18180000002,
+      "calls": 40
+    },
+    {
+      "job": "hard-03",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 12982.768899999995,
+      "classicGaTimeToJevQualityMs": 1920.1324000000022,
+      "apiMs": 10230.525399999751,
+      "calls": 40
+    },
+    {
+      "job": "hard-03",
+      "seed": 4,
+      "outcome": 1,
+      "utilisationDeltaPoints": -15.460221361809928,
+      "jevRuntimeMs": 13195.157200000016,
+      "classicGaTimeToJevQualityMs": 1878.4304999999586,
+      "apiMs": 10729.166499999992,
+      "calls": 40
+    }
+  ]
+}
