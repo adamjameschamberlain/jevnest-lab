@@ -1,0 +1,71 @@
+[
+  {
+    "caseId": "shirts-roll-500-p3-prefix16",
+    "proposalDigest": "425d7f08b21faad2bd109d8f3c5c813954ed39b5da54e03d0f6d4a52c572b86f",
+    "outcome": {
+      "status": "complete",
+      "metrics": {
+        "unplaced": 0,
+        "bins": 1,
+        "length": 13885.5784091,
+        "occupiedLength": 13865.5784091,
+        "fitness": 1.0000601573987429,
+        "utilisation": 0.7689676771845636
+      },
+      "validation": {
+        "valid": true,
+        "checks": 125250,
+        "areaTolerance": 0.0001,
+        "violations": []
+      },
+      "elapsedMs": 30098.006165000003,
+      "source": "Fresh local frozen-engine completion; quality label only, not Windows benchmark timing."
+    }
+  },
+  {
+    "caseId": "blaz-roll-250-p2-prefix16",
+    "proposalDigest": "f836b6e0601957b049ecca8a9e0b755f1c93651602f58a2d340c2c00c76153c6",
+    "outcome": {
+      "status": "complete",
+      "metrics": {
+        "unplaced": 0,
+        "bins": 1,
+        "length": 28936.8421519,
+        "occupiedLength": 28916.8421519,
+        "fitness": 1.0001711449923631,
+        "utilisation": 0.6955209125987788
+      },
+      "validation": {
+        "valid": true,
+        "checks": 31375,
+        "areaTolerance": 0.0001,
+        "violations": []
+      },
+      "elapsedMs": 11189.591624,
+      "source": "Fresh local frozen-engine completion; quality label only, not Windows benchmark timing."
+    }
+  },
+  {
+    "caseId": "blaz-roll-250-p4-prefix16",
+    "proposalDigest": "a48c375d88053be6ff5610240b5858bcb0531b7a9889ef47ee12886e39892e54",
+    "outcome": {
+      "status": "complete",
+      "metrics": {
+        "unplaced": 0,
+        "bins": 1,
+        "length": 28039.3035796,
+        "occupiedLength": 28019.3035796,
+        "fitness": 1.0001658328897727,
+        "utilisation": 0.7177845485384678
+      },
+      "validation": {
+        "valid": true,
+        "checks": 31375,
+        "areaTolerance": 0.0001,
+        "violations": []
+      },
+      "elapsedMs": 9632.347102000002,
+      "source": "Fresh local frozen-engine completion; quality label only, not Windows benchmark timing."
+    }
+  }
+]

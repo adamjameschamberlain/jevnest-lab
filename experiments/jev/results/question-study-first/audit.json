@@ -1,0 +1,533 @@
+{
+  "metrics": {
+    "albano-sheet-500-p1-prefix16": {
+      "unplaced": 0,
+      "bins": 35,
+      "length": null,
+      "occupiedLength": 78960.46714759998,
+      "fitness": 35.02014092111713,
+      "utilisation": 0.6768150847597435
+    },
+    "albano-sheet-500-p2-prefix16": {
+      "unplaced": 0,
+      "bins": 37,
+      "length": null,
+      "occupiedLength": 77790.73047349998,
+      "fitness": 37.01984254935046,
+      "utilisation": 0.640230485583536
+    },
+    "albano-sheet-500-p3-prefix16": {
+      "unplaced": 0,
+      "bins": 35,
+      "length": null,
+      "occupiedLength": 78079.45552100001,
+      "fitness": 35.01991619618432,
+      "utilisation": 0.6768150847597396
+    },
+    "albano-sheet-500-p4-prefix16": {
+      "unplaced": 0,
+      "bins": 33,
+      "length": null,
+      "occupiedLength": 74611.99108220002,
+      "fitness": 33.018447182939,
+      "utilisation": 0.7178341808057894
+    },
+    "blaz-roll-250-p1-prefix16": {
+      "unplaced": 0,
+      "bins": 1,
+      "length": 28073.2466014,
+      "occupiedLength": 28053.2466014,
+      "fitness": 1.0001660337823244,
+      "utilisation": 0.7169166839510656
+    },
+    "blaz-roll-250-p2-prefix16": {
+      "unplaced": 0,
+      "bins": 1,
+      "length": 28936.8421519,
+      "occupiedLength": 28916.8421519,
+      "fitness": 1.0001711449923631,
+      "utilisation": 0.6955209125987788
+    },
+    "blaz-roll-250-p3-prefix16": {
+      "unplaced": 0,
+      "bins": 1,
+      "length": 27674.3022017,
+      "occupiedLength": 27654.3022017,
+      "fitness": 1.0001636726207606,
+      "utilisation": 0.7272515387932664
+    },
+    "blaz-roll-250-p4-prefix16": {
+      "unplaced": 0,
+      "bins": 1,
+      "length": 28039.3035796,
+      "occupiedLength": 28019.3035796,
+      "fitness": 1.0001658328897727,
+      "utilisation": 0.7177845485384678
+    },
+    "shirts-roll-500-p1-prefix16": {
+      "unplaced": 0,
+      "bins": 1,
+      "length": 13550.6261159,
+      "occupiedLength": 13530.6261159,
+      "fitness": 1.000058704169886,
+      "utilisation": 0.7879754694936897
+    },
+    "shirts-roll-500-p2-prefix16": {
+      "unplaced": 0,
+      "bins": 1,
+      "length": 13406.8142511,
+      "occupiedLength": 13386.8142511,
+      "fitness": 1.0000580802256525,
+      "utilisation": 0.7964279041707231
+    },
+    "shirts-roll-500-p3-prefix16": {
+      "unplaced": 0,
+      "bins": 1,
+      "length": 13885.5784091,
+      "occupiedLength": 13865.5784091,
+      "fitness": 1.0000601573987429,
+      "utilisation": 0.7689676771845636
+    },
+    "shirts-roll-500-p4-prefix16": {
+      "unplaced": 0,
+      "bins": 1,
+      "length": 13457.4462824,
+      "occupiedLength": 13437.4462824,
+      "fitness": 1.0000582998985146,
+      "utilisation": 0.7934314394829983
+    },
+    "shirts-sheet-100-p1-prefix16": {
+      "unplaced": 0,
+      "bins": 2,
+      "length": null,
+      "occupiedLength": 2781.1676335,
+      "fitness": 2.000709409150469,
+      "utilisation": 0.4407237105157937
+    },
+    "shirts-sheet-100-p2-prefix16": {
+      "unplaced": 0,
+      "bins": 2,
+      "length": null,
+      "occupiedLength": 2930.5612100999997,
+      "fitness": 2.000747515868304,
+      "utilisation": 0.4407237105157937
+    },
+    "shirts-sheet-100-p3-prefix16": {
+      "unplaced": 0,
+      "bins": 2,
+      "length": null,
+      "occupiedLength": 2938.1416027000005,
+      "fitness": 2.000133518172763,
+      "utilisation": 0.4407237105157937
+    },
+    "shirts-sheet-100-p4-prefix16": {
+      "unplaced": 0,
+      "bins": 2,
+      "length": null,
+      "occupiedLength": 2890.2147913,
+      "fitness": 2.000737224464672,
+      "utilisation": 0.4407237105157937
+    }
+  },
+  "labels": {
+    "albano-sheet-500-p1-prefix16": {
+      "beat_best": false,
+      "save_material": false,
+      "small_win": false,
+      "hit_target": false,
+      "avoid_bad_tail": true
+    },
+    "albano-sheet-500-p2-prefix16": {
+      "beat_best": false,
+      "save_material": false,
+      "small_win": false,
+      "hit_target": false,
+      "avoid_bad_tail": true
+    },
+    "albano-sheet-500-p3-prefix16": {
+      "beat_best": false,
+      "save_material": false,
+      "small_win": false,
+      "hit_target": false,
+      "avoid_bad_tail": true
+    },
+    "albano-sheet-500-p4-prefix16": {
+      "beat_best": true,
+      "save_material": true,
+      "small_win": true,
+      "hit_target": true,
+      "avoid_bad_tail": false
+    },
+    "blaz-roll-250-p1-prefix16": {
+      "beat_best": true,
+      "save_material": true,
+      "small_win": true,
+      "hit_target": true,
+      "avoid_bad_tail": false
+    },
+    "blaz-roll-250-p2-prefix16": {
+      "beat_best": true,
+      "save_material": true,
+      "small_win": true,
+      "hit_target": true,
+      "avoid_bad_tail": false
+    },
+    "blaz-roll-250-p3-prefix16": {
+      "beat_best": true,
+      "save_material": true,
+      "small_win": true,
+      "hit_target": true,
+      "avoid_bad_tail": false
+    },
+    "blaz-roll-250-p4-prefix16": {
+      "beat_best": true,
+      "save_material": true,
+      "small_win": true,
+      "hit_target": true,
+      "avoid_bad_tail": false
+    },
+    "shirts-roll-500-p1-prefix16": {
+      "beat_best": true,
+      "save_material": true,
+      "small_win": true,
+      "hit_target": true,
+      "avoid_bad_tail": false
+    },
+    "shirts-roll-500-p2-prefix16": {
+      "beat_best": true,
+      "save_material": true,
+      "small_win": true,
+      "hit_target": true,
+      "avoid_bad_tail": false
+    },
+    "shirts-roll-500-p3-prefix16": {
+      "beat_best": true,
+      "save_material": true,
+      "small_win": true,
+      "hit_target": true,
+      "avoid_bad_tail": false
+    },
+    "shirts-roll-500-p4-prefix16": {
+      "beat_best": true,
+      "save_material": true,
+      "small_win": true,
+      "hit_target": true,
+      "avoid_bad_tail": false
+    },
+    "shirts-sheet-100-p1-prefix16": {
+      "beat_best": true,
+      "save_material": false,
+      "small_win": false,
+      "hit_target": false,
+      "avoid_bad_tail": false
+    },
+    "shirts-sheet-100-p2-prefix16": {
+      "beat_best": false,
+      "save_material": false,
+      "small_win": false,
+      "hit_target": false,
+      "avoid_bad_tail": true
+    },
+    "shirts-sheet-100-p3-prefix16": {
+      "beat_best": false,
+      "save_material": false,
+      "small_win": false,
+      "hit_target": false,
+      "avoid_bad_tail": true
+    },
+    "shirts-sheet-100-p4-prefix16": {
+      "beat_best": false,
+      "save_material": false,
+      "small_win": false,
+      "hit_target": false,
+      "avoid_bad_tail": true
+    }
+  },
+  "answers": {
+    "shirts-sheet-100-p4-prefix16": {
+      "beat_best_casual": 0.32,
+      "beat_best_technical": 0.37,
+      "save_material_casual": 0.35,
+      "save_material_technical": 0.31,
+      "small_win_casual": 0.35,
+      "small_win_technical": 0.35,
+      "hit_target_casual": 0.23,
+      "hit_target_technical": 0.29,
+      "avoid_bad_tail_casual": 0.63,
+      "avoid_bad_tail_technical": 0.48
+    },
+    "albano-sheet-500-p1-prefix16": {
+      "beat_best_casual": 0.24,
+      "beat_best_technical": 0.27,
+      "save_material_casual": 0.36,
+      "save_material_technical": 0.3,
+      "small_win_casual": 0.28,
+      "small_win_technical": 0.29,
+      "hit_target_casual": 0.23,
+      "hit_target_technical": 0.23,
+      "avoid_bad_tail_casual": 0.52,
+      "avoid_bad_tail_technical": 0.52
+    },
+    "albano-sheet-500-p2-prefix16": {
+      "beat_best_casual": 0.22,
+      "beat_best_technical": 0.27,
+      "save_material_casual": 0.34,
+      "save_material_technical": 0.28,
+      "small_win_casual": 0.29,
+      "small_win_technical": 0.27,
+      "hit_target_casual": 0.24,
+      "hit_target_technical": 0.24,
+      "avoid_bad_tail_casual": 0.5,
+      "avoid_bad_tail_technical": 0.48
+    },
+    "albano-sheet-500-p3-prefix16": {
+      "beat_best_casual": 0.21,
+      "beat_best_technical": 0.24,
+      "save_material_casual": 0.33,
+      "save_material_technical": 0.28,
+      "small_win_casual": 0.29,
+      "small_win_technical": 0.26,
+      "hit_target_casual": 0.24,
+      "hit_target_technical": 0.24,
+      "avoid_bad_tail_casual": 0.53,
+      "avoid_bad_tail_technical": 0.53
+    },
+    "albano-sheet-500-p4-prefix16": {
+      "beat_best_casual": 0.38,
+      "beat_best_technical": 0.37,
+      "save_material_casual": 0.42,
+      "save_material_technical": 0.38,
+      "small_win_casual": 0.41,
+      "small_win_technical": 0.34,
+      "hit_target_casual": 0.38,
+      "hit_target_technical": 0.36,
+      "avoid_bad_tail_casual": 0.46,
+      "avoid_bad_tail_technical": 0.43
+    },
+    "blaz-roll-250-p1-prefix16": {
+      "beat_best_casual": 0.37,
+      "beat_best_technical": 0.39,
+      "save_material_casual": 0.41,
+      "save_material_technical": 0.37,
+      "small_win_casual": 0.42,
+      "small_win_technical": 0.37,
+      "hit_target_casual": 0.38,
+      "hit_target_technical": 0.37,
+      "avoid_bad_tail_casual": 0.45,
+      "avoid_bad_tail_technical": 0.47
+    },
+    "blaz-roll-250-p2-prefix16": {
+      "beat_best_casual": 0.17,
+      "beat_best_technical": 0.2,
+      "save_material_casual": 0.29,
+      "save_material_technical": 0.23,
+      "small_win_casual": 0.26,
+      "small_win_technical": 0.19,
+      "hit_target_casual": 0.21,
+      "hit_target_technical": 0.23,
+      "avoid_bad_tail_casual": 0.55,
+      "avoid_bad_tail_technical": 0.57
+    },
+    "blaz-roll-250-p3-prefix16": {
+      "beat_best_casual": 0.31,
+      "beat_best_technical": 0.32,
+      "save_material_casual": 0.38,
+      "save_material_technical": 0.33,
+      "small_win_casual": 0.36,
+      "small_win_technical": 0.31,
+      "hit_target_casual": 0.32,
+      "hit_target_technical": 0.33,
+      "avoid_bad_tail_casual": 0.46,
+      "avoid_bad_tail_technical": 0.48
+    },
+    "blaz-roll-250-p4-prefix16": {
+      "beat_best_casual": 0.28,
+      "beat_best_technical": 0.3,
+      "save_material_casual": 0.35,
+      "save_material_technical": 0.31,
+      "small_win_casual": 0.36,
+      "small_win_technical": 0.28,
+      "hit_target_casual": 0.32,
+      "hit_target_technical": 0.34,
+      "avoid_bad_tail_casual": 0.49,
+      "avoid_bad_tail_technical": 0.5
+    },
+    "shirts-roll-500-p1-prefix16": {
+      "beat_best_casual": 0.32,
+      "beat_best_technical": 0.36,
+      "save_material_casual": 0.38,
+      "save_material_technical": 0.34,
+      "small_win_casual": 0.41,
+      "small_win_technical": 0.35,
+      "hit_target_casual": 0.37,
+      "hit_target_technical": 0.36,
+      "avoid_bad_tail_casual": 0.42,
+      "avoid_bad_tail_technical": 0.43
+    },
+    "shirts-roll-500-p2-prefix16": {
+      "beat_best_casual": 0.2,
+      "beat_best_technical": 0.24,
+      "save_material_casual": 0.34,
+      "save_material_technical": 0.27,
+      "small_win_casual": 0.29,
+      "small_win_technical": 0.24,
+      "hit_target_casual": 0.26,
+      "hit_target_technical": 0.26,
+      "avoid_bad_tail_casual": 0.53,
+      "avoid_bad_tail_technical": 0.52
+    },
+    "shirts-roll-500-p3-prefix16": {
+      "beat_best_casual": 0.18,
+      "beat_best_technical": 0.18,
+      "save_material_casual": 0.29,
+      "save_material_technical": 0.26,
+      "small_win_casual": 0.24,
+      "small_win_technical": 0.21,
+      "hit_target_casual": 0.19,
+      "hit_target_technical": 0.21,
+      "avoid_bad_tail_casual": 0.54,
+      "avoid_bad_tail_technical": 0.54
+    },
+    "shirts-roll-500-p4-prefix16": {
+      "beat_best_casual": 0.44,
+      "beat_best_technical": 0.45,
+      "save_material_casual": 0.45,
+      "save_material_technical": 0.41,
+      "small_win_casual": 0.49,
+      "small_win_technical": 0.44,
+      "hit_target_casual": 0.49,
+      "hit_target_technical": 0.45,
+      "avoid_bad_tail_casual": 0.37,
+      "avoid_bad_tail_technical": 0.37
+    },
+    "shirts-sheet-100-p1-prefix16": {
+      "beat_best_casual": 0.47,
+      "beat_best_technical": 0.52,
+      "save_material_casual": 0.43,
+      "save_material_technical": 0.41,
+      "small_win_casual": 0.54,
+      "small_win_technical": 0.5,
+      "hit_target_casual": 0.53,
+      "hit_target_technical": 0.47,
+      "avoid_bad_tail_casual": 0.35,
+      "avoid_bad_tail_technical": 0.35
+    },
+    "shirts-sheet-100-p2-prefix16": {
+      "beat_best_casual": 0.27,
+      "beat_best_technical": 0.32,
+      "save_material_casual": 0.31,
+      "save_material_technical": 0.29,
+      "small_win_casual": 0.4,
+      "small_win_technical": 0.32,
+      "hit_target_casual": 0.35,
+      "hit_target_technical": 0.32,
+      "avoid_bad_tail_casual": 0.5,
+      "avoid_bad_tail_technical": 0.45
+    },
+    "shirts-sheet-100-p3-prefix16": {
+      "beat_best_casual": 0.34,
+      "beat_best_technical": 0.36,
+      "save_material_casual": 0.3,
+      "save_material_technical": 0.29,
+      "small_win_casual": 0.42,
+      "small_win_technical": 0.33,
+      "hit_target_casual": 0.4,
+      "hit_target_technical": 0.35,
+      "avoid_bad_tail_casual": 0.46,
+      "avoid_bad_tail_technical": 0.44
+    }
+  },
+  "apiLatencyMs": 3241.2410999999993,
+  "tokens": [
+    57798,
+    4044
+  ],
+  "wordingMeanAbsDelta": 0.032749999999999994,
+  "wordingThresholdFlips": 6,
+  "provenance": {
+    "questionArchiveSha256": "5aec8e62dcc8aa6a6e0b6728d4b99b638c47932b8289d6f9bbaaa3fe2c4193bf",
+    "baselineArchiveSha256": "ff58e42e251d616405254a37d3c9658ce71a5a2a07739126c52da222c73a5b07",
+    "originalOutcomes": 13,
+    "additionalLocalOutcomes": 3,
+    "questionVariants": 10,
+    "hypotheses": 5,
+    "cases": 16,
+    "jobs": 4,
+    "sourceFamilies": 3,
+    "statement": "Development observations, not held-out confirmation. Additional Linux completion timings are not combined with Windows nesting timings."
+  },
+  "scores": {
+    "beat_best_casual": {
+      "n": 16,
+      "positive": 10,
+      "correct": 6,
+      "missedPositivesAtHalf": 10,
+      "brier": 0.32968749999999997
+    },
+    "beat_best_technical": {
+      "n": 16,
+      "positive": 10,
+      "correct": 7,
+      "missedPositivesAtHalf": 9,
+      "brier": 0.32038750000000005
+    },
+    "save_material_casual": {
+      "n": 16,
+      "positive": 9,
+      "correct": 7,
+      "missedPositivesAtHalf": 9,
+      "brier": 0.27935625
+    },
+    "save_material_technical": {
+      "n": 16,
+      "positive": 9,
+      "correct": 7,
+      "missedPositivesAtHalf": 9,
+      "brier": 0.3026625
+    },
+    "small_win_casual": {
+      "n": 16,
+      "positive": 9,
+      "correct": 6,
+      "missedPositivesAtHalf": 9,
+      "brier": 0.29614375000000004
+    },
+    "small_win_technical": {
+      "n": 16,
+      "positive": 9,
+      "correct": 6,
+      "missedPositivesAtHalf": 9,
+      "brier": 0.32683125
+    },
+    "hit_target_casual": {
+      "n": 16,
+      "positive": 9,
+      "correct": 6,
+      "missedPositivesAtHalf": 9,
+      "brier": 0.310175
+    },
+    "hit_target_technical": {
+      "n": 16,
+      "positive": 9,
+      "correct": 7,
+      "missedPositivesAtHalf": 9,
+      "brier": 0.30410625
+    },
+    "avoid_bad_tail_casual": {
+      "n": 16,
+      "positive": 6,
+      "correct": 12,
+      "missedPositivesAtHalf": 1,
+      "brier": 0.22227499999999997
+    },
+    "avoid_bad_tail_technical": {
+      "n": 16,
+      "positive": 6,
+      "correct": 8,
+      "missedPositivesAtHalf": 4,
+      "brier": 0.23909999999999998
+    }
+  },
+  "qualityLabelsCaveat": "Thirteen outcomes are matching-digest completed evaluation records from the original run; non-incumbents were not all individually validated there. The three additional outcomes were independently completed and validated using the unchanged engine. All reported completions have zero unplaced parts.",
+  "targetLabelsCaveat": "save_material, small_win and hit_target share the same outcome in this pack: at least one fewer sheet or at least 10 mm less roll length. These are not independent outcomes."
+}
