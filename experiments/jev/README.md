@@ -2,7 +2,8 @@
 
 This is the next step after the Classic corpus: ask Jev to select one candidate
 from an existing recorded decision. It does not modify SVGnest or run Jev in the
-browser worker. It does not yet replay changed choices or measure Jev utilisation.
+browser worker. The replay command tests each recorded choice independently, regenerates subsequent
+candidates, and lets Classic finish. It does not implement a full Jev policy rollout.
 
 ## Prepare the exact requests without a key
 
@@ -100,12 +101,47 @@ A model disagreeing with Classic is not evidence of improvement. A lower local
 bounding score is not evidence of improved final utilisation. Confidence measures
 model certainty, not a validated probability of producing the best final nest.
 
-After a successful live run, the next implementation is **geometry replay**:
-apply the chosen candidate, regenerate the subsequent legal region/candidates,
-and continue from that changed state with identical input/order/rotation budgets.
-Do not chain later candidate IDs from the original Classic snapshot once a choice
-has changed. Finish by validating the layout and comparing final bins, utilisation,
-unplaced parts and runtime against Classic.
+## Replay saved choices through the exact engine
+
+```powershell
+npm.cmd run jev:replay -- --choices jev-results/YOUR-RUN/choices.ndjson --requests jev-results/YOUR-RUN/requests.ndjson
+```
+
+No key or API call is needed. The replay checks source and request hashes, rebuilds
+NFPs with the original SVGnest callback, and requires exact parity with the saved
+Classic placements and full candidate trace before any intervention. It overrides
+one recorded placement in an isolated VM copy of the worker. Every subsequent
+candidate is regenerated and selected by Classic. Saved future candidate IDs are
+never reused after a divergence. All layouts receive containment, overlap and
+part-accounting checks. Hole geometry is currently rejected.
+
+The first real uploaded batch and its measured replay are in
+[`results/first-live/report.html`](results/first-live/report.html). Reproduce it:
+
+```powershell
+npm.cmd run jev:replay -- --choices experiments/jev/results/first-live/choices.ndjson --requests experiments/jev/results/first-live/requests.ndjson
+```
+
+Of 20 choices, 19 matched Classic and reproduced identical final placements. The
+one different choice (concave, seed 1, first placement) used 3 sheets instead of 2:
+utilisation fell from 51.4125% to 34.275%, with all 12 parts placed in both layouts.
+All replayed geometry passed validation. Ten Classic evaluations reproduced the
+saved browser results and candidate traces exactly.
+
+Observed API latency averaged 286.78 ms (median 241.12 ms), totalling 5.736 s for
+20 calls. These are request latencies, not end-to-end nesting runtimes. The experiment
+did not measure a speed advantage or quality achieved per equal wall-clock budget.
+Candidate generation still happens locally before the model call.
+
+This batch selected only the first two decisions of each of ten best evaluations
+from five small synthetic jobs. Inputs lacked outlines, cavity geometry and contact
+features. It cannot establish broad policy quality or rule out useful later decisions.
+A stronger next test should first replay alternative candidates at crowded later
+states to find measurable headroom over Classic, then compare Jev against Classic
+and cheap deterministic alternatives on held-out jobs. Give the selector geometric
+features relevant to remaining-part fit, and include their computation plus API
+latency in the runtime budget. Larger full-policy tests must query fresh states
+after divergences, rather than reuse these recorded responses.
 
 ## Checks
 

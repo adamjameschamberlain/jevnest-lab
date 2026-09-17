@@ -162,10 +162,16 @@ Never commit an API key. Use environment variables/local secrets only.
 - Synthetic Classic SVG corpus complete: five inputs, two seeds, 20 evaluations
   per pass, with exact ordinary/captured parity. Reference outputs are archived in
   `benchmarks/baselines/classic-initial.zip`.
-- Offline Jev request preparation and API adapter implemented in
-  `experiments/jev/`. Dry-run and mocked transport tests pass. No live Jev call or
-  model result has been produced yet; a local `TYPESAFE_API_KEY` is required.
-- Changed-policy geometry replay and Classic-versus-Jev quality comparison remain
-  unimplemented. Agreement metrics are not final nesting quality metrics.
+- Offline Jev adapter and real API batch complete: 20 choices, 19 agreements.
+- Exact single-decision geometry replay implemented. Ten Classic best evaluations
+  reproduced their saved browser placements and candidate traces. All layouts
+  passed containment and overlap checks. The sole changed choice used 3 sheets
+  instead of 2 (34.275% versus 51.4125% utilisation), with all parts placed.
+- These were only the first two placements per evaluation, with no outline/cavity
+  features. This is insufficient to judge general policy potential. No full Jev
+  rollout or speed improvement has been demonstrated.
+- Next: find later states with measurable improvement available through candidate
+  replay, enrich the state with relevant geometric features, and compare policies
+  on held-out jobs with total runtime accounted for.
 
 See `experiments/jev/README.md` for the commands and current feature limitations.

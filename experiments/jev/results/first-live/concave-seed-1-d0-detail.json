@@ -1,0 +1,4497 @@
+{
+  "id": 0,
+  "inputId": "concave",
+  "seed": 1,
+  "evaluationId": 1,
+  "decisionId": "d0",
+  "classicCandidateId": "d0:c0",
+  "jevCandidateId": "d0:c1",
+  "agreement": false,
+  "confidence": 0.38,
+  "apiLatencyMs": 677.7805999999999,
+  "classicBins": 2,
+  "replayBins": 3,
+  "classicUtilisation": 0.5141250000000005,
+  "replayUtilisation": 0.3427500000000003,
+  "utilisationDeltaPoints": -17.13750000000002,
+  "classicUnplaced": 0,
+  "replayUnplaced": 0,
+  "classicFitness": 2.022125,
+  "replayFitness": 3.03575,
+  "geometryValid": true,
+  "materialOutcome": "worse",
+  "classic": {
+    "result": {
+      "fitness": 2.022125,
+      "area": 8000,
+      "placements": [
+        [
+          {
+            "id": 0,
+            "rotation": 270,
+            "x": -19.999999999999957,
+            "y": 240
+          },
+          {
+            "id": 6,
+            "rotation": 90,
+            "x": 279,
+            "y": -620
+          },
+          {
+            "id": 1,
+            "rotation": 180,
+            "x": 471,
+            "y": 70.99999999999994
+          },
+          {
+            "id": 2,
+            "rotation": 90,
+            "x": 108.99999999999996,
+            "y": -620
+          },
+          {
+            "id": 4,
+            "rotation": 270,
+            "x": -168.99999999999994,
+            "y": 257.00000000000006
+          },
+          {
+            "id": 11,
+            "rotation": 270,
+            "x": -439.99999999999983,
+            "y": 895.0000000000001
+          }
+        ],
+        [
+          {
+            "id": 7,
+            "rotation": 90,
+            "x": 274.99999999999994,
+            "y": -830
+          },
+          {
+            "id": 8,
+            "rotation": 90,
+            "x": 468,
+            "y": -188.00000000000003
+          },
+          {
+            "id": 10,
+            "rotation": 180,
+            "x": 660,
+            "y": 507.99999999999994
+          },
+          {
+            "id": 3,
+            "rotation": 180,
+            "x": 882,
+            "y": 98.99999999999989
+          },
+          {
+            "id": 5,
+            "rotation": 90,
+            "x": 311,
+            "y": -375
+          },
+          {
+            "id": 9,
+            "rotation": 0,
+            "x": -365,
+            "y": -437
+          }
+        ]
+      ],
+      "unplaced": []
+    },
+    "metrics": {
+      "partCount": 12,
+      "placedPartCount": 12,
+      "unplacedPartCount": 0,
+      "binsUsed": 2,
+      "placedArea": 8226.000000000007,
+      "utilisation": 0.5141250000000005,
+      "fitness": 2.022125,
+      "placementRuntimeMs": 14.376529000000005
+    },
+    "decisions": [
+      {
+        "id": "d0",
+        "binIndex": 0,
+        "partId": 0,
+        "rotation": 270,
+        "policy": "minimum-x-first-encountered",
+        "placedPartCount": 0,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "placedArea": 0,
+        "partArea": 764,
+        "placed": [],
+        "remaining": [
+          {
+            "id": 0,
+            "source": 0,
+            "rotation": 270,
+            "area": 764
+          },
+          {
+            "id": 6,
+            "source": 6,
+            "rotation": 90,
+            "area": 764
+          },
+          {
+            "id": 1,
+            "source": 1,
+            "rotation": 180,
+            "area": 760.0000000000022
+          },
+          {
+            "id": 7,
+            "source": 7,
+            "rotation": 90,
+            "area": 760
+          },
+          {
+            "id": 2,
+            "source": 2,
+            "rotation": 90,
+            "area": 698.9999999999999
+          },
+          {
+            "id": 8,
+            "source": 8,
+            "rotation": 90,
+            "area": 699
+          },
+          {
+            "id": 4,
+            "source": 4,
+            "rotation": 270,
+            "area": 684
+          },
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 11,
+            "source": 11,
+            "rotation": 270,
+            "area": 635
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d0:c0",
+            "partId": 0,
+            "rotation": 270,
+            "x": -19.999999999999957,
+            "y": 240,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 38.00000000000001,
+            "height": 40,
+            "score": 116.00000000000001,
+            "selectionScore": -19.999999999999957,
+            "widthGrowth": 38.00000000000001,
+            "heightGrowth": 40,
+            "partArea": 764,
+            "binUtilisation": 0.0955,
+            "selected": true
+          },
+          {
+            "id": "d0:c1",
+            "partId": 0,
+            "rotation": 270,
+            "x": 42.00000000000004,
+            "y": 240,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 38.00000000000001,
+            "height": 40,
+            "score": 116.00000000000001,
+            "selectionScore": 42.00000000000004,
+            "widthGrowth": 38.00000000000001,
+            "heightGrowth": 40,
+            "partArea": 764,
+            "binUtilisation": 0.0955,
+            "selected": false
+          },
+          {
+            "id": "d0:c2",
+            "partId": 0,
+            "rotation": 270,
+            "x": 42.00000000000004,
+            "y": 280,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 38.00000000000001,
+            "height": 40,
+            "score": 116.00000000000001,
+            "selectionScore": 42.00000000000004,
+            "widthGrowth": 38.00000000000001,
+            "heightGrowth": 40,
+            "partArea": 764,
+            "binUtilisation": 0.0955,
+            "selected": false
+          },
+          {
+            "id": "d0:c3",
+            "partId": 0,
+            "rotation": 270,
+            "x": -19.999999999999957,
+            "y": 280,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 38.00000000000001,
+            "height": 40,
+            "score": 116.00000000000001,
+            "selectionScore": -19.999999999999957,
+            "widthGrowth": 38.00000000000001,
+            "heightGrowth": 40,
+            "partArea": 764,
+            "binUtilisation": 0.0955,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d0:c0"
+      },
+      {
+        "id": "d1",
+        "binIndex": 0,
+        "partId": 6,
+        "rotation": 90,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 1,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 38.00000000000001,
+          "height": 40
+        },
+        "placedArea": 764,
+        "partArea": 764,
+        "placed": [
+          {
+            "id": 0,
+            "rotation": 270,
+            "x": -19.999999999999957,
+            "y": 240
+          }
+        ],
+        "remaining": [
+          {
+            "id": 6,
+            "source": 6,
+            "rotation": 90,
+            "area": 764
+          },
+          {
+            "id": 1,
+            "source": 1,
+            "rotation": 180,
+            "area": 760.0000000000022
+          },
+          {
+            "id": 7,
+            "source": 7,
+            "rotation": 90,
+            "area": 760
+          },
+          {
+            "id": 2,
+            "source": 2,
+            "rotation": 90,
+            "area": 698.9999999999999
+          },
+          {
+            "id": 8,
+            "source": 8,
+            "rotation": 90,
+            "area": 699
+          },
+          {
+            "id": 4,
+            "source": 4,
+            "rotation": 270,
+            "area": 684
+          },
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 11,
+            "source": 11,
+            "rotation": 270,
+            "area": 635
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d1:c0",
+            "partId": 6,
+            "rotation": 90,
+            "x": 330,
+            "y": -580,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 100.00000000000003,
+            "height": 80,
+            "score": 280.00000000000006,
+            "selectionScore": 280.00000000000006,
+            "widthGrowth": 62.00000000000002,
+            "heightGrowth": 40,
+            "partArea": 764,
+            "binUtilisation": 0.191,
+            "selected": false
+          },
+          {
+            "id": "d1:c1",
+            "partId": 6,
+            "rotation": 90,
+            "x": 306,
+            "y": -580,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 76.00000000000003,
+            "height": 80,
+            "score": 232.00000000000006,
+            "selectionScore": 232.00000000000006,
+            "widthGrowth": 38.00000000000002,
+            "heightGrowth": 40,
+            "partArea": 764,
+            "binUtilisation": 0.191,
+            "selected": false
+          },
+          {
+            "id": "d1:c2",
+            "partId": 6,
+            "rotation": 90,
+            "x": 306,
+            "y": -604,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 76.00000000000003,
+            "height": 56,
+            "score": 208.00000000000006,
+            "selectionScore": 208.00000000000006,
+            "widthGrowth": 38.00000000000002,
+            "heightGrowth": 16,
+            "partArea": 764,
+            "binUtilisation": 0.191,
+            "selected": false
+          },
+          {
+            "id": "d1:c3",
+            "partId": 6,
+            "rotation": 90,
+            "x": 279,
+            "y": -604,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 49.00000000000003,
+            "height": 56,
+            "score": 154.00000000000006,
+            "selectionScore": 154.00000000000006,
+            "widthGrowth": 11.000000000000021,
+            "heightGrowth": 16,
+            "partArea": 764,
+            "binUtilisation": 0.191,
+            "selected": false
+          },
+          {
+            "id": "d1:c4",
+            "partId": 6,
+            "rotation": 90,
+            "x": 279,
+            "y": -620,
+            "polygonIndex": 0,
+            "vertexIndex": 4,
+            "width": 49.00000000000003,
+            "height": 40,
+            "score": 138.00000000000006,
+            "selectionScore": 138.00000000000006,
+            "widthGrowth": 11.000000000000021,
+            "heightGrowth": 0,
+            "partArea": 764,
+            "binUtilisation": 0.191,
+            "selected": true
+          },
+          {
+            "id": "d1:c5",
+            "partId": 6,
+            "rotation": 90,
+            "x": 330,
+            "y": -620,
+            "polygonIndex": 0,
+            "vertexIndex": 5,
+            "width": 100.00000000000003,
+            "height": 40,
+            "score": 240.00000000000006,
+            "selectionScore": 240.00000000000006,
+            "widthGrowth": 62.00000000000002,
+            "heightGrowth": 0,
+            "partArea": 764,
+            "binUtilisation": 0.191,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d1:c4"
+      },
+      {
+        "id": "d2",
+        "binIndex": 0,
+        "partId": 1,
+        "rotation": 180,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 2,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 49.00000000000003,
+          "height": 40
+        },
+        "placedArea": 1528,
+        "partArea": 760.0000000000022,
+        "placed": [
+          {
+            "id": 0,
+            "rotation": 270,
+            "x": -19.999999999999957,
+            "y": 240
+          },
+          {
+            "id": 6,
+            "rotation": 90,
+            "x": 279,
+            "y": -620
+          }
+        ],
+        "remaining": [
+          {
+            "id": 1,
+            "source": 1,
+            "rotation": 180,
+            "area": 760.0000000000022
+          },
+          {
+            "id": 7,
+            "source": 7,
+            "rotation": 90,
+            "area": 760
+          },
+          {
+            "id": 2,
+            "source": 2,
+            "rotation": 90,
+            "area": 698.9999999999999
+          },
+          {
+            "id": 8,
+            "source": 8,
+            "rotation": 90,
+            "area": 699
+          },
+          {
+            "id": 4,
+            "source": 4,
+            "rotation": 270,
+            "area": 684
+          },
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 11,
+            "source": 11,
+            "rotation": 270,
+            "area": 635
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d2:c0",
+            "partId": 1,
+            "rotation": 180,
+            "x": 510,
+            "y": 99.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 100,
+            "height": 80,
+            "score": 280,
+            "selectionScore": 280,
+            "widthGrowth": 50.99999999999997,
+            "heightGrowth": 40,
+            "partArea": 760.0000000000022,
+            "binUtilisation": 0.2860000000000003,
+            "selected": false
+          },
+          {
+            "id": "d2:c1",
+            "partId": 1,
+            "rotation": 180,
+            "x": 471,
+            "y": 99.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 61,
+            "height": 80,
+            "score": 202,
+            "selectionScore": 202,
+            "widthGrowth": 11.999999999999972,
+            "heightGrowth": 40,
+            "partArea": 760.0000000000022,
+            "binUtilisation": 0.2860000000000003,
+            "selected": false
+          },
+          {
+            "id": "d2:c2",
+            "partId": 1,
+            "rotation": 180,
+            "x": 471,
+            "y": 70.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 61,
+            "height": 51,
+            "score": 173,
+            "selectionScore": 173,
+            "widthGrowth": 11.999999999999972,
+            "heightGrowth": 11,
+            "partArea": 760.0000000000022,
+            "binUtilisation": 0.2860000000000003,
+            "selected": true
+          },
+          {
+            "id": "d2:c3",
+            "partId": 1,
+            "rotation": 180,
+            "x": 491,
+            "y": 70.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 81,
+            "height": 51,
+            "score": 213,
+            "selectionScore": 213,
+            "widthGrowth": 31.99999999999997,
+            "heightGrowth": 11,
+            "partArea": 760.0000000000022,
+            "binUtilisation": 0.2860000000000003,
+            "selected": false
+          },
+          {
+            "id": "d2:c4",
+            "partId": 1,
+            "rotation": 180,
+            "x": 491,
+            "y": 64.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 4,
+            "width": 81,
+            "height": 45,
+            "score": 207,
+            "selectionScore": 207,
+            "widthGrowth": 31.99999999999997,
+            "heightGrowth": 5,
+            "partArea": 760.0000000000022,
+            "binUtilisation": 0.2860000000000003,
+            "selected": false
+          },
+          {
+            "id": "d2:c5",
+            "partId": 1,
+            "rotation": 180,
+            "x": 510,
+            "y": 64.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 5,
+            "width": 100,
+            "height": 45,
+            "score": 245,
+            "selectionScore": 245,
+            "widthGrowth": 50.99999999999997,
+            "heightGrowth": 5,
+            "partArea": 760.0000000000022,
+            "binUtilisation": 0.2860000000000003,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d2:c2"
+      },
+      {
+        "id": "d3",
+        "binIndex": 0,
+        "partId": 2,
+        "rotation": 90,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 3,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 61,
+          "height": 51
+        },
+        "placedArea": 2288.0000000000023,
+        "partArea": 698.9999999999999,
+        "placed": [
+          {
+            "id": 0,
+            "rotation": 270,
+            "x": -19.999999999999957,
+            "y": 240
+          },
+          {
+            "id": 6,
+            "rotation": 90,
+            "x": 279,
+            "y": -620
+          },
+          {
+            "id": 1,
+            "rotation": 180,
+            "x": 471,
+            "y": 70.99999999999994
+          }
+        ],
+        "remaining": [
+          {
+            "id": 7,
+            "source": 7,
+            "rotation": 90,
+            "area": 760
+          },
+          {
+            "id": 2,
+            "source": 2,
+            "rotation": 90,
+            "area": 698.9999999999999
+          },
+          {
+            "id": 8,
+            "source": 8,
+            "rotation": 90,
+            "area": 699
+          },
+          {
+            "id": 4,
+            "source": 4,
+            "rotation": 270,
+            "area": 684
+          },
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 11,
+            "source": 11,
+            "rotation": 270,
+            "area": 635
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d3:c0",
+            "partId": 2,
+            "rotation": 90,
+            "x": 119.99999999999996,
+            "y": -585,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 100,
+            "height": 80,
+            "score": 280,
+            "selectionScore": 280,
+            "widthGrowth": 39,
+            "heightGrowth": 29,
+            "partArea": 698.9999999999999,
+            "binUtilisation": 0.3733750000000003,
+            "selected": false
+          },
+          {
+            "id": "d3:c1",
+            "partId": 2,
+            "rotation": 90,
+            "x": 108.99999999999996,
+            "y": -585,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 89,
+            "height": 80,
+            "score": 258,
+            "selectionScore": 258,
+            "widthGrowth": 28,
+            "heightGrowth": 29,
+            "partArea": 698.9999999999999,
+            "binUtilisation": 0.3733750000000003,
+            "selected": false
+          },
+          {
+            "id": "d3:c2",
+            "partId": 2,
+            "rotation": 90,
+            "x": 108.99999999999996,
+            "y": -620,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 89,
+            "height": 51,
+            "score": 229,
+            "selectionScore": 229,
+            "widthGrowth": 28,
+            "heightGrowth": 0,
+            "partArea": 698.9999999999999,
+            "binUtilisation": 0.3733750000000003,
+            "selected": true
+          },
+          {
+            "id": "d3:c3",
+            "partId": 2,
+            "rotation": 90,
+            "x": 119.99999999999996,
+            "y": -620,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 100,
+            "height": 51,
+            "score": 251,
+            "selectionScore": 251,
+            "widthGrowth": 39,
+            "heightGrowth": 0,
+            "partArea": 698.9999999999999,
+            "binUtilisation": 0.3733750000000003,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d3:c2"
+      },
+      {
+        "id": "d4",
+        "binIndex": 0,
+        "partId": 4,
+        "rotation": 270,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 4,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 89,
+          "height": 51
+        },
+        "placedArea": 2987.0000000000023,
+        "partArea": 684,
+        "placed": [
+          {
+            "id": 0,
+            "rotation": 270,
+            "x": -19.999999999999957,
+            "y": 240
+          },
+          {
+            "id": 6,
+            "rotation": 90,
+            "x": 279,
+            "y": -620
+          },
+          {
+            "id": 1,
+            "rotation": 180,
+            "x": 471,
+            "y": 70.99999999999994
+          },
+          {
+            "id": 2,
+            "rotation": 90,
+            "x": 108.99999999999996,
+            "y": -620
+          }
+        ],
+        "remaining": [
+          {
+            "id": 7,
+            "source": 7,
+            "rotation": 90,
+            "area": 760
+          },
+          {
+            "id": 8,
+            "source": 8,
+            "rotation": 90,
+            "area": 699
+          },
+          {
+            "id": 4,
+            "source": 4,
+            "rotation": 270,
+            "area": 684
+          },
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 11,
+            "source": 11,
+            "rotation": 270,
+            "area": 635
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d4:c0",
+            "partId": 4,
+            "rotation": 270,
+            "x": -211.99999999999994,
+            "y": 276.00000000000006,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 89,
+            "height": 76.00000000000003,
+            "score": 254.00000000000003,
+            "selectionScore": 254.00000000000003,
+            "widthGrowth": 0,
+            "heightGrowth": 25.00000000000003,
+            "partArea": 684,
+            "binUtilisation": 0.4588750000000003,
+            "selected": false
+          },
+          {
+            "id": "d4:c1",
+            "partId": 4,
+            "rotation": 270,
+            "x": -211.99999999999994,
+            "y": 280.00000000000006,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 89,
+            "height": 80.00000000000003,
+            "score": 258,
+            "selectionScore": 258,
+            "widthGrowth": 0,
+            "heightGrowth": 29.00000000000003,
+            "partArea": 684,
+            "binUtilisation": 0.4588750000000003,
+            "selected": false
+          },
+          {
+            "id": "d4:c2",
+            "partId": 4,
+            "rotation": 270,
+            "x": -229.99999999999994,
+            "y": 280.00000000000006,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 89,
+            "height": 80.00000000000003,
+            "score": 258,
+            "selectionScore": 258,
+            "widthGrowth": 0,
+            "heightGrowth": 29.00000000000003,
+            "partArea": 684,
+            "binUtilisation": 0.4588750000000003,
+            "selected": false
+          },
+          {
+            "id": "d4:c3",
+            "partId": 4,
+            "rotation": 270,
+            "x": -229.99999999999994,
+            "y": 276.00000000000006,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 89,
+            "height": 76.00000000000003,
+            "score": 254.00000000000003,
+            "selectionScore": 254.00000000000003,
+            "widthGrowth": 0,
+            "heightGrowth": 25.00000000000003,
+            "partArea": 684,
+            "binUtilisation": 0.4588750000000003,
+            "selected": false
+          },
+          {
+            "id": "d4:c4",
+            "partId": 4,
+            "rotation": 270,
+            "x": -164.99999999999994,
+            "y": 280.00000000000006,
+            "polygonIndex": 1,
+            "vertexIndex": 0,
+            "width": 100,
+            "height": 80.00000000000003,
+            "score": 280,
+            "selectionScore": 280,
+            "widthGrowth": 11,
+            "heightGrowth": 29.00000000000003,
+            "partArea": 684,
+            "binUtilisation": 0.4588750000000003,
+            "selected": false
+          },
+          {
+            "id": "d4:c5",
+            "partId": 4,
+            "rotation": 270,
+            "x": -168.99999999999994,
+            "y": 280.00000000000006,
+            "polygonIndex": 1,
+            "vertexIndex": 1,
+            "width": 96,
+            "height": 80.00000000000003,
+            "score": 272,
+            "selectionScore": 272,
+            "widthGrowth": 7,
+            "heightGrowth": 29.00000000000003,
+            "partArea": 684,
+            "binUtilisation": 0.4588750000000003,
+            "selected": false
+          },
+          {
+            "id": "d4:c6",
+            "partId": 4,
+            "rotation": 270,
+            "x": -168.99999999999994,
+            "y": 257.00000000000006,
+            "polygonIndex": 1,
+            "vertexIndex": 2,
+            "width": 96,
+            "height": 57.00000000000003,
+            "score": 249.00000000000003,
+            "selectionScore": 249.00000000000003,
+            "widthGrowth": 7,
+            "heightGrowth": 6.000000000000028,
+            "partArea": 684,
+            "binUtilisation": 0.4588750000000003,
+            "selected": true
+          },
+          {
+            "id": "d4:c7",
+            "partId": 4,
+            "rotation": 270,
+            "x": -164.99999999999994,
+            "y": 257.00000000000006,
+            "polygonIndex": 1,
+            "vertexIndex": 3,
+            "width": 100,
+            "height": 57.00000000000003,
+            "score": 257,
+            "selectionScore": 257,
+            "widthGrowth": 11,
+            "heightGrowth": 6.000000000000028,
+            "partArea": 684,
+            "binUtilisation": 0.4588750000000003,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d4:c6"
+      },
+      {
+        "id": "d5",
+        "binIndex": 0,
+        "partId": 11,
+        "rotation": 270,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 5,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 96,
+          "height": 57.00000000000003
+        },
+        "placedArea": 3671.0000000000023,
+        "partArea": 635,
+        "placed": [
+          {
+            "id": 0,
+            "rotation": 270,
+            "x": -19.999999999999957,
+            "y": 240
+          },
+          {
+            "id": 6,
+            "rotation": 90,
+            "x": 279,
+            "y": -620
+          },
+          {
+            "id": 1,
+            "rotation": 180,
+            "x": 471,
+            "y": 70.99999999999994
+          },
+          {
+            "id": 2,
+            "rotation": 90,
+            "x": 108.99999999999996,
+            "y": -620
+          },
+          {
+            "id": 4,
+            "rotation": 270,
+            "x": -168.99999999999994,
+            "y": 257.00000000000006
+          }
+        ],
+        "remaining": [
+          {
+            "id": 7,
+            "source": 7,
+            "rotation": 90,
+            "area": 760
+          },
+          {
+            "id": 8,
+            "source": 8,
+            "rotation": 90,
+            "area": 699
+          },
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 11,
+            "source": 11,
+            "rotation": 270,
+            "area": 635
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d5:c0",
+            "partId": 11,
+            "rotation": 270,
+            "x": -421.99999999999983,
+            "y": 895.0000000000001,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 96,
+            "height": 65,
+            "score": 257,
+            "selectionScore": 257,
+            "widthGrowth": 0,
+            "heightGrowth": 7.999999999999972,
+            "partArea": 635,
+            "binUtilisation": 0.5382500000000002,
+            "selected": false
+          },
+          {
+            "id": "d5:c1",
+            "partId": 11,
+            "rotation": 270,
+            "x": -421.99999999999983,
+            "y": 906.0000000000001,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 96,
+            "height": 76,
+            "score": 268,
+            "selectionScore": 268,
+            "widthGrowth": 0,
+            "heightGrowth": 18.99999999999997,
+            "partArea": 635,
+            "binUtilisation": 0.5382500000000002,
+            "selected": false
+          },
+          {
+            "id": "d5:c2",
+            "partId": 11,
+            "rotation": 270,
+            "x": -389.99999999999983,
+            "y": 906.0000000000001,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 96,
+            "height": 76,
+            "score": 268,
+            "selectionScore": 268,
+            "widthGrowth": 0,
+            "heightGrowth": 18.99999999999997,
+            "partArea": 635,
+            "binUtilisation": 0.5382500000000002,
+            "selected": false
+          },
+          {
+            "id": "d5:c3",
+            "partId": 11,
+            "rotation": 270,
+            "x": -389.99999999999983,
+            "y": 910.0000000000001,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 96,
+            "height": 80,
+            "score": 272,
+            "selectionScore": 272,
+            "widthGrowth": 0,
+            "heightGrowth": 22.99999999999997,
+            "partArea": 635,
+            "binUtilisation": 0.5382500000000002,
+            "selected": false
+          },
+          {
+            "id": "d5:c4",
+            "partId": 11,
+            "rotation": 270,
+            "x": -439.99999999999983,
+            "y": 910.0000000000001,
+            "polygonIndex": 0,
+            "vertexIndex": 4,
+            "width": 96,
+            "height": 80,
+            "score": 272,
+            "selectionScore": 272,
+            "widthGrowth": 0,
+            "heightGrowth": 22.99999999999997,
+            "partArea": 635,
+            "binUtilisation": 0.5382500000000002,
+            "selected": false
+          },
+          {
+            "id": "d5:c5",
+            "partId": 11,
+            "rotation": 270,
+            "x": -439.99999999999983,
+            "y": 895.0000000000001,
+            "polygonIndex": 0,
+            "vertexIndex": 5,
+            "width": 96,
+            "height": 65,
+            "score": 257,
+            "selectionScore": 257,
+            "widthGrowth": 0,
+            "heightGrowth": 7.999999999999972,
+            "partArea": 635,
+            "binUtilisation": 0.5382500000000002,
+            "selected": true
+          }
+        ],
+        "selectedCandidateId": "d5:c5"
+      },
+      {
+        "id": "d6",
+        "binIndex": 1,
+        "partId": 7,
+        "rotation": 90,
+        "policy": "minimum-x-first-encountered",
+        "placedPartCount": 0,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "placedArea": 0,
+        "partArea": 760,
+        "placed": [],
+        "remaining": [
+          {
+            "id": 7,
+            "source": 7,
+            "rotation": 90,
+            "area": 760
+          },
+          {
+            "id": 8,
+            "source": 8,
+            "rotation": 90,
+            "area": 699
+          },
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d6:c0",
+            "partId": 7,
+            "rotation": 90,
+            "x": 274.99999999999994,
+            "y": -830,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 45,
+            "height": 32,
+            "score": 122,
+            "selectionScore": 274.99999999999994,
+            "widthGrowth": 45,
+            "heightGrowth": 32,
+            "partArea": 760,
+            "binUtilisation": 0.095,
+            "selected": true
+          },
+          {
+            "id": "d6:c1",
+            "partId": 7,
+            "rotation": 90,
+            "x": 329.99999999999994,
+            "y": -830,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 45,
+            "height": 32,
+            "score": 122,
+            "selectionScore": 329.99999999999994,
+            "widthGrowth": 45,
+            "heightGrowth": 32,
+            "partArea": 760,
+            "binUtilisation": 0.095,
+            "selected": false
+          },
+          {
+            "id": "d6:c2",
+            "partId": 7,
+            "rotation": 90,
+            "x": 329.99999999999994,
+            "y": -782,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 45,
+            "height": 32,
+            "score": 122,
+            "selectionScore": 329.99999999999994,
+            "widthGrowth": 45,
+            "heightGrowth": 32,
+            "partArea": 760,
+            "binUtilisation": 0.095,
+            "selected": false
+          },
+          {
+            "id": "d6:c3",
+            "partId": 7,
+            "rotation": 90,
+            "x": 274.99999999999994,
+            "y": -782,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 45,
+            "height": 32,
+            "score": 122,
+            "selectionScore": 274.99999999999994,
+            "widthGrowth": 45,
+            "heightGrowth": 32,
+            "partArea": 760,
+            "binUtilisation": 0.095,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d6:c0"
+      },
+      {
+        "id": "d7",
+        "binIndex": 1,
+        "partId": 8,
+        "rotation": 90,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 1,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 45,
+          "height": 32
+        },
+        "placedArea": 760,
+        "partArea": 699,
+        "placed": [
+          {
+            "id": 7,
+            "rotation": 90,
+            "x": 274.99999999999994,
+            "y": -830
+          }
+        ],
+        "remaining": [
+          {
+            "id": 8,
+            "source": 8,
+            "rotation": 90,
+            "area": 699
+          },
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d7:c0",
+            "partId": 8,
+            "rotation": 90,
+            "x": 540,
+            "y": -165.00000000000003,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 100,
+            "height": 80,
+            "score": 280,
+            "selectionScore": 280,
+            "widthGrowth": 55,
+            "heightGrowth": 48,
+            "partArea": 699,
+            "binUtilisation": 0.182375,
+            "selected": false
+          },
+          {
+            "id": "d7:c1",
+            "partId": 8,
+            "rotation": 90,
+            "x": 468,
+            "y": -165.00000000000003,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 45,
+            "height": 80,
+            "score": 170,
+            "selectionScore": 170,
+            "widthGrowth": 0,
+            "heightGrowth": 48,
+            "partArea": 699,
+            "binUtilisation": 0.182375,
+            "selected": false
+          },
+          {
+            "id": "d7:c2",
+            "partId": 8,
+            "rotation": 90,
+            "x": 468,
+            "y": -188.00000000000003,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 45,
+            "height": 57,
+            "score": 147,
+            "selectionScore": 147,
+            "widthGrowth": 0,
+            "heightGrowth": 25,
+            "partArea": 699,
+            "binUtilisation": 0.182375,
+            "selected": true
+          },
+          {
+            "id": "d7:c3",
+            "partId": 8,
+            "rotation": 90,
+            "x": 474,
+            "y": -188.00000000000003,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 45,
+            "height": 57,
+            "score": 147,
+            "selectionScore": 147,
+            "widthGrowth": 0,
+            "heightGrowth": 25,
+            "partArea": 699,
+            "binUtilisation": 0.182375,
+            "selected": false
+          },
+          {
+            "id": "d7:c4",
+            "partId": 8,
+            "rotation": 90,
+            "x": 474,
+            "y": -168.00000000000003,
+            "polygonIndex": 0,
+            "vertexIndex": 4,
+            "width": 45,
+            "height": 77,
+            "score": 167,
+            "selectionScore": 167,
+            "widthGrowth": 0,
+            "heightGrowth": 45,
+            "partArea": 699,
+            "binUtilisation": 0.182375,
+            "selected": false
+          },
+          {
+            "id": "d7:c5",
+            "partId": 8,
+            "rotation": 90,
+            "x": 513,
+            "y": -168.00000000000003,
+            "polygonIndex": 0,
+            "vertexIndex": 5,
+            "width": 73,
+            "height": 77,
+            "score": 223,
+            "selectionScore": 223,
+            "widthGrowth": 28,
+            "heightGrowth": 45,
+            "partArea": 699,
+            "binUtilisation": 0.182375,
+            "selected": false
+          },
+          {
+            "id": "d7:c6",
+            "partId": 8,
+            "rotation": 90,
+            "x": 513,
+            "y": -200.00000000000003,
+            "polygonIndex": 0,
+            "vertexIndex": 6,
+            "width": 73,
+            "height": 45,
+            "score": 191,
+            "selectionScore": 191,
+            "widthGrowth": 28,
+            "heightGrowth": 13,
+            "partArea": 699,
+            "binUtilisation": 0.182375,
+            "selected": false
+          },
+          {
+            "id": "d7:c7",
+            "partId": 8,
+            "rotation": 90,
+            "x": 540,
+            "y": -200.00000000000003,
+            "polygonIndex": 0,
+            "vertexIndex": 7,
+            "width": 100,
+            "height": 45,
+            "score": 245,
+            "selectionScore": 245,
+            "widthGrowth": 55,
+            "heightGrowth": 13,
+            "partArea": 699,
+            "binUtilisation": 0.182375,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d7:c2"
+      },
+      {
+        "id": "d8",
+        "binIndex": 1,
+        "partId": 10,
+        "rotation": 180,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 2,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 45,
+          "height": 57
+        },
+        "placedArea": 1459,
+        "partArea": 684,
+        "placed": [
+          {
+            "id": 7,
+            "rotation": 90,
+            "x": 274.99999999999994,
+            "y": -830
+          },
+          {
+            "id": 8,
+            "rotation": 90,
+            "x": 468,
+            "y": -188.00000000000003
+          }
+        ],
+        "remaining": [
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d8:c0",
+            "partId": 10,
+            "rotation": 180,
+            "x": 720,
+            "y": 520,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 100,
+            "height": 80.00000000000006,
+            "score": 280.00000000000006,
+            "selectionScore": 280.00000000000006,
+            "widthGrowth": 55,
+            "heightGrowth": 23.000000000000057,
+            "partArea": 684,
+            "binUtilisation": 0.267875,
+            "selected": false
+          },
+          {
+            "id": "d8:c1",
+            "partId": 10,
+            "rotation": 180,
+            "x": 660,
+            "y": 520,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 45,
+            "height": 80.00000000000006,
+            "score": 170.00000000000006,
+            "selectionScore": 170.00000000000006,
+            "widthGrowth": 0,
+            "heightGrowth": 23.000000000000057,
+            "partArea": 684,
+            "binUtilisation": 0.267875,
+            "selected": false
+          },
+          {
+            "id": "d8:c2",
+            "partId": 10,
+            "rotation": 180,
+            "x": 660,
+            "y": 507.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 45,
+            "height": 68,
+            "score": 158,
+            "selectionScore": 158,
+            "widthGrowth": 0,
+            "heightGrowth": 11,
+            "partArea": 684,
+            "binUtilisation": 0.267875,
+            "selected": true
+          },
+          {
+            "id": "d8:c3",
+            "partId": 10,
+            "rotation": 180,
+            "x": 684,
+            "y": 507.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 64,
+            "height": 68,
+            "score": 196,
+            "selectionScore": 196,
+            "widthGrowth": 19,
+            "heightGrowth": 11,
+            "partArea": 684,
+            "binUtilisation": 0.267875,
+            "selected": false
+          },
+          {
+            "id": "d8:c4",
+            "partId": 10,
+            "rotation": 180,
+            "x": 684,
+            "y": 482.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 4,
+            "width": 64,
+            "height": 57,
+            "score": 185,
+            "selectionScore": 185,
+            "widthGrowth": 19,
+            "heightGrowth": 0,
+            "partArea": 684,
+            "binUtilisation": 0.267875,
+            "selected": false
+          },
+          {
+            "id": "d8:c5",
+            "partId": 10,
+            "rotation": 180,
+            "x": 701,
+            "y": 482.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 5,
+            "width": 81,
+            "height": 57,
+            "score": 219,
+            "selectionScore": 219,
+            "widthGrowth": 36,
+            "heightGrowth": 0,
+            "partArea": 684,
+            "binUtilisation": 0.267875,
+            "selected": false
+          },
+          {
+            "id": "d8:c6",
+            "partId": 10,
+            "rotation": 180,
+            "x": 701,
+            "y": 474.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 6,
+            "width": 81,
+            "height": 57,
+            "score": 219,
+            "selectionScore": 219,
+            "widthGrowth": 36,
+            "heightGrowth": 0,
+            "partArea": 684,
+            "binUtilisation": 0.267875,
+            "selected": false
+          },
+          {
+            "id": "d8:c7",
+            "partId": 10,
+            "rotation": 180,
+            "x": 720,
+            "y": 474.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 7,
+            "width": 100,
+            "height": 57,
+            "score": 257,
+            "selectionScore": 257,
+            "widthGrowth": 55,
+            "heightGrowth": 0,
+            "partArea": 684,
+            "binUtilisation": 0.267875,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d8:c2"
+      },
+      {
+        "id": "d9",
+        "binIndex": 1,
+        "partId": 3,
+        "rotation": 180,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 3,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 45,
+          "height": 68
+        },
+        "placedArea": 2143,
+        "partArea": 571.0000000000043,
+        "placed": [
+          {
+            "id": 7,
+            "rotation": 90,
+            "x": 274.99999999999994,
+            "y": -830
+          },
+          {
+            "id": 8,
+            "rotation": 90,
+            "x": 468,
+            "y": -188.00000000000003
+          },
+          {
+            "id": 10,
+            "rotation": 180,
+            "x": 660,
+            "y": 507.99999999999994
+          }
+        ],
+        "remaining": [
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d9:c0",
+            "partId": 3,
+            "rotation": 180,
+            "x": 930,
+            "y": 99.99999999999989,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 100,
+            "height": 80,
+            "score": 280,
+            "selectionScore": 280,
+            "widthGrowth": 55,
+            "heightGrowth": 12,
+            "partArea": 571.0000000000043,
+            "binUtilisation": 0.33925000000000055,
+            "selected": false
+          },
+          {
+            "id": "d9:c1",
+            "partId": 3,
+            "rotation": 180,
+            "x": 882,
+            "y": 99.99999999999989,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 52,
+            "height": 80,
+            "score": 184,
+            "selectionScore": 184,
+            "widthGrowth": 7,
+            "heightGrowth": 12,
+            "partArea": 571.0000000000043,
+            "binUtilisation": 0.33925000000000055,
+            "selected": false
+          },
+          {
+            "id": "d9:c2",
+            "partId": 3,
+            "rotation": 180,
+            "x": 882,
+            "y": 98.99999999999989,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 52,
+            "height": 79,
+            "score": 183,
+            "selectionScore": 183,
+            "widthGrowth": 7,
+            "heightGrowth": 11,
+            "partArea": 571.0000000000043,
+            "binUtilisation": 0.33925000000000055,
+            "selected": true
+          },
+          {
+            "id": "d9:c3",
+            "partId": 3,
+            "rotation": 180,
+            "x": 899,
+            "y": 98.99999999999989,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 69,
+            "height": 79,
+            "score": 217,
+            "selectionScore": 217,
+            "widthGrowth": 24,
+            "heightGrowth": 11,
+            "partArea": 571.0000000000043,
+            "binUtilisation": 0.33925000000000055,
+            "selected": false
+          },
+          {
+            "id": "d9:c4",
+            "partId": 3,
+            "rotation": 180,
+            "x": 899,
+            "y": 62.99999999999989,
+            "polygonIndex": 0,
+            "vertexIndex": 4,
+            "width": 69,
+            "height": 68,
+            "score": 206,
+            "selectionScore": 206,
+            "widthGrowth": 24,
+            "heightGrowth": 0,
+            "partArea": 571.0000000000043,
+            "binUtilisation": 0.33925000000000055,
+            "selected": false
+          },
+          {
+            "id": "d9:c5",
+            "partId": 3,
+            "rotation": 180,
+            "x": 904,
+            "y": 62.99999999999989,
+            "polygonIndex": 0,
+            "vertexIndex": 5,
+            "width": 74,
+            "height": 68,
+            "score": 216,
+            "selectionScore": 216,
+            "widthGrowth": 29,
+            "heightGrowth": 0,
+            "partArea": 571.0000000000043,
+            "binUtilisation": 0.33925000000000055,
+            "selected": false
+          },
+          {
+            "id": "d9:c6",
+            "partId": 3,
+            "rotation": 180,
+            "x": 904,
+            "y": 51.99999999999989,
+            "polygonIndex": 0,
+            "vertexIndex": 6,
+            "width": 74,
+            "height": 68,
+            "score": 216,
+            "selectionScore": 216,
+            "widthGrowth": 29,
+            "heightGrowth": 0,
+            "partArea": 571.0000000000043,
+            "binUtilisation": 0.33925000000000055,
+            "selected": false
+          },
+          {
+            "id": "d9:c7",
+            "partId": 3,
+            "rotation": 180,
+            "x": 930,
+            "y": 51.99999999999989,
+            "polygonIndex": 0,
+            "vertexIndex": 7,
+            "width": 100,
+            "height": 68,
+            "score": 268,
+            "selectionScore": 268,
+            "widthGrowth": 55,
+            "heightGrowth": 0,
+            "partArea": 571.0000000000043,
+            "binUtilisation": 0.33925000000000055,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d9:c2"
+      },
+      {
+        "id": "d10",
+        "binIndex": 1,
+        "partId": 5,
+        "rotation": 90,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 4,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 52,
+          "height": 79
+        },
+        "placedArea": 2714.0000000000045,
+        "partArea": 635.0000000000009,
+        "placed": [
+          {
+            "id": 7,
+            "rotation": 90,
+            "x": 274.99999999999994,
+            "y": -830
+          },
+          {
+            "id": 8,
+            "rotation": 90,
+            "x": 468,
+            "y": -188.00000000000003
+          },
+          {
+            "id": 10,
+            "rotation": 180,
+            "x": 660,
+            "y": 507.99999999999994
+          },
+          {
+            "id": 3,
+            "rotation": 180,
+            "x": 882,
+            "y": 98.99999999999989
+          }
+        ],
+        "remaining": [
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d10:c0",
+            "partId": 5,
+            "rotation": 90,
+            "x": 330,
+            "y": -355,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 100.00000000000003,
+            "height": 80,
+            "score": 280.00000000000006,
+            "selectionScore": 280.00000000000006,
+            "widthGrowth": 48.00000000000003,
+            "heightGrowth": 1,
+            "partArea": 635.0000000000009,
+            "binUtilisation": 0.4186250000000007,
+            "selected": false
+          },
+          {
+            "id": "d10:c1",
+            "partId": 5,
+            "rotation": 90,
+            "x": 323,
+            "y": -355,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 93.00000000000003,
+            "height": 80,
+            "score": 266.00000000000006,
+            "selectionScore": 266.00000000000006,
+            "widthGrowth": 41.00000000000003,
+            "heightGrowth": 1,
+            "partArea": 635.0000000000009,
+            "binUtilisation": 0.4186250000000007,
+            "selected": false
+          },
+          {
+            "id": "d10:c2",
+            "partId": 5,
+            "rotation": 90,
+            "x": 323,
+            "y": -375,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 93.00000000000003,
+            "height": 79,
+            "score": 265.00000000000006,
+            "selectionScore": 265.00000000000006,
+            "widthGrowth": 41.00000000000003,
+            "heightGrowth": 0,
+            "partArea": 635.0000000000009,
+            "binUtilisation": 0.4186250000000007,
+            "selected": false
+          },
+          {
+            "id": "d10:c3",
+            "partId": 5,
+            "rotation": 90,
+            "x": 311,
+            "y": -375,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 81.00000000000003,
+            "height": 79,
+            "score": 241.00000000000006,
+            "selectionScore": 241.00000000000006,
+            "widthGrowth": 29.00000000000003,
+            "heightGrowth": 0,
+            "partArea": 635.0000000000009,
+            "binUtilisation": 0.4186250000000007,
+            "selected": true
+          },
+          {
+            "id": "d10:c4",
+            "partId": 5,
+            "rotation": 90,
+            "x": 311,
+            "y": -378,
+            "polygonIndex": 0,
+            "vertexIndex": 4,
+            "width": 81.00000000000003,
+            "height": 79,
+            "score": 241.00000000000006,
+            "selectionScore": 241.00000000000006,
+            "widthGrowth": 29.00000000000003,
+            "heightGrowth": 0,
+            "partArea": 635.0000000000009,
+            "binUtilisation": 0.4186250000000007,
+            "selected": false
+          },
+          {
+            "id": "d10:c5",
+            "partId": 5,
+            "rotation": 90,
+            "x": 316,
+            "y": -378,
+            "polygonIndex": 0,
+            "vertexIndex": 5,
+            "width": 86.00000000000003,
+            "height": 79,
+            "score": 251.00000000000006,
+            "selectionScore": 251.00000000000006,
+            "widthGrowth": 34.00000000000003,
+            "heightGrowth": 0,
+            "partArea": 635.0000000000009,
+            "binUtilisation": 0.4186250000000007,
+            "selected": false
+          },
+          {
+            "id": "d10:c6",
+            "partId": 5,
+            "rotation": 90,
+            "x": 316,
+            "y": -410,
+            "polygonIndex": 0,
+            "vertexIndex": 6,
+            "width": 86.00000000000003,
+            "height": 79,
+            "score": 251.00000000000006,
+            "selectionScore": 251.00000000000006,
+            "widthGrowth": 34.00000000000003,
+            "heightGrowth": 0,
+            "partArea": 635.0000000000009,
+            "binUtilisation": 0.4186250000000007,
+            "selected": false
+          },
+          {
+            "id": "d10:c7",
+            "partId": 5,
+            "rotation": 90,
+            "x": 330,
+            "y": -410,
+            "polygonIndex": 0,
+            "vertexIndex": 7,
+            "width": 100.00000000000003,
+            "height": 79,
+            "score": 279.00000000000006,
+            "selectionScore": 279.00000000000006,
+            "widthGrowth": 48.00000000000003,
+            "heightGrowth": 0,
+            "partArea": 635.0000000000009,
+            "binUtilisation": 0.4186250000000007,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d10:c3"
+      },
+      {
+        "id": "d11",
+        "binIndex": 1,
+        "partId": 9,
+        "rotation": 0,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 5,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 81.00000000000003,
+          "height": 79
+        },
+        "placedArea": 3349.0000000000055,
+        "partArea": 571,
+        "placed": [
+          {
+            "id": 7,
+            "rotation": 90,
+            "x": 274.99999999999994,
+            "y": -830
+          },
+          {
+            "id": 8,
+            "rotation": 90,
+            "x": 468,
+            "y": -188.00000000000003
+          },
+          {
+            "id": 10,
+            "rotation": 180,
+            "x": 660,
+            "y": 507.99999999999994
+          },
+          {
+            "id": 3,
+            "rotation": 180,
+            "x": 882,
+            "y": 98.99999999999989
+          },
+          {
+            "id": 5,
+            "rotation": 90,
+            "x": 311,
+            "y": -375
+          }
+        ],
+        "remaining": [
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d11:c0",
+            "partId": 9,
+            "rotation": 0,
+            "x": -365,
+            "y": -437,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 81.00000000000003,
+            "height": 79,
+            "score": 241.00000000000006,
+            "selectionScore": 241.00000000000006,
+            "widthGrowth": 0,
+            "heightGrowth": 0,
+            "partArea": 571,
+            "binUtilisation": 0.49000000000000066,
+            "selected": true
+          },
+          {
+            "id": "d11:c1",
+            "partId": 9,
+            "rotation": 0,
+            "x": -365,
+            "y": -440,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 81.00000000000003,
+            "height": 79,
+            "score": 241.00000000000006,
+            "selectionScore": 241.00000000000006,
+            "widthGrowth": 0,
+            "heightGrowth": 0,
+            "partArea": 571,
+            "binUtilisation": 0.49000000000000066,
+            "selected": false
+          },
+          {
+            "id": "d11:c2",
+            "partId": 9,
+            "rotation": 0,
+            "x": -339,
+            "y": -440,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 100,
+            "height": 79,
+            "score": 279,
+            "selectionScore": 279,
+            "widthGrowth": 18.99999999999997,
+            "heightGrowth": 0,
+            "partArea": 571,
+            "binUtilisation": 0.49000000000000066,
+            "selected": false
+          },
+          {
+            "id": "d11:c3",
+            "partId": 9,
+            "rotation": 0,
+            "x": -339,
+            "y": -437,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 100,
+            "height": 79,
+            "score": 279,
+            "selectionScore": 279,
+            "widthGrowth": 18.99999999999997,
+            "heightGrowth": 0,
+            "partArea": 571,
+            "binUtilisation": 0.49000000000000066,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d11:c0"
+      }
+    ],
+    "validation": {
+      "valid": true,
+      "checks": 42,
+      "areaTolerance": 0.0001,
+      "violations": []
+    },
+    "nfpRuntimeMs": 62.901433,
+    "placementRuntimeMs": 14.910209999999978
+  },
+  "replay": {
+    "result": {
+      "fitness": 3.03575,
+      "area": 8000,
+      "placements": [
+        [
+          {
+            "id": 0,
+            "rotation": 270,
+            "x": 42.00000000000004,
+            "y": 240
+          },
+          {
+            "id": 6,
+            "rotation": 90,
+            "x": 292,
+            "y": -620
+          },
+          {
+            "id": 1,
+            "rotation": 180,
+            "x": 461,
+            "y": 76.99999999999994
+          },
+          {
+            "id": 7,
+            "rotation": 90,
+            "x": 325.99999999999994,
+            "y": -790
+          },
+          {
+            "id": 4,
+            "rotation": 270,
+            "x": -221.99999999999994,
+            "y": 269.00000000000006
+          }
+        ],
+        [
+          {
+            "id": 2,
+            "rotation": 90,
+            "x": 47.999999999999964,
+            "y": -620
+          },
+          {
+            "id": 8,
+            "rotation": 90,
+            "x": 496,
+            "y": -200.00000000000003
+          },
+          {
+            "id": 10,
+            "rotation": 180,
+            "x": 660,
+            "y": 495.99999999999994
+          },
+          {
+            "id": 11,
+            "rotation": 270,
+            "x": -399.99999999999983,
+            "y": 900.0000000000001
+          },
+          {
+            "id": 3,
+            "rotation": 180,
+            "x": 910,
+            "y": 77.99999999999989
+          },
+          {
+            "id": 5,
+            "rotation": 90,
+            "x": 327,
+            "y": -396
+          }
+        ],
+        [
+          {
+            "id": 9,
+            "rotation": 0,
+            "x": -410,
+            "y": -440
+          }
+        ]
+      ],
+      "unplaced": []
+    },
+    "metrics": {
+      "partCount": 12,
+      "placedPartCount": 12,
+      "unplacedPartCount": 0,
+      "binsUsed": 3,
+      "placedArea": 8226.000000000007,
+      "utilisation": 0.3427500000000003,
+      "fitness": 3.03575,
+      "placementRuntimeMs": 10.16354800000002
+    },
+    "decisions": [
+      {
+        "id": "d0",
+        "binIndex": 0,
+        "partId": 0,
+        "rotation": 270,
+        "policy": "minimum-x-first-encountered",
+        "placedPartCount": 0,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "placedArea": 0,
+        "partArea": 764,
+        "placed": [],
+        "remaining": [
+          {
+            "id": 0,
+            "source": 0,
+            "rotation": 270,
+            "area": 764
+          },
+          {
+            "id": 6,
+            "source": 6,
+            "rotation": 90,
+            "area": 764
+          },
+          {
+            "id": 1,
+            "source": 1,
+            "rotation": 180,
+            "area": 760.0000000000022
+          },
+          {
+            "id": 7,
+            "source": 7,
+            "rotation": 90,
+            "area": 760
+          },
+          {
+            "id": 2,
+            "source": 2,
+            "rotation": 90,
+            "area": 698.9999999999999
+          },
+          {
+            "id": 8,
+            "source": 8,
+            "rotation": 90,
+            "area": 699
+          },
+          {
+            "id": 4,
+            "source": 4,
+            "rotation": 270,
+            "area": 684
+          },
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 11,
+            "source": 11,
+            "rotation": 270,
+            "area": 635
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d0:c0",
+            "partId": 0,
+            "rotation": 270,
+            "x": -19.999999999999957,
+            "y": 240,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 38.00000000000001,
+            "height": 40,
+            "score": 116.00000000000001,
+            "selectionScore": -19.999999999999957,
+            "widthGrowth": 38.00000000000001,
+            "heightGrowth": 40,
+            "partArea": 764,
+            "binUtilisation": 0.0955,
+            "selected": false
+          },
+          {
+            "id": "d0:c1",
+            "partId": 0,
+            "rotation": 270,
+            "x": 42.00000000000004,
+            "y": 240,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 38.00000000000001,
+            "height": 40,
+            "score": 116.00000000000001,
+            "selectionScore": 42.00000000000004,
+            "widthGrowth": 38.00000000000001,
+            "heightGrowth": 40,
+            "partArea": 764,
+            "binUtilisation": 0.0955,
+            "selected": true
+          },
+          {
+            "id": "d0:c2",
+            "partId": 0,
+            "rotation": 270,
+            "x": 42.00000000000004,
+            "y": 280,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 38.00000000000001,
+            "height": 40,
+            "score": 116.00000000000001,
+            "selectionScore": 42.00000000000004,
+            "widthGrowth": 38.00000000000001,
+            "heightGrowth": 40,
+            "partArea": 764,
+            "binUtilisation": 0.0955,
+            "selected": false
+          },
+          {
+            "id": "d0:c3",
+            "partId": 0,
+            "rotation": 270,
+            "x": -19.999999999999957,
+            "y": 280,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 38.00000000000001,
+            "height": 40,
+            "score": 116.00000000000001,
+            "selectionScore": -19.999999999999957,
+            "widthGrowth": 38.00000000000001,
+            "heightGrowth": 40,
+            "partArea": 764,
+            "binUtilisation": 0.0955,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d0:c1"
+      },
+      {
+        "id": "d1",
+        "binIndex": 0,
+        "partId": 6,
+        "rotation": 90,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 1,
+        "currentBounds": {
+          "x": 62,
+          "y": 0,
+          "width": 38,
+          "height": 40
+        },
+        "placedArea": 764,
+        "partArea": 764,
+        "placed": [
+          {
+            "id": 0,
+            "rotation": 270,
+            "x": 42.00000000000004,
+            "y": 240
+          }
+        ],
+        "remaining": [
+          {
+            "id": 6,
+            "source": 6,
+            "rotation": 90,
+            "area": 764
+          },
+          {
+            "id": 1,
+            "source": 1,
+            "rotation": 180,
+            "area": 760.0000000000022
+          },
+          {
+            "id": 7,
+            "source": 7,
+            "rotation": 90,
+            "area": 760
+          },
+          {
+            "id": 2,
+            "source": 2,
+            "rotation": 90,
+            "area": 698.9999999999999
+          },
+          {
+            "id": 8,
+            "source": 8,
+            "rotation": 90,
+            "area": 699
+          },
+          {
+            "id": 4,
+            "source": 4,
+            "rotation": 270,
+            "area": 684
+          },
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 11,
+            "source": 11,
+            "rotation": 270,
+            "area": 635
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d1:c0",
+            "partId": 6,
+            "rotation": 90,
+            "x": 292,
+            "y": -580,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 75.99999999999994,
+            "height": 80,
+            "score": 231.9999999999999,
+            "selectionScore": 231.9999999999999,
+            "widthGrowth": 37.99999999999994,
+            "heightGrowth": 40,
+            "partArea": 764,
+            "binUtilisation": 0.191,
+            "selected": false
+          },
+          {
+            "id": "d1:c1",
+            "partId": 6,
+            "rotation": 90,
+            "x": 268,
+            "y": -580,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 99.99999999999994,
+            "height": 80,
+            "score": 279.9999999999999,
+            "selectionScore": 279.9999999999999,
+            "widthGrowth": 61.99999999999994,
+            "heightGrowth": 40,
+            "partArea": 764,
+            "binUtilisation": 0.191,
+            "selected": false
+          },
+          {
+            "id": "d1:c2",
+            "partId": 6,
+            "rotation": 90,
+            "x": 268,
+            "y": -620,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 99.99999999999994,
+            "height": 40,
+            "score": 239.9999999999999,
+            "selectionScore": 239.9999999999999,
+            "widthGrowth": 61.99999999999994,
+            "heightGrowth": 0,
+            "partArea": 764,
+            "binUtilisation": 0.191,
+            "selected": false
+          },
+          {
+            "id": "d1:c3",
+            "partId": 6,
+            "rotation": 90,
+            "x": 292,
+            "y": -620,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 75.99999999999994,
+            "height": 40,
+            "score": 191.9999999999999,
+            "selectionScore": 191.9999999999999,
+            "widthGrowth": 37.99999999999994,
+            "heightGrowth": 0,
+            "partArea": 764,
+            "binUtilisation": 0.191,
+            "selected": true
+          }
+        ],
+        "selectedCandidateId": "d1:c3"
+      },
+      {
+        "id": "d2",
+        "binIndex": 0,
+        "partId": 1,
+        "rotation": 180,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 2,
+        "currentBounds": {
+          "x": 24.000000000000057,
+          "y": 0,
+          "width": 75.99999999999994,
+          "height": 40
+        },
+        "placedArea": 1528,
+        "partArea": 760.0000000000022,
+        "placed": [
+          {
+            "id": 0,
+            "rotation": 270,
+            "x": 42.00000000000004,
+            "y": 240
+          },
+          {
+            "id": 6,
+            "rotation": 90,
+            "x": 292,
+            "y": -620
+          }
+        ],
+        "remaining": [
+          {
+            "id": 1,
+            "source": 1,
+            "rotation": 180,
+            "area": 760.0000000000022
+          },
+          {
+            "id": 7,
+            "source": 7,
+            "rotation": 90,
+            "area": 760
+          },
+          {
+            "id": 2,
+            "source": 2,
+            "rotation": 90,
+            "area": 698.9999999999999
+          },
+          {
+            "id": 8,
+            "source": 8,
+            "rotation": 90,
+            "area": 699
+          },
+          {
+            "id": 4,
+            "source": 4,
+            "rotation": 270,
+            "area": 684
+          },
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 11,
+            "source": 11,
+            "rotation": 270,
+            "area": 635
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d2:c0",
+            "partId": 1,
+            "rotation": 180,
+            "x": 461,
+            "y": 76.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 81,
+            "height": 57,
+            "score": 219,
+            "selectionScore": 219,
+            "widthGrowth": 5.000000000000057,
+            "heightGrowth": 17,
+            "partArea": 760.0000000000022,
+            "binUtilisation": 0.2860000000000003,
+            "selected": true
+          },
+          {
+            "id": "d2:c1",
+            "partId": 1,
+            "rotation": 180,
+            "x": 461,
+            "y": 99.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 81,
+            "height": 80,
+            "score": 242,
+            "selectionScore": 242,
+            "widthGrowth": 5.000000000000057,
+            "heightGrowth": 40,
+            "partArea": 760.0000000000022,
+            "binUtilisation": 0.2860000000000003,
+            "selected": false
+          },
+          {
+            "id": "d2:c2",
+            "partId": 1,
+            "rotation": 180,
+            "x": 442,
+            "y": 99.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 100,
+            "height": 80,
+            "score": 280,
+            "selectionScore": 280,
+            "widthGrowth": 24.000000000000057,
+            "heightGrowth": 40,
+            "partArea": 760.0000000000022,
+            "binUtilisation": 0.2860000000000003,
+            "selected": false
+          },
+          {
+            "id": "d2:c3",
+            "partId": 1,
+            "rotation": 180,
+            "x": 442,
+            "y": 76.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 100,
+            "height": 57,
+            "score": 257,
+            "selectionScore": 257,
+            "widthGrowth": 24.000000000000057,
+            "heightGrowth": 17,
+            "partArea": 760.0000000000022,
+            "binUtilisation": 0.2860000000000003,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d2:c0"
+      },
+      {
+        "id": "d3",
+        "binIndex": 0,
+        "partId": 7,
+        "rotation": 90,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 3,
+        "currentBounds": {
+          "x": 19,
+          "y": 0,
+          "width": 81,
+          "height": 57
+        },
+        "placedArea": 2288.0000000000023,
+        "partArea": 760,
+        "placed": [
+          {
+            "id": 0,
+            "rotation": 270,
+            "x": 42.00000000000004,
+            "y": 240
+          },
+          {
+            "id": 6,
+            "rotation": 90,
+            "x": 292,
+            "y": -620
+          },
+          {
+            "id": 1,
+            "rotation": 180,
+            "x": 461,
+            "y": 76.99999999999994
+          }
+        ],
+        "remaining": [
+          {
+            "id": 7,
+            "source": 7,
+            "rotation": 90,
+            "area": 760
+          },
+          {
+            "id": 2,
+            "source": 2,
+            "rotation": 90,
+            "area": 698.9999999999999
+          },
+          {
+            "id": 8,
+            "source": 8,
+            "rotation": 90,
+            "area": 699
+          },
+          {
+            "id": 4,
+            "source": 4,
+            "rotation": 270,
+            "area": 684
+          },
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 11,
+            "source": 11,
+            "rotation": 270,
+            "area": 635
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d3:c0",
+            "partId": 7,
+            "rotation": 90,
+            "x": 329.99999999999994,
+            "y": -782,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 81,
+            "height": 80,
+            "score": 242,
+            "selectionScore": 242,
+            "widthGrowth": 0,
+            "heightGrowth": 23,
+            "partArea": 760,
+            "binUtilisation": 0.3810000000000003,
+            "selected": false
+          },
+          {
+            "id": "d3:c1",
+            "partId": 7,
+            "rotation": 90,
+            "x": 325.99999999999994,
+            "y": -782,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 81,
+            "height": 80,
+            "score": 242,
+            "selectionScore": 242,
+            "widthGrowth": 0,
+            "heightGrowth": 23,
+            "partArea": 760,
+            "binUtilisation": 0.3810000000000003,
+            "selected": false
+          },
+          {
+            "id": "d3:c2",
+            "partId": 7,
+            "rotation": 90,
+            "x": 325.99999999999994,
+            "y": -790,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 81,
+            "height": 72,
+            "score": 234,
+            "selectionScore": 234,
+            "widthGrowth": 0,
+            "heightGrowth": 15,
+            "partArea": 760,
+            "binUtilisation": 0.3810000000000003,
+            "selected": true
+          },
+          {
+            "id": "d3:c3",
+            "partId": 7,
+            "rotation": 90,
+            "x": 329.99999999999994,
+            "y": -790,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 81,
+            "height": 72,
+            "score": 234,
+            "selectionScore": 234,
+            "widthGrowth": 0,
+            "heightGrowth": 15,
+            "partArea": 760,
+            "binUtilisation": 0.3810000000000003,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d3:c2"
+      },
+      {
+        "id": "d4",
+        "binIndex": 0,
+        "partId": 4,
+        "rotation": 270,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 4,
+        "currentBounds": {
+          "x": 19,
+          "y": 0,
+          "width": 81,
+          "height": 72
+        },
+        "placedArea": 3048.0000000000023,
+        "partArea": 684,
+        "placed": [
+          {
+            "id": 0,
+            "rotation": 270,
+            "x": 42.00000000000004,
+            "y": 240
+          },
+          {
+            "id": 6,
+            "rotation": 90,
+            "x": 292,
+            "y": -620
+          },
+          {
+            "id": 1,
+            "rotation": 180,
+            "x": 461,
+            "y": 76.99999999999994
+          },
+          {
+            "id": 7,
+            "rotation": 90,
+            "x": 325.99999999999994,
+            "y": -790
+          }
+        ],
+        "remaining": [
+          {
+            "id": 2,
+            "source": 2,
+            "rotation": 90,
+            "area": 698.9999999999999
+          },
+          {
+            "id": 8,
+            "source": 8,
+            "rotation": 90,
+            "area": 699
+          },
+          {
+            "id": 4,
+            "source": 4,
+            "rotation": 270,
+            "area": 684
+          },
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 11,
+            "source": 11,
+            "rotation": 270,
+            "area": 635
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d4:c0",
+            "partId": 4,
+            "rotation": 270,
+            "x": -221.99999999999994,
+            "y": 269.00000000000006,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 92,
+            "height": 72,
+            "score": 256,
+            "selectionScore": 256,
+            "widthGrowth": 11,
+            "heightGrowth": 0,
+            "partArea": 684,
+            "binUtilisation": 0.4665000000000003,
+            "selected": true
+          },
+          {
+            "id": "d4:c1",
+            "partId": 4,
+            "rotation": 270,
+            "x": -221.99999999999994,
+            "y": 280.00000000000006,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 92,
+            "height": 80.00000000000003,
+            "score": 264,
+            "selectionScore": 264,
+            "widthGrowth": 11,
+            "heightGrowth": 8.000000000000028,
+            "partArea": 684,
+            "binUtilisation": 0.4665000000000003,
+            "selected": false
+          },
+          {
+            "id": "d4:c2",
+            "partId": 4,
+            "rotation": 270,
+            "x": -229.99999999999994,
+            "y": 280.00000000000006,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 100,
+            "height": 80.00000000000003,
+            "score": 280,
+            "selectionScore": 280,
+            "widthGrowth": 19,
+            "heightGrowth": 8.000000000000028,
+            "partArea": 684,
+            "binUtilisation": 0.4665000000000003,
+            "selected": false
+          },
+          {
+            "id": "d4:c3",
+            "partId": 4,
+            "rotation": 270,
+            "x": -229.99999999999994,
+            "y": 269.00000000000006,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 100,
+            "height": 72,
+            "score": 272,
+            "selectionScore": 272,
+            "widthGrowth": 19,
+            "heightGrowth": 0,
+            "partArea": 684,
+            "binUtilisation": 0.4665000000000003,
+            "selected": false
+          },
+          {
+            "id": "d4:c4",
+            "partId": 4,
+            "rotation": 270,
+            "x": -225.99999999999994,
+            "y": 246.00000000000006,
+            "polygonIndex": 1,
+            "vertexIndex": 0,
+            "width": 96,
+            "height": 72,
+            "score": 264,
+            "selectionScore": 264,
+            "widthGrowth": 15,
+            "heightGrowth": 0,
+            "partArea": 684,
+            "binUtilisation": 0.4665000000000003,
+            "selected": false
+          },
+          {
+            "id": "d4:c5",
+            "partId": 4,
+            "rotation": 270,
+            "x": -229.99999999999994,
+            "y": 246.00000000000006,
+            "polygonIndex": 1,
+            "vertexIndex": 1,
+            "width": 100,
+            "height": 72,
+            "score": 272,
+            "selectionScore": 272,
+            "widthGrowth": 19,
+            "heightGrowth": 0,
+            "partArea": 684,
+            "binUtilisation": 0.4665000000000003,
+            "selected": false
+          },
+          {
+            "id": "d4:c6",
+            "partId": 4,
+            "rotation": 270,
+            "x": -229.99999999999994,
+            "y": 236.00000000000006,
+            "polygonIndex": 1,
+            "vertexIndex": 2,
+            "width": 100,
+            "height": 72,
+            "score": 272,
+            "selectionScore": 272,
+            "widthGrowth": 19,
+            "heightGrowth": 0,
+            "partArea": 684,
+            "binUtilisation": 0.4665000000000003,
+            "selected": false
+          },
+          {
+            "id": "d4:c7",
+            "partId": 4,
+            "rotation": 270,
+            "x": -225.99999999999994,
+            "y": 236.00000000000006,
+            "polygonIndex": 1,
+            "vertexIndex": 3,
+            "width": 96,
+            "height": 72,
+            "score": 264,
+            "selectionScore": 264,
+            "widthGrowth": 15,
+            "heightGrowth": 0,
+            "partArea": 684,
+            "binUtilisation": 0.4665000000000003,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d4:c0"
+      },
+      {
+        "id": "d5",
+        "binIndex": 1,
+        "partId": 2,
+        "rotation": 90,
+        "policy": "minimum-x-first-encountered",
+        "placedPartCount": 0,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "placedArea": 0,
+        "partArea": 698.9999999999999,
+        "placed": [],
+        "remaining": [
+          {
+            "id": 2,
+            "source": 2,
+            "rotation": 90,
+            "area": 698.9999999999999
+          },
+          {
+            "id": 8,
+            "source": 8,
+            "rotation": 90,
+            "area": 699
+          },
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 11,
+            "source": 11,
+            "rotation": 270,
+            "area": 635
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d5:c0",
+            "partId": 2,
+            "rotation": 90,
+            "x": 47.999999999999964,
+            "y": -620,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 28.000000000000004,
+            "height": 45,
+            "score": 101,
+            "selectionScore": 47.999999999999964,
+            "widthGrowth": 28.000000000000004,
+            "heightGrowth": 45,
+            "partArea": 698.9999999999999,
+            "binUtilisation": 0.08737499999999998,
+            "selected": true
+          },
+          {
+            "id": "d5:c1",
+            "partId": 2,
+            "rotation": 90,
+            "x": 119.99999999999996,
+            "y": -620,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 28.000000000000004,
+            "height": 45,
+            "score": 101,
+            "selectionScore": 119.99999999999996,
+            "widthGrowth": 28.000000000000004,
+            "heightGrowth": 45,
+            "partArea": 698.9999999999999,
+            "binUtilisation": 0.08737499999999998,
+            "selected": false
+          },
+          {
+            "id": "d5:c2",
+            "partId": 2,
+            "rotation": 90,
+            "x": 119.99999999999996,
+            "y": -585,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 28.000000000000004,
+            "height": 45,
+            "score": 101,
+            "selectionScore": 119.99999999999996,
+            "widthGrowth": 28.000000000000004,
+            "heightGrowth": 45,
+            "partArea": 698.9999999999999,
+            "binUtilisation": 0.08737499999999998,
+            "selected": false
+          },
+          {
+            "id": "d5:c3",
+            "partId": 2,
+            "rotation": 90,
+            "x": 47.999999999999964,
+            "y": -585,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 28.000000000000004,
+            "height": 45,
+            "score": 101,
+            "selectionScore": 47.999999999999964,
+            "widthGrowth": 28.000000000000004,
+            "heightGrowth": 45,
+            "partArea": 698.9999999999999,
+            "binUtilisation": 0.08737499999999998,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d5:c0"
+      },
+      {
+        "id": "d6",
+        "binIndex": 1,
+        "partId": 8,
+        "rotation": 90,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 1,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 28.000000000000004,
+          "height": 45
+        },
+        "placedArea": 698.9999999999999,
+        "partArea": 699,
+        "placed": [
+          {
+            "id": 2,
+            "rotation": 90,
+            "x": 47.999999999999964,
+            "y": -620
+          }
+        ],
+        "remaining": [
+          {
+            "id": 8,
+            "source": 8,
+            "rotation": 90,
+            "area": 699
+          },
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 11,
+            "source": 11,
+            "rotation": 270,
+            "area": 635
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d6:c0",
+            "partId": 8,
+            "rotation": 90,
+            "x": 540,
+            "y": -165.00000000000003,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 100,
+            "height": 80,
+            "score": 280,
+            "selectionScore": 280,
+            "widthGrowth": 72,
+            "heightGrowth": 35,
+            "partArea": 699,
+            "binUtilisation": 0.17475,
+            "selected": false
+          },
+          {
+            "id": "d6:c1",
+            "partId": 8,
+            "rotation": 90,
+            "x": 496,
+            "y": -165.00000000000003,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 56,
+            "height": 80,
+            "score": 192,
+            "selectionScore": 192,
+            "widthGrowth": 27.999999999999996,
+            "heightGrowth": 35,
+            "partArea": 699,
+            "binUtilisation": 0.17475,
+            "selected": false
+          },
+          {
+            "id": "d6:c2",
+            "partId": 8,
+            "rotation": 90,
+            "x": 496,
+            "y": -200.00000000000003,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 56,
+            "height": 45,
+            "score": 157,
+            "selectionScore": 157,
+            "widthGrowth": 27.999999999999996,
+            "heightGrowth": 0,
+            "partArea": 699,
+            "binUtilisation": 0.17475,
+            "selected": true
+          },
+          {
+            "id": "d6:c3",
+            "partId": 8,
+            "rotation": 90,
+            "x": 540,
+            "y": -200.00000000000003,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 100,
+            "height": 45,
+            "score": 245,
+            "selectionScore": 245,
+            "widthGrowth": 72,
+            "heightGrowth": 0,
+            "partArea": 699,
+            "binUtilisation": 0.17475,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d6:c2"
+      },
+      {
+        "id": "d7",
+        "binIndex": 1,
+        "partId": 10,
+        "rotation": 180,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 2,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 56,
+          "height": 45
+        },
+        "placedArea": 1398,
+        "partArea": 684,
+        "placed": [
+          {
+            "id": 2,
+            "rotation": 90,
+            "x": 47.999999999999964,
+            "y": -620
+          },
+          {
+            "id": 8,
+            "rotation": 90,
+            "x": 496,
+            "y": -200.00000000000003
+          }
+        ],
+        "remaining": [
+          {
+            "id": 10,
+            "source": 10,
+            "rotation": 180,
+            "area": 684
+          },
+          {
+            "id": 11,
+            "source": 11,
+            "rotation": 270,
+            "area": 635
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d7:c0",
+            "partId": 10,
+            "rotation": 180,
+            "x": 665,
+            "y": 520,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 56,
+            "height": 80.00000000000006,
+            "score": 192.00000000000006,
+            "selectionScore": 192.00000000000006,
+            "widthGrowth": 0,
+            "heightGrowth": 35.00000000000006,
+            "partArea": 684,
+            "binUtilisation": 0.26025,
+            "selected": false
+          },
+          {
+            "id": "d7:c1",
+            "partId": 10,
+            "rotation": 180,
+            "x": 660,
+            "y": 520,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 56,
+            "height": 80.00000000000006,
+            "score": 192.00000000000006,
+            "selectionScore": 192.00000000000006,
+            "widthGrowth": 0,
+            "heightGrowth": 35.00000000000006,
+            "partArea": 684,
+            "binUtilisation": 0.26025,
+            "selected": false
+          },
+          {
+            "id": "d7:c2",
+            "partId": 10,
+            "rotation": 180,
+            "x": 660,
+            "y": 495.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 56,
+            "height": 56,
+            "score": 168,
+            "selectionScore": 168,
+            "widthGrowth": 0,
+            "heightGrowth": 11,
+            "partArea": 684,
+            "binUtilisation": 0.26025,
+            "selected": true
+          },
+          {
+            "id": "d7:c3",
+            "partId": 10,
+            "rotation": 180,
+            "x": 665,
+            "y": 495.99999999999994,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 56,
+            "height": 56,
+            "score": 168,
+            "selectionScore": 168,
+            "widthGrowth": 0,
+            "heightGrowth": 11,
+            "partArea": 684,
+            "binUtilisation": 0.26025,
+            "selected": false
+          },
+          {
+            "id": "d7:c4",
+            "partId": 10,
+            "rotation": 180,
+            "x": 720,
+            "y": 520,
+            "polygonIndex": 1,
+            "vertexIndex": 0,
+            "width": 100,
+            "height": 80.00000000000006,
+            "score": 280.00000000000006,
+            "selectionScore": 280.00000000000006,
+            "widthGrowth": 44,
+            "heightGrowth": 35.00000000000006,
+            "partArea": 684,
+            "binUtilisation": 0.26025,
+            "selected": false
+          },
+          {
+            "id": "d7:c5",
+            "partId": 10,
+            "rotation": 180,
+            "x": 688,
+            "y": 520,
+            "polygonIndex": 1,
+            "vertexIndex": 1,
+            "width": 68,
+            "height": 80.00000000000006,
+            "score": 216.00000000000006,
+            "selectionScore": 216.00000000000006,
+            "widthGrowth": 12,
+            "heightGrowth": 35.00000000000006,
+            "partArea": 684,
+            "binUtilisation": 0.26025,
+            "selected": false
+          },
+          {
+            "id": "d7:c6",
+            "partId": 10,
+            "rotation": 180,
+            "x": 688,
+            "y": 495.99999999999994,
+            "polygonIndex": 1,
+            "vertexIndex": 2,
+            "width": 68,
+            "height": 56,
+            "score": 192,
+            "selectionScore": 192,
+            "widthGrowth": 12,
+            "heightGrowth": 11,
+            "partArea": 684,
+            "binUtilisation": 0.26025,
+            "selected": false
+          },
+          {
+            "id": "d7:c7",
+            "partId": 10,
+            "rotation": 180,
+            "x": 712,
+            "y": 495.99999999999994,
+            "polygonIndex": 1,
+            "vertexIndex": 3,
+            "width": 92,
+            "height": 56,
+            "score": 240,
+            "selectionScore": 240,
+            "widthGrowth": 36,
+            "heightGrowth": 11,
+            "partArea": 684,
+            "binUtilisation": 0.26025,
+            "selected": false
+          },
+          {
+            "id": "d7:c8",
+            "partId": 10,
+            "rotation": 180,
+            "x": 712,
+            "y": 474.99999999999994,
+            "polygonIndex": 1,
+            "vertexIndex": 4,
+            "width": 92,
+            "height": 45,
+            "score": 229,
+            "selectionScore": 229,
+            "widthGrowth": 36,
+            "heightGrowth": 0,
+            "partArea": 684,
+            "binUtilisation": 0.26025,
+            "selected": false
+          },
+          {
+            "id": "d7:c9",
+            "partId": 10,
+            "rotation": 180,
+            "x": 720,
+            "y": 474.99999999999994,
+            "polygonIndex": 1,
+            "vertexIndex": 5,
+            "width": 100,
+            "height": 45,
+            "score": 245,
+            "selectionScore": 245,
+            "widthGrowth": 44,
+            "heightGrowth": 0,
+            "partArea": 684,
+            "binUtilisation": 0.26025,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d7:c2"
+      },
+      {
+        "id": "d8",
+        "binIndex": 1,
+        "partId": 11,
+        "rotation": 270,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 3,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 56,
+          "height": 56
+        },
+        "placedArea": 2082,
+        "partArea": 635,
+        "placed": [
+          {
+            "id": 2,
+            "rotation": 90,
+            "x": 47.999999999999964,
+            "y": -620
+          },
+          {
+            "id": 8,
+            "rotation": 90,
+            "x": 496,
+            "y": -200.00000000000003
+          },
+          {
+            "id": 10,
+            "rotation": 180,
+            "x": 660,
+            "y": 495.99999999999994
+          }
+        ],
+        "remaining": [
+          {
+            "id": 11,
+            "source": 11,
+            "rotation": 270,
+            "area": 635
+          },
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d8:c0",
+            "partId": 11,
+            "rotation": 270,
+            "x": -380.99999999999983,
+            "y": 910.0000000000001,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 100,
+            "height": 80,
+            "score": 280,
+            "selectionScore": 280,
+            "widthGrowth": 44,
+            "heightGrowth": 24,
+            "partArea": 635,
+            "binUtilisation": 0.339625,
+            "selected": false
+          },
+          {
+            "id": "d8:c1",
+            "partId": 11,
+            "rotation": 270,
+            "x": -399.99999999999983,
+            "y": 910.0000000000001,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 81,
+            "height": 80,
+            "score": 242,
+            "selectionScore": 242,
+            "widthGrowth": 25,
+            "heightGrowth": 24,
+            "partArea": 635,
+            "binUtilisation": 0.339625,
+            "selected": false
+          },
+          {
+            "id": "d8:c2",
+            "partId": 11,
+            "rotation": 270,
+            "x": -399.99999999999983,
+            "y": 900.0000000000001,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 81,
+            "height": 70,
+            "score": 232,
+            "selectionScore": 232,
+            "widthGrowth": 25,
+            "heightGrowth": 14,
+            "partArea": 635,
+            "binUtilisation": 0.339625,
+            "selected": true
+          },
+          {
+            "id": "d8:c3",
+            "partId": 11,
+            "rotation": 270,
+            "x": -383.99999999999983,
+            "y": 900.0000000000001,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 97,
+            "height": 70,
+            "score": 264,
+            "selectionScore": 264,
+            "widthGrowth": 41,
+            "heightGrowth": 14,
+            "partArea": 635,
+            "binUtilisation": 0.339625,
+            "selected": false
+          },
+          {
+            "id": "d8:c4",
+            "partId": 11,
+            "rotation": 270,
+            "x": -383.99999999999983,
+            "y": 855.0000000000001,
+            "polygonIndex": 0,
+            "vertexIndex": 4,
+            "width": 97,
+            "height": 56,
+            "score": 250,
+            "selectionScore": 250,
+            "widthGrowth": 41,
+            "heightGrowth": 0,
+            "partArea": 635,
+            "binUtilisation": 0.339625,
+            "selected": false
+          },
+          {
+            "id": "d8:c5",
+            "partId": 11,
+            "rotation": 270,
+            "x": -380.99999999999983,
+            "y": 855.0000000000001,
+            "polygonIndex": 0,
+            "vertexIndex": 5,
+            "width": 100,
+            "height": 56,
+            "score": 256,
+            "selectionScore": 256,
+            "widthGrowth": 44,
+            "heightGrowth": 0,
+            "partArea": 635,
+            "binUtilisation": 0.339625,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d8:c2"
+      },
+      {
+        "id": "d9",
+        "binIndex": 1,
+        "partId": 3,
+        "rotation": 180,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 4,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 81,
+          "height": 70
+        },
+        "placedArea": 2717,
+        "partArea": 571.0000000000043,
+        "placed": [
+          {
+            "id": 2,
+            "rotation": 90,
+            "x": 47.999999999999964,
+            "y": -620
+          },
+          {
+            "id": 8,
+            "rotation": 90,
+            "x": 496,
+            "y": -200.00000000000003
+          },
+          {
+            "id": 10,
+            "rotation": 180,
+            "x": 660,
+            "y": 495.99999999999994
+          },
+          {
+            "id": 11,
+            "rotation": 270,
+            "x": -399.99999999999983,
+            "y": 900.0000000000001
+          }
+        ],
+        "remaining": [
+          {
+            "id": 3,
+            "source": 3,
+            "rotation": 180,
+            "area": 571.0000000000043
+          },
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d9:c0",
+            "partId": 3,
+            "rotation": 180,
+            "x": 910,
+            "y": 77.99999999999989,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 81,
+            "height": 70,
+            "score": 232,
+            "selectionScore": 232,
+            "widthGrowth": 0,
+            "heightGrowth": 0,
+            "partArea": 571.0000000000043,
+            "binUtilisation": 0.4110000000000006,
+            "selected": true
+          },
+          {
+            "id": "d9:c1",
+            "partId": 3,
+            "rotation": 180,
+            "x": 910,
+            "y": 75.99999999999989,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 81,
+            "height": 70,
+            "score": 232,
+            "selectionScore": 232,
+            "widthGrowth": 0,
+            "heightGrowth": 0,
+            "partArea": 571.0000000000043,
+            "binUtilisation": 0.4110000000000006,
+            "selected": false
+          },
+          {
+            "id": "d9:c2",
+            "partId": 3,
+            "rotation": 180,
+            "x": 915,
+            "y": 75.99999999999989,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 85,
+            "height": 70,
+            "score": 240,
+            "selectionScore": 240,
+            "widthGrowth": 4,
+            "heightGrowth": 0,
+            "partArea": 571.0000000000043,
+            "binUtilisation": 0.4110000000000006,
+            "selected": false
+          },
+          {
+            "id": "d9:c3",
+            "partId": 3,
+            "rotation": 180,
+            "x": 915,
+            "y": 51.99999999999989,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 85,
+            "height": 70,
+            "score": 240,
+            "selectionScore": 240,
+            "widthGrowth": 4,
+            "heightGrowth": 0,
+            "partArea": 571.0000000000043,
+            "binUtilisation": 0.4110000000000006,
+            "selected": false
+          },
+          {
+            "id": "d9:c4",
+            "partId": 3,
+            "rotation": 180,
+            "x": 930,
+            "y": 51.99999999999989,
+            "polygonIndex": 0,
+            "vertexIndex": 4,
+            "width": 100,
+            "height": 70,
+            "score": 270,
+            "selectionScore": 270,
+            "widthGrowth": 19,
+            "heightGrowth": 0,
+            "partArea": 571.0000000000043,
+            "binUtilisation": 0.4110000000000006,
+            "selected": false
+          },
+          {
+            "id": "d9:c5",
+            "partId": 3,
+            "rotation": 180,
+            "x": 930,
+            "y": 77.99999999999989,
+            "polygonIndex": 0,
+            "vertexIndex": 5,
+            "width": 100,
+            "height": 70,
+            "score": 270,
+            "selectionScore": 270,
+            "widthGrowth": 19,
+            "heightGrowth": 0,
+            "partArea": 571.0000000000043,
+            "binUtilisation": 0.4110000000000006,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d9:c0"
+      },
+      {
+        "id": "d10",
+        "binIndex": 1,
+        "partId": 5,
+        "rotation": 90,
+        "policy": "width2-plus-height-then-x",
+        "placedPartCount": 5,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 81,
+          "height": 70
+        },
+        "placedArea": 3288.0000000000045,
+        "partArea": 635.0000000000009,
+        "placed": [
+          {
+            "id": 2,
+            "rotation": 90,
+            "x": 47.999999999999964,
+            "y": -620
+          },
+          {
+            "id": 8,
+            "rotation": 90,
+            "x": 496,
+            "y": -200.00000000000003
+          },
+          {
+            "id": 10,
+            "rotation": 180,
+            "x": 660,
+            "y": 495.99999999999994
+          },
+          {
+            "id": 11,
+            "rotation": 270,
+            "x": -399.99999999999983,
+            "y": 900.0000000000001
+          },
+          {
+            "id": 3,
+            "rotation": 180,
+            "x": 910,
+            "y": 77.99999999999989
+          }
+        ],
+        "remaining": [
+          {
+            "id": 5,
+            "source": 5,
+            "rotation": 90,
+            "area": 635.0000000000009
+          },
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d10:c0",
+            "partId": 5,
+            "rotation": 90,
+            "x": 327,
+            "y": -396,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 97.00000000000003,
+            "height": 70,
+            "score": 264.00000000000006,
+            "selectionScore": 264.00000000000006,
+            "widthGrowth": 16.00000000000003,
+            "heightGrowth": 0,
+            "partArea": 635.0000000000009,
+            "binUtilisation": 0.49037500000000067,
+            "selected": true
+          },
+          {
+            "id": "d10:c1",
+            "partId": 5,
+            "rotation": 90,
+            "x": 327,
+            "y": -410,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 97.00000000000003,
+            "height": 70,
+            "score": 264.00000000000006,
+            "selectionScore": 264.00000000000006,
+            "widthGrowth": 16.00000000000003,
+            "heightGrowth": 0,
+            "partArea": 635.0000000000009,
+            "binUtilisation": 0.49037500000000067,
+            "selected": false
+          },
+          {
+            "id": "d10:c2",
+            "partId": 5,
+            "rotation": 90,
+            "x": 330,
+            "y": -410,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 100.00000000000003,
+            "height": 70,
+            "score": 270.00000000000006,
+            "selectionScore": 270.00000000000006,
+            "widthGrowth": 19.00000000000003,
+            "heightGrowth": 0,
+            "partArea": 635.0000000000009,
+            "binUtilisation": 0.49037500000000067,
+            "selected": false
+          },
+          {
+            "id": "d10:c3",
+            "partId": 5,
+            "rotation": 90,
+            "x": 330,
+            "y": -396,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 100.00000000000003,
+            "height": 70,
+            "score": 270.00000000000006,
+            "selectionScore": 270.00000000000006,
+            "widthGrowth": 19.00000000000003,
+            "heightGrowth": 0,
+            "partArea": 635.0000000000009,
+            "binUtilisation": 0.49037500000000067,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d10:c0"
+      },
+      {
+        "id": "d11",
+        "binIndex": 2,
+        "partId": 9,
+        "rotation": 0,
+        "policy": "minimum-x-first-encountered",
+        "placedPartCount": 0,
+        "currentBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "placedArea": 0,
+        "partArea": 571,
+        "placed": [],
+        "remaining": [
+          {
+            "id": 9,
+            "source": 9,
+            "rotation": 0,
+            "area": 571
+          }
+        ],
+        "candidates": [
+          {
+            "id": "d11:c0",
+            "partId": 9,
+            "rotation": 0,
+            "x": -410,
+            "y": -440,
+            "polygonIndex": 0,
+            "vertexIndex": 0,
+            "width": 29,
+            "height": 32,
+            "score": 90,
+            "selectionScore": -410,
+            "widthGrowth": 29,
+            "heightGrowth": 32,
+            "partArea": 571,
+            "binUtilisation": 0.071375,
+            "selected": true
+          },
+          {
+            "id": "d11:c1",
+            "partId": 9,
+            "rotation": 0,
+            "x": -339,
+            "y": -440,
+            "polygonIndex": 0,
+            "vertexIndex": 1,
+            "width": 29,
+            "height": 32,
+            "score": 90,
+            "selectionScore": -339,
+            "widthGrowth": 29,
+            "heightGrowth": 32,
+            "partArea": 571,
+            "binUtilisation": 0.071375,
+            "selected": false
+          },
+          {
+            "id": "d11:c2",
+            "partId": 9,
+            "rotation": 0,
+            "x": -339,
+            "y": -392,
+            "polygonIndex": 0,
+            "vertexIndex": 2,
+            "width": 29,
+            "height": 32,
+            "score": 90,
+            "selectionScore": -339,
+            "widthGrowth": 29,
+            "heightGrowth": 32,
+            "partArea": 571,
+            "binUtilisation": 0.071375,
+            "selected": false
+          },
+          {
+            "id": "d11:c3",
+            "partId": 9,
+            "rotation": 0,
+            "x": -410,
+            "y": -392,
+            "polygonIndex": 0,
+            "vertexIndex": 3,
+            "width": 29,
+            "height": 32,
+            "score": 90,
+            "selectionScore": -410,
+            "widthGrowth": 29,
+            "heightGrowth": 32,
+            "partArea": 571,
+            "binUtilisation": 0.071375,
+            "selected": false
+          }
+        ],
+        "selectedCandidateId": "d11:c0"
+      }
+    ],
+    "validation": {
+      "valid": true,
+      "checks": 37,
+      "areaTolerance": 0.0001,
+      "violations": []
+    },
+    "nfpRuntimeMs": 62.901433,
+    "placementRuntimeMs": 10.240352000000001
+  },
+  "warning": "One changed choice; all subsequent decisions recomputed with Classic. Not a full Jev policy rollout."
+}
