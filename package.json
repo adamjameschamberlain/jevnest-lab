@@ -6,8 +6,16 @@
   "scripts": {
     "test": "node tests/placement-instrumentation.test.cjs",
     "benchmark:setup": "playwright install chromium",
-    "benchmark": "node scripts/run-corpus.cjs"
+    "benchmark": "node scripts/run-corpus.cjs",
+    "jev:prepare": "node scripts/evaluate-jev.cjs",
+    "jev:evaluate": "node scripts/evaluate-jev.cjs --live",
+    "test:jev": "node --test tests/jev-offline.test.cjs"
   },
-  "engines": { "node": ">=20" },
-  "devDependencies": { "playwright": "1.62.1" }
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "fflate": "0.8.2",
+    "playwright": "1.62.1"
+  }
 }

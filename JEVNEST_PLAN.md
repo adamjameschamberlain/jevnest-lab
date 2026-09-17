@@ -155,3 +155,17 @@ If the answer is no, stop or redesign the state representation. If yes, then tes
 - Any batching or parallel-decision guidance.
 
 Never commit an API key. Use environment variables/local secrets only.
+
+## Implementation status — 17 September 2026
+
+- Phase 1 capture and regression verification complete.
+- Synthetic Classic SVG corpus complete: five inputs, two seeds, 20 evaluations
+  per pass, with exact ordinary/captured parity. Reference outputs are archived in
+  `benchmarks/baselines/classic-initial.zip`.
+- Offline Jev request preparation and API adapter implemented in
+  `experiments/jev/`. Dry-run and mocked transport tests pass. No live Jev call or
+  model result has been produced yet; a local `TYPESAFE_API_KEY` is required.
+- Changed-policy geometry replay and Classic-versus-Jev quality comparison remain
+  unimplemented. Agreement metrics are not final nesting quality metrics.
+
+See `experiments/jev/README.md` for the commands and current feature limitations.

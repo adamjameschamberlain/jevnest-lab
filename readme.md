@@ -10,7 +10,7 @@ npm.cmd run benchmark
 
 Use `npm` instead of `npm.cmd` outside Windows. Requires Node.js 20+.
 See [the benchmark guide](benchmarks/README.md) for setup, outputs and adding SVGs.
-The placement instrumentation remains opt-in; no Jev integration is included.
+The placement instrumentation remains opt-in. The [offline Jev evaluator](experiments/jev/README.md) prepares requests with `npm.cmd run jev:prepare`; live evaluation uses a locally configured key.
 
 ---
 
