@@ -33,7 +33,8 @@
 			populationSize: 10,
 			mutationRate: 10,
 			useHoles: false,
-			exploreConcave: false
+			exploreConcave: false,
+			captureCandidates: false
 		};
 		
 		this.working = false;
@@ -42,8 +43,18 @@
 		var best = null;
 		var workerTimer = null;
 		var progress = 0;
+		var lastPlacementEvaluation = null;
+		var evaluationSequence = 0;
+
+		// Optional observer for every evaluated individual, including non-improving ones.
+		// The observer receives a detached, JSON-safe snapshot, never live geometry.
+		this.onPlacementEvaluation = null;
+		this.getLastPlacementEvaluation = function(){
+			return lastPlacementEvaluation ? JSON.parse(JSON.stringify(lastPlacementEvaluation)) : null;
+		};
 		
 		this.parsesvg = function(svgstring){
+			lastPlacementEvaluation = null;
 			// reset if in progress
 			this.stop();
 			
@@ -115,6 +126,10 @@
 			if('exploreConcave' in c){
 				config.exploreConcave = !!c.exploreConcave;
 			}
+			if('captureCandidates' in c){
+				config.captureCandidates = !!c.captureCandidates;
+			}
+			lastPlacementEvaluation = null;
 			
 			SvgParser.config({ tolerance: config.curveTolerance});
 			
@@ -241,6 +256,7 @@
 		}
 		
 		this.launchWorkers = function(tree, binPolygon, config, progressCallback, displayCallback){
+			var evaluationStarted = config.captureCandidates ? Date.now() : null;
 			function shuffle(array) {
 			  var currentIndex = array.length, temporaryValue, randomIndex ;
 
@@ -582,6 +598,20 @@
 						displayCallback();
 					}
 					self.working = false;
+					if(bestresult.instrumentation){
+						lastPlacementEvaluation = bestresult.instrumentation;
+						lastPlacementEvaluation.evaluationId = evaluationSequence++;
+						lastPlacementEvaluation.isBest = bestresult === best;
+						// Includes NFP work and worker round trips; excludes observer/export work.
+						lastPlacementEvaluation.metrics.evaluationRuntimeMs = Date.now()-evaluationStarted;
+						if(typeof self.onPlacementEvaluation === 'function'){
+							try {
+								self.onPlacementEvaluation(self.getLastPlacementEvaluation());
+							} catch(err){
+								console.log('Placement instrumentation observer failed:', err);
+							}
+						}
+					}
 				}, function (err) {
 					console.log(err);
 				});
