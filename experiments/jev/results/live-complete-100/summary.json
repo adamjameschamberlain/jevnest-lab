@@ -1,0 +1,1068 @@
+{
+  "status": "complete-live-comparison",
+  "expectedTrials": 100,
+  "completedTrials": 100,
+  "completedNests": 1890,
+  "policies": {
+    "classic": {
+      "n": 100,
+      "meanUtilisation": 0.4968327891427185,
+      "meanBins": 3.52,
+      "medianRuntimeMs": 1681.6611500000581,
+      "allValid": true
+    },
+    "contact": {
+      "n": 100,
+      "meanUtilisation": 0.49838821206086725,
+      "meanBins": 3.51,
+      "medianRuntimeMs": 1735.992049999797,
+      "allValid": true
+    },
+    "ga": {
+      "n": 100,
+      "meanUtilisation": 0.5102186263342026,
+      "meanBins": 3.43,
+      "medianRuntimeMs": 12009.525549999991,
+      "allValid": true
+    },
+    "jev": {
+      "n": 100,
+      "meanUtilisation": 0.5164097727926792,
+      "meanBins": 3.39,
+      "medianRuntimeMs": 11269.971099999966,
+      "allValid": true
+    }
+  },
+  "profiling": {
+    "classicMeanNfpMs": 2190.3709240000126,
+    "classicMeanScoreLoopMs": 3.2913610000495845,
+    "classicMeanEvaluationMs": 2257.3260029999938,
+    "scoreLoopShareOfColdRuntime": 0.001447577818772912,
+    "theoreticalSpeedupRemovingWholeScoreLoop": 1.0014496763380842,
+    "note": "Score loop includes bounding-box construction and comparison. Jev still needs candidate features, so this zero-cost removal ceiling is optimistic. Runtime includes VM setup; GA is stock algorithm in Node, without browser worker parallelism."
+  },
+  "pairedAgainstGaAtJevBudget": {
+    "n": 100,
+    "wins": 5,
+    "ties": 94,
+    "losses": 1,
+    "meanUtilisationDeltaPoints": 0.6191146458476662,
+    "jobClusterBootstrap95Percent": [
+      0,
+      1.3919726940292576
+    ],
+    "intervalStatus": "available",
+    "fasterToSameQuality": 0,
+    "gaDidNotReachJevQuality": 5
+  },
+  "proceedDecision": "No established equal-time quality advantage on this suite; inspect runtime-to-quality and failure cases before further investment.",
+  "limitations": [
+    "Synthetic concave polygons, 90-degree rotations, zero spacing, no holes. Not evidence on all production jobs.",
+    "Full Jev rollout changes placement selection only; order and rotations match Classic first evaluation. GA may change both.",
+    "Candidate feature extraction and original score computation remain costs of the Jev policy.",
+    "API timeout/failure stops rather than silently substituting Classic. Successful calls are cached for resume; resumed timing reconstructs original API latency.",
+    "Any GA evaluation finishing after a deadline is excluded from that deadline comparison."
+  ],
+  "pairs": [
+    {
+      "job": "hard-01",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6757.764599999999,
+      "classicGaTimeToJevQualityMs": 146.01899999999978,
+      "apiMs": 6549.726399999999,
+      "calls": 20
+    },
+    {
+      "job": "hard-01",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 5401.127499999999,
+      "classicGaTimeToJevQualityMs": 145.01339999999982,
+      "apiMs": 5200.898800000001,
+      "calls": 20
+    },
+    {
+      "job": "hard-01",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 5665.1296,
+      "classicGaTimeToJevQualityMs": 150.91040000000066,
+      "apiMs": 5464.3836999999985,
+      "calls": 20
+    },
+    {
+      "job": "hard-01",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 5713.4259999999995,
+      "classicGaTimeToJevQualityMs": 143.97350000000006,
+      "apiMs": 5520.083099999989,
+      "calls": 20
+    },
+    {
+      "job": "hard-01",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 5610.369999999995,
+      "classicGaTimeToJevQualityMs": 147.03600000000006,
+      "apiMs": 5399.409399999997,
+      "calls": 20
+    },
+    {
+      "job": "hard-02",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 10693.355900000002,
+      "classicGaTimeToJevQualityMs": 3076.4925999999978,
+      "apiMs": 8216.561799999967,
+      "calls": 30
+    },
+    {
+      "job": "hard-02",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 10445.665599999993,
+      "classicGaTimeToJevQualityMs": 2473.032500000001,
+      "apiMs": 7972.561899999986,
+      "calls": 30
+    },
+    {
+      "job": "hard-02",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 11403.554899999988,
+      "classicGaTimeToJevQualityMs": 2425.3294999999925,
+      "apiMs": 8751.125599999985,
+      "calls": 30
+    },
+    {
+      "job": "hard-02",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 10971.709299999988,
+      "classicGaTimeToJevQualityMs": 2484.3406999999715,
+      "apiMs": 8105.48060000001,
+      "calls": 30
+    },
+    {
+      "job": "hard-02",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 11583.739499999996,
+      "classicGaTimeToJevQualityMs": 2652.11050000001,
+      "apiMs": 8833.34209999995,
+      "calls": 30
+    },
+    {
+      "job": "hard-03",
+      "seed": 1,
+      "outcome": -1,
+      "utilisationDeltaPoints": 15.460221361809928,
+      "jevRuntimeMs": 13585.567500000005,
+      "classicGaTimeToJevQualityMs": null,
+      "apiMs": 11541.086899999995,
+      "calls": 40
+    },
+    {
+      "job": "hard-03",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 13035.266999999993,
+      "classicGaTimeToJevQualityMs": 1884.059099999984,
+      "apiMs": 10999.18180000002,
+      "calls": 40
+    },
+    {
+      "job": "hard-03",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 12982.768899999995,
+      "classicGaTimeToJevQualityMs": 1920.1324000000022,
+      "apiMs": 10230.525399999751,
+      "calls": 40
+    },
+    {
+      "job": "hard-03",
+      "seed": 4,
+      "outcome": 1,
+      "utilisationDeltaPoints": -15.460221361809928,
+      "jevRuntimeMs": 13195.157200000016,
+      "classicGaTimeToJevQualityMs": 1878.4304999999586,
+      "apiMs": 10729.166499999992,
+      "calls": 40
+    },
+    {
+      "job": "hard-03",
+      "seed": 5,
+      "outcome": -1,
+      "utilisationDeltaPoints": 15.460221361809928,
+      "jevRuntimeMs": 13019.965700000088,
+      "classicGaTimeToJevQualityMs": null,
+      "apiMs": 10967.48140000009,
+      "calls": 40
+    },
+    {
+      "job": "hard-04",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 18244.6851,
+      "classicGaTimeToJevQualityMs": 4506.025600000001,
+      "apiMs": 13303.546000000017,
+      "calls": 50
+    },
+    {
+      "job": "hard-04",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 18118.0374,
+      "classicGaTimeToJevQualityMs": 4433.336800000005,
+      "apiMs": 13435.271000000095,
+      "calls": 50
+    },
+    {
+      "job": "hard-04",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 19103.094699999987,
+      "classicGaTimeToJevQualityMs": 4808.333599999984,
+      "apiMs": 14247.602200000008,
+      "calls": 50
+    },
+    {
+      "job": "hard-04",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 18636.295700000017,
+      "classicGaTimeToJevQualityMs": 4759.491399999999,
+      "apiMs": 13503.896099999896,
+      "calls": 50
+    },
+    {
+      "job": "hard-04",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 18801.5882,
+      "classicGaTimeToJevQualityMs": 4773.728299999988,
+      "apiMs": 13658.288900000072,
+      "calls": 50
+    },
+    {
+      "job": "hard-05",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6271.044599999965,
+      "classicGaTimeToJevQualityMs": 1057.124599999981,
+      "apiMs": 5139.859200000064,
+      "calls": 20
+    },
+    {
+      "job": "hard-05",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6233.22649999999,
+      "classicGaTimeToJevQualityMs": 1007.7646999999997,
+      "apiMs": 5172.211699999927,
+      "calls": 20
+    },
+    {
+      "job": "hard-05",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": -1.1102230246251565e-14,
+      "jevRuntimeMs": 6206.106099999975,
+      "classicGaTimeToJevQualityMs": 959.3033999999752,
+      "apiMs": 5073.569899999828,
+      "calls": 20
+    },
+    {
+      "job": "hard-05",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6737.214899999963,
+      "classicGaTimeToJevQualityMs": 1038.830399999977,
+      "apiMs": 5654.313999999897,
+      "calls": 20
+    },
+    {
+      "job": "hard-05",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6365.295999999973,
+      "classicGaTimeToJevQualityMs": 1064.3495000000112,
+      "apiMs": 5309.147699999856,
+      "calls": 20
+    },
+    {
+      "job": "hard-06",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 8173.458099999989,
+      "classicGaTimeToJevQualityMs": 357,
+      "apiMs": 7769.145800000115,
+      "calls": 30
+    },
+    {
+      "job": "hard-06",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 8322.655200000037,
+      "classicGaTimeToJevQualityMs": 331.3662999999942,
+      "apiMs": 7915.628900000011,
+      "calls": 30
+    },
+    {
+      "job": "hard-06",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 8144.538600000029,
+      "classicGaTimeToJevQualityMs": 351.6449999999604,
+      "apiMs": 7709.976299999806,
+      "calls": 30
+    },
+    {
+      "job": "hard-06",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 8049.370200000005,
+      "classicGaTimeToJevQualityMs": 449.1376000000164,
+      "apiMs": 7620.891699999862,
+      "calls": 30
+    },
+    {
+      "job": "hard-06",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 8471.961100000015,
+      "classicGaTimeToJevQualityMs": 328.4316000000108,
+      "apiMs": 8068.811400000181,
+      "calls": 30
+    },
+    {
+      "job": "hard-07",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 12902.363000000012,
+      "classicGaTimeToJevQualityMs": 2612.9410999999964,
+      "apiMs": 10132.502200000221,
+      "calls": 40
+    },
+    {
+      "job": "hard-07",
+      "seed": 2,
+      "outcome": -1,
+      "utilisationDeltaPoints": 15.456395864087307,
+      "jevRuntimeMs": 13467.355500000005,
+      "classicGaTimeToJevQualityMs": null,
+      "apiMs": 10609.676400000113,
+      "calls": 40
+    },
+    {
+      "job": "hard-07",
+      "seed": 3,
+      "outcome": -1,
+      "utilisationDeltaPoints": 15.456395864087307,
+      "jevRuntimeMs": 12790.876099999994,
+      "classicGaTimeToJevQualityMs": null,
+      "apiMs": 10066.45949999988,
+      "calls": 40
+    },
+    {
+      "job": "hard-07",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 13340.000600000028,
+      "classicGaTimeToJevQualityMs": 2908.500400000019,
+      "apiMs": 10495.603599999798,
+      "calls": 40
+    },
+    {
+      "job": "hard-07",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 14192.67790000001,
+      "classicGaTimeToJevQualityMs": 2852.3924000000115,
+      "apiMs": 11235.90900000045,
+      "calls": 40
+    },
+    {
+      "job": "hard-08",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 18882.071000000113,
+      "classicGaTimeToJevQualityMs": 5696.156699999934,
+      "apiMs": 13063.281000000658,
+      "calls": 50
+    },
+    {
+      "job": "hard-08",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 19492.97690000001,
+      "classicGaTimeToJevQualityMs": 5738.3135000000475,
+      "apiMs": 13089.37200000009,
+      "calls": 50
+    },
+    {
+      "job": "hard-08",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 19684.44040000008,
+      "classicGaTimeToJevQualityMs": 5564.692199999932,
+      "apiMs": 13676.71809999994,
+      "calls": 50
+    },
+    {
+      "job": "hard-08",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 19707.291600000113,
+      "classicGaTimeToJevQualityMs": 5807.526799999992,
+      "apiMs": 13847.338100000168,
+      "calls": 50
+    },
+    {
+      "job": "hard-08",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 21084.97259999998,
+      "classicGaTimeToJevQualityMs": 5560.614899999928,
+      "apiMs": 14971.42619999987,
+      "calls": 50
+    },
+    {
+      "job": "hard-09",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6722.157600000035,
+      "classicGaTimeToJevQualityMs": 988.4787999999244,
+      "apiMs": 5679.416499999585,
+      "calls": 20
+    },
+    {
+      "job": "hard-09",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 7131.714000000036,
+      "classicGaTimeToJevQualityMs": 1036.5862999999663,
+      "apiMs": 6069.515799999936,
+      "calls": 20
+    },
+    {
+      "job": "hard-09",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6754.310100000002,
+      "classicGaTimeToJevQualityMs": 1013.169899999979,
+      "apiMs": 5708.161400000099,
+      "calls": 20
+    },
+    {
+      "job": "hard-09",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6161.158100000001,
+      "classicGaTimeToJevQualityMs": 1028.606299999985,
+      "apiMs": 5087.445099999779,
+      "calls": 20
+    },
+    {
+      "job": "hard-09",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": -1.1102230246251565e-14,
+      "jevRuntimeMs": 6332.052999999956,
+      "classicGaTimeToJevQualityMs": 1000.7678000000305,
+      "apiMs": 5285.085000000079,
+      "calls": 20
+    },
+    {
+      "job": "hard-10",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 9102.654500000062,
+      "classicGaTimeToJevQualityMs": 1387.3603000000585,
+      "apiMs": 7628.284799999907,
+      "calls": 30
+    },
+    {
+      "job": "hard-10",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 9668.604300000006,
+      "classicGaTimeToJevQualityMs": 1421.277299999958,
+      "apiMs": 8158.764300000737,
+      "calls": 30
+    },
+    {
+      "job": "hard-10",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 1.1102230246251565e-14,
+      "jevRuntimeMs": 9514.989799999981,
+      "classicGaTimeToJevQualityMs": 1452.420299999998,
+      "apiMs": 8005.532499999972,
+      "calls": 30
+    },
+    {
+      "job": "hard-10",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": -1.1102230246251565e-14,
+      "jevRuntimeMs": 10682.682900000014,
+      "classicGaTimeToJevQualityMs": 1463.0314999999246,
+      "apiMs": 9106.786199999857,
+      "calls": 30
+    },
+    {
+      "job": "hard-10",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 9916.954400000046,
+      "classicGaTimeToJevQualityMs": 1381.6041999999434,
+      "apiMs": 8456.676900000311,
+      "calls": 30
+    },
+    {
+      "job": "hard-11",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 11519.069500000216,
+      "classicGaTimeToJevQualityMs": 1246.75130000012,
+      "apiMs": 10848.03669999959,
+      "calls": 40
+    },
+    {
+      "job": "hard-11",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 11024.836099999957,
+      "classicGaTimeToJevQualityMs": 1314.6154000000097,
+      "apiMs": 10332.479300000472,
+      "calls": 40
+    },
+    {
+      "job": "hard-11",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 11324.443899999838,
+      "classicGaTimeToJevQualityMs": 709.0068000000902,
+      "apiMs": 10662.607199999504,
+      "calls": 40
+    },
+    {
+      "job": "hard-11",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 12592.340599999996,
+      "classicGaTimeToJevQualityMs": 5318.165400000056,
+      "apiMs": 11903.619999999413,
+      "calls": 40
+    },
+    {
+      "job": "hard-11",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 11146.583199999994,
+      "classicGaTimeToJevQualityMs": 879.3373000000138,
+      "apiMs": 10475.68509999942,
+      "calls": 40
+    },
+    {
+      "job": "hard-12",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 19120.89220000012,
+      "classicGaTimeToJevQualityMs": 5879.306800000137,
+      "apiMs": 13162.165099998703,
+      "calls": 50
+    },
+    {
+      "job": "hard-12",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 19144.08129999996,
+      "classicGaTimeToJevQualityMs": 5580.747300000163,
+      "apiMs": 13375.389500000514,
+      "calls": 50
+    },
+    {
+      "job": "hard-12",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 19211.595200000098,
+      "classicGaTimeToJevQualityMs": 6240.259199999971,
+      "apiMs": 13328.426900000079,
+      "calls": 50
+    },
+    {
+      "job": "hard-12",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 20033.566800000146,
+      "classicGaTimeToJevQualityMs": 5592.86950000003,
+      "apiMs": 13233.40479999967,
+      "calls": 50
+    },
+    {
+      "job": "hard-12",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 19016.70350000006,
+      "classicGaTimeToJevQualityMs": 5451.827400000067,
+      "apiMs": 13264.994599999394,
+      "calls": 50
+    },
+    {
+      "job": "hard-13",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6121.401800000109,
+      "classicGaTimeToJevQualityMs": 786.1577999999281,
+      "apiMs": 5241.6832000005525,
+      "calls": 20
+    },
+    {
+      "job": "hard-13",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6176.7384000001475,
+      "classicGaTimeToJevQualityMs": 785.2994000001345,
+      "apiMs": 5357.560299999779,
+      "calls": 20
+    },
+    {
+      "job": "hard-13",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6456.650400000159,
+      "classicGaTimeToJevQualityMs": 772.9890000000596,
+      "apiMs": 5561.178499999223,
+      "calls": 20
+    },
+    {
+      "job": "hard-13",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6242.330199999968,
+      "classicGaTimeToJevQualityMs": 767.1764999998268,
+      "apiMs": 5407.845500000054,
+      "calls": 20
+    },
+    {
+      "job": "hard-13",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6098.600199999986,
+      "classicGaTimeToJevQualityMs": 729.9147999999113,
+      "apiMs": 5308.469299999997,
+      "calls": 20
+    },
+    {
+      "job": "hard-14",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 1.1102230246251565e-14,
+      "jevRuntimeMs": 10795.460599999875,
+      "classicGaTimeToJevQualityMs": 2571.1483000000007,
+      "apiMs": 8141.1694999998435,
+      "calls": 30
+    },
+    {
+      "job": "hard-14",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 11215.498300000094,
+      "classicGaTimeToJevQualityMs": 2502.8630999999586,
+      "apiMs": 8581.808399999514,
+      "calls": 30
+    },
+    {
+      "job": "hard-14",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 1.1102230246251565e-14,
+      "jevRuntimeMs": 10500.679400000023,
+      "classicGaTimeToJevQualityMs": 2546.216199999908,
+      "apiMs": 7883.83550000051,
+      "calls": 30
+    },
+    {
+      "job": "hard-14",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 10628.371700000018,
+      "classicGaTimeToJevQualityMs": 3410.1163999999408,
+      "apiMs": 7961.645399999572,
+      "calls": 30
+    },
+    {
+      "job": "hard-14",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 10909.525600000052,
+      "classicGaTimeToJevQualityMs": 2480.3855000000913,
+      "apiMs": 8311.517800000962,
+      "calls": 30
+    },
+    {
+      "job": "hard-15",
+      "seed": 1,
+      "outcome": -1,
+      "utilisationDeltaPoints": 15.53845149478208,
+      "jevRuntimeMs": 15655.303000000073,
+      "classicGaTimeToJevQualityMs": null,
+      "apiMs": 12325.739400000311,
+      "calls": 40
+    },
+    {
+      "job": "hard-15",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 13853.123900000006,
+      "classicGaTimeToJevQualityMs": 2997.8038999999408,
+      "apiMs": 10681.825500000734,
+      "calls": 40
+    },
+    {
+      "job": "hard-15",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 13858.227900000056,
+      "classicGaTimeToJevQualityMs": 3004.59300000011,
+      "apiMs": 10703.036200000206,
+      "calls": 40
+    },
+    {
+      "job": "hard-15",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 13762.200100000016,
+      "classicGaTimeToJevQualityMs": 3189.563100000145,
+      "apiMs": 10484.132199999876,
+      "calls": 40
+    },
+    {
+      "job": "hard-15",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 14170.484799999977,
+      "classicGaTimeToJevQualityMs": 2972.3290000001434,
+      "apiMs": 11097.777499999851,
+      "calls": 40
+    },
+    {
+      "job": "hard-16",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 13762.726000000024,
+      "classicGaTimeToJevQualityMs": 858.5309000001289,
+      "apiMs": 12787.515500000445,
+      "calls": 50
+    },
+    {
+      "job": "hard-16",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 14423.211099999957,
+      "classicGaTimeToJevQualityMs": 843.4339000000618,
+      "apiMs": 13448.262199999765,
+      "calls": 50
+    },
+    {
+      "job": "hard-16",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 14692.513900000136,
+      "classicGaTimeToJevQualityMs": 856.0863000000827,
+      "apiMs": 13703.948000000324,
+      "calls": 50
+    },
+    {
+      "job": "hard-16",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 13696.583600000013,
+      "classicGaTimeToJevQualityMs": 856.8697999999858,
+      "apiMs": 12703.072599999374,
+      "calls": 50
+    },
+    {
+      "job": "hard-16",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 14305.604399999836,
+      "classicGaTimeToJevQualityMs": 851.7505999999121,
+      "apiMs": 13324.827599998796,
+      "calls": 50
+    },
+    {
+      "job": "hard-17",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6797.753999999957,
+      "classicGaTimeToJevQualityMs": 965.3586999999825,
+      "apiMs": 5774.150200000033,
+      "calls": 20
+    },
+    {
+      "job": "hard-17",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": -1.1102230246251565e-14,
+      "jevRuntimeMs": 6165.673999999883,
+      "classicGaTimeToJevQualityMs": 944.8066000000108,
+      "apiMs": 5160.107299999567,
+      "calls": 20
+    },
+    {
+      "job": "hard-17",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6569.631499999901,
+      "classicGaTimeToJevQualityMs": 989.2490000000689,
+      "apiMs": 5539.523199999938,
+      "calls": 20
+    },
+    {
+      "job": "hard-17",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 5878.3889999999665,
+      "classicGaTimeToJevQualityMs": 940.748099999968,
+      "apiMs": 4870.128999999724,
+      "calls": 20
+    },
+    {
+      "job": "hard-17",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 6691.875200000126,
+      "classicGaTimeToJevQualityMs": 971.7773000001907,
+      "apiMs": 5657.410899999784,
+      "calls": 20
+    },
+    {
+      "job": "hard-18",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 9653.522299999837,
+      "classicGaTimeToJevQualityMs": 1526.6491000000387,
+      "apiMs": 8048.607000000542,
+      "calls": 30
+    },
+    {
+      "job": "hard-18",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 9534.175300000003,
+      "classicGaTimeToJevQualityMs": 1499.5446999999695,
+      "apiMs": 7952.175000000047,
+      "calls": 30
+    },
+    {
+      "job": "hard-18",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 9925.016100000124,
+      "classicGaTimeToJevQualityMs": 1475.966299999971,
+      "apiMs": 8344.84949999908,
+      "calls": 30
+    },
+    {
+      "job": "hard-18",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": -1.1102230246251565e-14,
+      "jevRuntimeMs": 9528.325199999847,
+      "classicGaTimeToJevQualityMs": 1526.1047999998555,
+      "apiMs": 7927.154800001532,
+      "calls": 30
+    },
+    {
+      "job": "hard-18",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 9400.928299999796,
+      "classicGaTimeToJevQualityMs": 1509.5477000004612,
+      "apiMs": 7675.9765999997035,
+      "calls": 30
+    },
+    {
+      "job": "hard-19",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 14874.764500000048,
+      "classicGaTimeToJevQualityMs": 3497.5631000003777,
+      "apiMs": 11196.331099999603,
+      "calls": 40
+    },
+    {
+      "job": "hard-19",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 15346.939000000246,
+      "classicGaTimeToJevQualityMs": 3535.2990999999456,
+      "apiMs": 11320.641099999659,
+      "calls": 40
+    },
+    {
+      "job": "hard-19",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 13578.510899999645,
+      "classicGaTimeToJevQualityMs": 3522.3870999999344,
+      "apiMs": 9949.376300001051,
+      "calls": 40
+    },
+    {
+      "job": "hard-19",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 15556.935399999842,
+      "classicGaTimeToJevQualityMs": 3427.4445999995805,
+      "apiMs": 11796.318100000266,
+      "calls": 40
+    },
+    {
+      "job": "hard-19",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 14493.603600000031,
+      "classicGaTimeToJevQualityMs": 3522.4216999998316,
+      "apiMs": 10806.412499996368,
+      "calls": 40
+    },
+    {
+      "job": "hard-20",
+      "seed": 1,
+      "outcome": 0,
+      "utilisationDeltaPoints": -1.1102230246251565e-14,
+      "jevRuntimeMs": 17139.03830000013,
+      "classicGaTimeToJevQualityMs": 3886.9799000001512,
+      "apiMs": 12980.710100000259,
+      "calls": 50
+    },
+    {
+      "job": "hard-20",
+      "seed": 2,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 17864.30700000003,
+      "classicGaTimeToJevQualityMs": 3914.06780000031,
+      "apiMs": 13779.241100002546,
+      "calls": 50
+    },
+    {
+      "job": "hard-20",
+      "seed": 3,
+      "outcome": 0,
+      "utilisationDeltaPoints": 1.1102230246251565e-14,
+      "jevRuntimeMs": 17421.996100000106,
+      "classicGaTimeToJevQualityMs": 3990.3212999999523,
+      "apiMs": 13260.089499997906,
+      "calls": 50
+    },
+    {
+      "job": "hard-20",
+      "seed": 4,
+      "outcome": 0,
+      "utilisationDeltaPoints": 1.1102230246251565e-14,
+      "jevRuntimeMs": 17232.66060000006,
+      "classicGaTimeToJevQualityMs": 3872.160300000105,
+      "apiMs": 13153.341200001538,
+      "calls": 50
+    },
+    {
+      "job": "hard-20",
+      "seed": 5,
+      "outcome": 0,
+      "utilisationDeltaPoints": 0,
+      "jevRuntimeMs": 17724.441000000108,
+      "classicGaTimeToJevQualityMs": 3887.8601000001654,
+      "apiMs": 13666.164000000339,
+      "calls": 50
+    }
+  ]
+}

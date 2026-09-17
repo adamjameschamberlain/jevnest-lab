@@ -1,0 +1,97 @@
+{
+  "archiveSha256": "4dc99d94f4925f37aebf41f51827da7ea02d09b9e986daaad88c43003e5e32c1",
+  "trials": 100,
+  "distinctJobs": 20,
+  "finalLayoutsRevalidated": 400,
+  "allPartsPlaced": true,
+  "equalTimeSheetCount": {
+    "wins": 5,
+    "ties": 94,
+    "losses": 1
+  },
+  "versusClassicSheetCount": {
+    "wins": 13,
+    "ties": 87,
+    "losses": 0
+  },
+  "withSvgNestFitnessTiebreak": {
+    "wins": 14,
+    "ties": 0,
+    "losses": 86
+  },
+  "timeToSameSheetCount": {
+    "comparableTrials": 95,
+    "gaEarlier": 95,
+    "jevEarlier": 0,
+    "gaDidNotReachWithinRecordedRun": 5,
+    "medianGaMs": 1526.1047999998555,
+    "medianJevMs": 11024.836099999957,
+    "medianPairedJevOverGa": 6.227645737857057
+  },
+  "usage": {
+    "calls": 3500,
+    "inputTokens": 15089598,
+    "outputTokens": 511368,
+    "decisions": 3500
+  },
+  "totalApiMs": 946899.4985999968,
+  "totalJevMs": 1186313.2808000012,
+  "apiRuntimeShare": 0.7981867133456066,
+  "changedSheetCounts": [
+    {
+      "job": "hard-03",
+      "seed": 1,
+      "jevBins": 3,
+      "gaBins": 4
+    },
+    {
+      "job": "hard-03",
+      "seed": 4,
+      "jevBins": 4,
+      "gaBins": 3
+    },
+    {
+      "job": "hard-03",
+      "seed": 5,
+      "jevBins": 3,
+      "gaBins": 4
+    },
+    {
+      "job": "hard-07",
+      "seed": 2,
+      "jevBins": 3,
+      "gaBins": 4
+    },
+    {
+      "job": "hard-07",
+      "seed": 3,
+      "jevBins": 3,
+      "gaBins": 4
+    },
+    {
+      "job": "hard-15",
+      "seed": 1,
+      "jevBins": 3,
+      "gaBins": 4
+    }
+  ],
+  "reconstructedTrials": [
+    {
+      "job": "hard-01",
+      "seed": 1,
+      "cachedCalls": 13
+    },
+    {
+      "job": "hard-03",
+      "seed": 5,
+      "cachedCalls": 32
+    }
+  ],
+  "notes": [
+    "Time-to-quality here means all parts placed with no more sheets; it does not require equal occupied width.",
+    "Secondary fitness comparison uses the original SVGnest scalar fitness with 1e-9 tie tolerance.",
+    "Revalidation uses the existing authoritative geometry validator, not a separate geometry implementation.",
+    "Archive error.json is historical when 100 trials and finishedAt are present.",
+    "Token totals cover accepted calls; no currency cost is inferred without the applicable pricing."
+  ]
+}

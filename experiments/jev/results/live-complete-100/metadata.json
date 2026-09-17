@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "signature": "2a7788476ef23a4912a7ab0aaac9391a6968e9bd213a89c027cce1952d99cb63",
+  "config": {
+    "live": true,
+    "jobs": 20,
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "seconds": 2,
+    "minEvaluations": 1,
+    "model": "jev-1.13.0"
+  },
+  "expectedTrials": 100,
+  "sourceSha256": {
+    "svgnest.js": "75ccfc9ffc52f1f97467da590698ced626fadde7a413928756064c8d84795f9d",
+    "util/placementworker.js": "22f2a7f2a7795ad2ff6ed9aa359e1adff517a75e44b30c6d16d074b7bb71cb95",
+    "util/geometryutil.js": "e5dae1bb190c3f8c39bf0cdf6ebc1ae89c0085db6c38796940489209deee530a",
+    "util/clipper.js": "ce646cdaa76b179c705a5b6c8e0dfb2bf5651d48ed1257fcf53d06eaed0d4917",
+    "benchmarks/runner.js": "0e84e5bbd71a4a153eb46ba1748721ff176f951ae5d993143759f44624b5cd6c",
+    "experiments/jev/offline.cjs": "d443cc02e14fce6eb9883c3ba1af05513d634e11d2f1032adf9667990f1c1fde",
+    "experiments/jev/replay.cjs": "85c22a622126dcf2e0917cad90f6bd620770b684e0f50da581f3816b55f22c20",
+    "experiments/jev/full/corpus.cjs": "a6091539c2118541031a0e51e91663dcb6c2e51a6ae54c1c7ef35ffe0cafab11",
+    "experiments/jev/full/engine.cjs": "c7ef45b67e51d5d8071169163840f059dc7a288831f51eb2928db0a8d9aafd6b",
+    "experiments/jev/full/features.cjs": "88fc4525106b76daa4e540ab775a01eec8965f0394ffd87e131e989b1f658ca6",
+    "experiments/jev/full/report.cjs": "915c61283b7cfdff197646224ff1edd0754e298077e2f8b92b679b2f668e26ea",
+    "scripts/full-jev-benchmark.cjs": "8ffb5c85306849ae7203388bb84512341dd17ef1adb3f2e2cd950b013dc31266",
+    "experiments/jev/full/resume.cjs": "1bfb42c82b03852c0fd09629c0a8cab7ba4d502fc3ec181086bf472f7358a94c"
+  },
+  "startedAt": "2026-09-17T11:36:39.181Z",
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "machine": {
+    "node": "v24.17.0",
+    "platform": "win32",
+    "arch": "x64",
+    "cpu": "Intel(R) Core(TM) i5-9400F CPU @ 2.90GHz"
+  },
+  "protocol": "Same generated job and initial order/rotation per seed. Native Classic one pass; geometric contact/fragmentation control one pass; stock SVGnest GA with a wall-clock budget and at least one evaluation; Jev one complete sequential rollout. GA equal-time outcome uses only completed evaluations. Cold NFP caches per method, original one-cycle cache policy within GA. API latency, feature generation and logging included in guided runtime. VM setup and validation included in all methods. No browser worker parallelism.",
+  "decisionRule": "Primary: fewer unplaced, then fewer sheets at equal runtime. Secondary: utilisation, fitness, time to Jev quality, per-job clustered uncertainty. No model claim until full live suite complete.",
+  "migrations": [
+    {
+      "reason": "Bounded probability-rounding validation fix; geometry, requests and policy unchanged. No completed trials existed.",
+      "at": "2026-09-17T11:43:19.662Z",
+      "previousSignature": "291b678a9bb0e34345b47847e4086f3284edc8f0b051b452b0a47271e29c38dc",
+      "previousSourceSha256": {
+        "svgnest.js": "75ccfc9ffc52f1f97467da590698ced626fadde7a413928756064c8d84795f9d",
+        "util/placementworker.js": "22f2a7f2a7795ad2ff6ed9aa359e1adff517a75e44b30c6d16d074b7bb71cb95",
+        "util/geometryutil.js": "e5dae1bb190c3f8c39bf0cdf6ebc1ae89c0085db6c38796940489209deee530a",
+        "util/clipper.js": "ce646cdaa76b179c705a5b6c8e0dfb2bf5651d48ed1257fcf53d06eaed0d4917",
+        "benchmarks/runner.js": "0e84e5bbd71a4a153eb46ba1748721ff176f951ae5d993143759f44624b5cd6c",
+        "experiments/jev/offline.cjs": "3a6b8b390969f8195b113b523575dcbad5aa5a7d3f65182f1b31d203a8798ec8",
+        "experiments/jev/replay.cjs": "85c22a622126dcf2e0917cad90f6bd620770b684e0f50da581f3816b55f22c20",
+        "experiments/jev/full/corpus.cjs": "a6091539c2118541031a0e51e91663dcb6c2e51a6ae54c1c7ef35ffe0cafab11",
+        "experiments/jev/full/engine.cjs": "c7ef45b67e51d5d8071169163840f059dc7a288831f51eb2928db0a8d9aafd6b",
+        "experiments/jev/full/features.cjs": "88fc4525106b76daa4e540ab775a01eec8965f0394ffd87e131e989b1f658ca6",
+        "experiments/jev/full/report.cjs": "dd8e4ab317e463d0563311236c1c65da0921c4b419a89913cd4a373820557139",
+        "scripts/full-jev-benchmark.cjs": "91ff6e2462eff08a66ae51f29a89fcfc431675a668f1ab0f21312d46dd8cdc0b"
+      }
+    },
+    {
+      "reason": "Preserve explicit API choice and log probability disagreement. Accepted choices, requests and geometry unchanged; completed trials retained.",
+      "completedTrialsRetained": 14,
+      "at": "2026-09-17T12:01:07.298Z",
+      "previousSignature": "89bf0424547e8ab492ff837611e113a8bd8ac26018aad35325ae8d9f98aafae4",
+      "previousSourceSha256": {
+        "svgnest.js": "75ccfc9ffc52f1f97467da590698ced626fadde7a413928756064c8d84795f9d",
+        "util/placementworker.js": "22f2a7f2a7795ad2ff6ed9aa359e1adff517a75e44b30c6d16d074b7bb71cb95",
+        "util/geometryutil.js": "e5dae1bb190c3f8c39bf0cdf6ebc1ae89c0085db6c38796940489209deee530a",
+        "util/clipper.js": "ce646cdaa76b179c705a5b6c8e0dfb2bf5651d48ed1257fcf53d06eaed0d4917",
+        "benchmarks/runner.js": "0e84e5bbd71a4a153eb46ba1748721ff176f951ae5d993143759f44624b5cd6c",
+        "experiments/jev/offline.cjs": "eefacab699243c7ad482df86fb20505d73dae53f65b96ebab4bff0e98858e7b0",
+        "experiments/jev/replay.cjs": "85c22a622126dcf2e0917cad90f6bd620770b684e0f50da581f3816b55f22c20",
+        "experiments/jev/full/corpus.cjs": "a6091539c2118541031a0e51e91663dcb6c2e51a6ae54c1c7ef35ffe0cafab11",
+        "experiments/jev/full/engine.cjs": "c7ef45b67e51d5d8071169163840f059dc7a288831f51eb2928db0a8d9aafd6b",
+        "experiments/jev/full/features.cjs": "88fc4525106b76daa4e540ab775a01eec8965f0394ffd87e131e989b1f658ca6",
+        "experiments/jev/full/report.cjs": "dd8e4ab317e463d0563311236c1c65da0921c4b419a89913cd4a373820557139",
+        "scripts/full-jev-benchmark.cjs": "8ffb5c85306849ae7203388bb84512341dd17ef1adb3f2e2cd950b013dc31266",
+        "experiments/jev/full/resume.cjs": "df76c47a304c298b592d5f4e89b6a96a1981fd957b2e7a3474ce0876aa69c933"
+      }
+    }
+  ],
+  "finishedAt": "2026-09-17T12:44:07.324Z"
+}

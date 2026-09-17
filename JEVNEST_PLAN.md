@@ -105,7 +105,12 @@ Secondary metrics:
 
 Do not treat one visually good nest as evidence. Use a repeatable benchmark corpus.
 
-## Phase 4 - expand decision surface only if Phase 3 wins
+## Phase 4 - production-scale search-policy experiment
+
+The user's subsequent instruction authorises this redesigned experiment after
+the completed single-question baseline, even without a decisive Phase 3 win.
+The original gate below is superseded by that instruction. Do not interpret the
+small synthetic baseline as a verdict on production-scale Jev-guided search.
 Possible later typed decisions:
 - next part to place
 - rotation ordering
@@ -191,3 +196,58 @@ this command is run with the user's key. See `experiments/jev/full/README.md`.
 Local full-suite baseline completed: 100 trials / 779 complete layouts, saved at
 `experiments/jev/results/full-classic-369cd4c/`. Native bounding/scoring accounted
 for about 0.16% of cold runtime. Full Jev outcomes remain pending a keyed live run.
+
+## Completed live baseline and next-build requirements
+
+The pending-live statements above describe historical stages. The uploaded
+complete live run now contains 100 trials / 1,890 evaluated layouts. See
+`experiments/jev/results/live-complete-100/README.md` and `audit.json`.
+Jev versus equal-time GA: 5 sheet-count wins, 94 ties, 1 loss; +0.619 percentage
+points mean utilisation. GA reaches the same sheet count earlier in all 95
+trials where it reaches it. No speed benefit has been demonstrated.
+
+The next build is a separate versioned benchmark, not another run of the same
+policy with larger synthetic files. The user explicitly requires:
+
+- Production-scale jobs of 100, 250 and 500 parts; repeated copies, mixed sizes,
+  complex outlines, meaningful spacing and rotation restrictions. Separate sheet
+  and fixed-width roll objectives. Support explicit hole semantics rather than
+  silently treating holes as usable material or ignoring them.
+- Actual production cut contours when available, published irregular-nesting
+  reference cases with provenance/licence, and clearly labelled synthetic stress
+  cases. Do not call synthetic jobs production evidence. Import and validate
+  units, transforms, copies and contour topology; reject unsupported geometry.
+- Development and held-out evaluation jobs split by source job/shape family,
+  not merely by random seed or copy count. Freeze prompts, aggregation rules,
+  scheduling policy and configuration before evaluating held-out jobs.
+- Jev directs expensive search: candidate/branch priorities, ordering or search
+  allocation at bounded decision points. It does not replace exact collision or
+  fit tests. Avoid an unavoidable network round trip per placed part.
+- Focused independent questions batched against a shared known state, with
+  concrete candidate consequences and remaining-part fit evidence. Questions
+  must identify their candidate/branch explicitly. No question may assume it
+  knows another answer from the same call. Speculative branches need their own
+  correctly regenerated geometry. Measure feature construction costs.
+- Native Classic search, deterministic search with the same features, and
+  Jev-guided search sharing geometry, candidate pools and resource limits.
+  Include an ablation for the effect of the additional features without Jev.
+- Predeclared time budgets and time-to-quality targets. Sheet count is primary
+  for sheets; consumed length is primary for fixed-width rolls. Record secondary
+  occupied extent/offcut measures so equal sheet counts do not hide changes.
+- Identical concurrency limits and explicit cold/warm cache policy. Separate
+  batch throughput from one-job latency. Count all preprocessing, geometry,
+  feature extraction, model calls, retries, validation and scheduling overhead.
+- Preserve full inputs, configurations, code/model versions, requests/responses,
+  seeds, anytime incumbents, exact final validation and visual layouts. Report
+  failures and incomplete runs; never silently drop them. Keep resumed latency
+  reconstruction separate from uninterrupted live timings.
+- Measure quality at equal wall time, time to equal quality, geometry/search
+  evaluations avoided, latency distribution, tokens and actual applicable API
+  cost. Analyse uncertainty by independent source job, not correlated seeds.
+
+Success requires better validated packing at the same total time, or equivalent
+packing sooner, at a declared acceptable cost. Parallel questions themselves
+are an implementation capability, not evidence of a better nesting policy.
+
+Implementation and representative production files for this next benchmark are
+still outstanding; the current full runner does not satisfy these requirements.
