@@ -121,3 +121,24 @@ complete layouts; Classic 49.68%, geometric control 49.84%, GA 50.87% mean
 utilisation. Bounding/scoring was about 0.16% of native runtime. This archived
 revision has a documented validation-timing asymmetry; the live runner now counts
 validation for every policy. No full live Jev outcome has been measured here.
+
+## Probability rounding and interrupted first trials
+
+The adapter retains the API's reported probabilities unchanged. A sum outside
+0.001 tolerance is accepted only if the values are on a two-decimal grid and
+there exists a normalised distribution within their individual rounding bounds.
+The selected ID, option set, finite values, ranges and highest-probability choice
+are still validated. `probabilityDiagnostics` records the sum and acceptance rule.
+This handles rounding-compatible responses; it does not prove that rounding was
+the cause of any particular failed response. Grossly invalid distributions stop.
+
+Every parsed successful HTTP response is now saved to `responses.ndjson` before
+validation. Rejected responses can therefore be inspected or revalidated offline
+without buying the same response again. Previously rejected responses were not
+saved and cannot be recovered retroactively. Accepted choices remain cached.
+
+An interrupted first trial from revision `86e5aa7` upgrades automatically when
+configuration and all geometry/request sources match and no trial has completed.
+Both LF and Windows CRLF source hashes are supported. The previous hashes are
+retained in metadata's migration history. Other changes still require a new run
+directory. Decision traces are regenerated on resume, avoiding duplicate rows.

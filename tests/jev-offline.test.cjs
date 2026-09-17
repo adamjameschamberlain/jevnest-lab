@@ -102,3 +102,24 @@ test('CLI dry-run writes real requests without a key; live mode fails before net
     assert.equal(fs.existsSync(path.join(dir,'live')),false);
   } finally {fs.rmSync(dir,{recursive:true,force:true});}
 });
+
+test('accept bounded rounding without changing the choice or reported probabilities',() => {
+  function sample(values){const ids=values.map((_,i)=>'c'+i);return {request:{questions:{placement:{criteria:Object.fromEntries(ids.map(id=>[id,id]))}}},body:{model:MODEL,answers:{placement:{type:'choice',choice:ids[values.indexOf(Math.max(...values))],probabilities:Object.fromEntries(ids.map((id,i)=>[id,values[i]])),confidence:0.1}},usage:{input_tokens:1,output_tokens:1}}};}
+  for(const values of [[.33,.33,.33],[.17,.17,.17,.17,.16,.17],[.49,.49,.01],Array(40).fill(.03),Array(80).fill(.01)]) {
+    const {request,body}=sample(values),r=validateResponse(body,request);
+    assert.equal(r.choice,body.answers.placement.choice);
+    assert.deepEqual(r.probabilities,body.answers.placement.probabilities);
+    assert.equal(r.probabilityDiagnostics.normalisation,'compatible-with-2dp-rounding');
+  }
+  for(const values of [[.5,0,0,0],[.34,.34,.34],[.2,.2],[0,0,0],[.335,.335,.335],[1,1],Array(110).fill(.02)]) {
+    const {request,body}=sample(values);assert.throws(()=>validateResponse(body,request),/sum/);
+  }
+});
+test('persist rejected response before validation without headers or credentials',async()=>{
+ const bad=response();bad.answers.placement.probabilities[decision.candidates[0].id]=.5;
+ const receipts=[];
+ await assert.rejects(callJev(request,{apiKey:'test-private-key',fetchImpl:async()=>new Response(JSON.stringify(bad)),onResponse:r=>receipts.push(r)}),/sum=0.5/);
+ assert.equal(receipts.length,1);assert.deepEqual(receipts[0].body,bad);
+ assert.ok(receipts[0].latencyMs>=0);assert.equal(receipts[0].attempts,1);
+ assert.ok(!JSON.stringify(receipts).includes('test-private-key'));
+});

@@ -9,7 +9,7 @@
     "benchmark": "node scripts/run-corpus.cjs",
     "jev:prepare": "node scripts/evaluate-jev.cjs",
     "jev:evaluate": "node scripts/evaluate-jev.cjs --live",
-    "test:jev": "node --test tests/jev-offline.test.cjs",
+    "test:jev": "node --test tests/jev-offline.test.cjs tests/jev-resume.test.cjs",
     "jev:replay": "node scripts/replay-jev.cjs",
     "benchmark:full": "node scripts/full-jev-benchmark.cjs",
     "benchmark:jev": "node scripts/full-jev-benchmark.cjs --live",

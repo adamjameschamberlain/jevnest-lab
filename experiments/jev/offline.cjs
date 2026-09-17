@@ -66,14 +66,27 @@ function validateResponse(body,request) {
     assert.ok(probability >= 0 && probability <= 1,'Probability outside [0,1]');
     sum += probability; max = Math.max(max,probability);
   }
-  assert.ok(Math.abs(sum-1) <= 0.001,'Probabilities do not sum to one');
+  // JSON probabilities can be quantised. Accept a non-unit sum only when
+  // every value is on a 0.01 grid and some exactly normalised distribution
+  // could round to these values. Keep the reported values; never renormalise
+  // silently or use rounding to change the returned candidate.
+  const values = Object.values(answer.probabilities);
+  const epsilon = 1e-10;
+  const lower = values.reduce((n,p) => n+Math.max(0,p-0.005),0);
+  const upper = values.reduce((n,p) => n+Math.min(1,p+0.005),0);
+  const withinTolerance = Math.abs(sum-1) <= 0.001+epsilon;
+  const roundingCompatible = sum > 0 && values.every(p => Math.abs(p*100-Math.round(p*100)) <= epsilon)
+    && lower <= 1+epsilon && upper >= 1-epsilon;
+  assert.ok(withinTolerance || roundingCompatible,
+    'Probabilities do not sum to one beyond rounding bounds (sum='+sum+', options='+ids.length+')');
+  const probabilityDiagnostics = {sum,normalisation:withinTolerance ? 'within-tolerance' : 'compatible-with-2dp-rounding'};
   assert.ok(answer.probabilities[answer.choice]+1e-6 >= max,'Choice is not a highest-probability candidate');
   finite(answer.confidence,'confidence');
   assert.ok(answer.confidence >= 0 && answer.confidence <= 1,'Confidence outside [0,1]');
   for(const name of ['input_tokens','output_tokens']) assert.ok(Number.isInteger(body.usage?.[name]) && body.usage[name] >= 0,'Missing/invalid '+name);
-  return {model:body.model,choice:answer.choice,probabilities:answer.probabilities,confidence:answer.confidence,usage:body.usage};
+  return {model:body.model,choice:answer.choice,probabilities:answer.probabilities,confidence:answer.confidence,usage:body.usage,probabilityDiagnostics};
 }
-async function callJev(request,{apiKey,fetchImpl=fetch,sleep=ms => new Promise(r => setTimeout(r,ms)),timeoutMs=15000,maxRetries=2}={}) {
+async function callJev(request,{apiKey,fetchImpl=fetch,sleep=ms => new Promise(r => setTimeout(r,ms)),timeoutMs=15000,maxRetries=2,onResponse}={}) {
   assert.ok(typeof apiKey === 'string' && apiKey.trim(),'Set TYPESAFE_API_KEY locally before live evaluation');
   const start = performance.now();
   for(let attempt=0;;attempt++) {
@@ -98,7 +111,11 @@ async function callJev(request,{apiKey,fetchImpl=fetch,sleep=ms => new Promise(r
     if(!response.ok) throw new Error('Jev HTTP '+response.status+'; stopped without a Classic fallback');
     let body;
     try {body = await response.json();} catch {throw new Error('Jev returned invalid JSON');}
-    return {...validateResponse(body,request),attempts:attempt+1,latencyMs:performance.now()-start};
+    const receipt = {body,attempts:attempt+1,latencyMs:performance.now()-start};
+    // Persist before validation, including rejected distributions, without any
+    // request headers or credentials. This also allows later offline recovery.
+    if(onResponse) await onResponse(receipt);
+    return {...validateResponse(body,request),attempts:receipt.attempts,latencyMs:receipt.latencyMs};
   }
 }
 function loadSnapshots(input) {

@@ -8,6 +8,7 @@ const {createEngine}=require('../experiments/jev/full/engine.cjs');
 const {features,requestsFor,contactChoice}=require('../experiments/jev/full/features.cjs');
 const {aggregate,quality}=require('../experiments/jev/full/report.cjs');
 const {callJev,digest,MODEL,ENDPOINT}=require('../experiments/jev/offline.cjs');
+const {resumeMetadata,validatedReceipt}=require('../experiments/jev/full/resume.cjs');
 const {renderSheets}=require('../experiments/jev/replay.cjs');
 const root=path.resolve(__dirname,'..');
 const opts={live:false,jobs:20,seeds:[1,2,3,4,5],seconds:2,minEvaluations:1,out:'jev-results/full-classic',model:MODEL};
@@ -40,6 +41,9 @@ function single(job,seed) {const start=performance.now(),e=createEngine(job.geom
 async function guided(job,seed,policy,dir,apiKey) {
  const start=performance.now(),e=createEngine(job.geometry,seed);
  const responseFile=path.join(dir,'choices.ndjson'),requestFile=path.join(dir,'requests.ndjson');
+ const receiptFile=path.join(dir,'responses.ndjson');
+ const receipts=new Map(readLines(receiptFile).map(r=>[r.key,r]));
+ if(policy==='jev')fs.writeFileSync(path.join(dir,'decisions.ndjson'),''); // Regenerate one canonical trace on resume.
  const cached=new Map(readLines(responseFile).map(r=>[r.key,r])),requestKeys=new Set(readLines(requestFile).map(r=>r.key));
  let apiMs=0,featureMs=0,calls=0,cachedCalls=0,decisions=0,disagreements=0,inputTokens=0,outputTokens=0,cacheMs=0,tournamentDecisions=0;
  const value=await e.evaluateGuided(e.ga.population[0],async d=>{
@@ -62,8 +66,9 @@ async function guided(job,seed,policy,dir,apiKey) {
      const key=d.id+':'+round+':'+group+':'+digest(request);
      if(!requestKeys.has(key)){append(requestFile,{key,decisionId:d.id,round,group,request});requestKeys.add(key);}
      let answer=cached.get(key);
-     if(answer){cachedCalls++;cacheMs+=answer.latencyMs;}
-     else {answer={key,...await callJev(request,{apiKey})};append(responseFile,answer);cached.set(key,answer);}
+     if(answer){answer=validatedReceipt(answer,request);cachedCalls++;cacheMs+=answer.latencyMs;}
+     else if(receipts.has(key)){answer=validatedReceipt(receipts.get(key),request);cachedCalls++;cacheMs+=answer.latencyMs;append(responseFile,answer);cached.set(key,answer);}
+     else {answer={key,...await callJev(request,{apiKey,onResponse:receipt=>append(receiptFile,{key,...receipt})})};append(responseFile,answer);cached.set(key,answer);}
      assert.ok(ids.includes(answer.choice),'Cached response does not match request');
      calls++;apiMs+=answer.latencyMs;inputTokens+=answer.usage.input_tokens;outputTokens+=answer.usage.output_tokens;winners.push(answer.choice);
     }
@@ -96,7 +101,7 @@ function ga(job,seed,target) {
 }
 async function main() {
  const apiKey=opts.live?await secret():null;
- const sourceFiles=['svgnest.js','util/placementworker.js','util/geometryutil.js','util/clipper.js','benchmarks/runner.js','experiments/jev/offline.cjs','experiments/jev/replay.cjs','experiments/jev/full/corpus.cjs','experiments/jev/full/engine.cjs','experiments/jev/full/features.cjs','experiments/jev/full/report.cjs','scripts/full-jev-benchmark.cjs'];
+ const sourceFiles=['svgnest.js','util/placementworker.js','util/geometryutil.js','util/clipper.js','benchmarks/runner.js','experiments/jev/offline.cjs','experiments/jev/replay.cjs','experiments/jev/full/corpus.cjs','experiments/jev/full/engine.cjs','experiments/jev/full/features.cjs','experiments/jev/full/report.cjs','scripts/full-jev-benchmark.cjs','experiments/jev/full/resume.cjs'];
  const sourceSha256=Object.fromEntries(sourceFiles.map(p=>[p,digest(fs.readFileSync(path.join(root,p),'utf8'))]));
  const config={...opts,out:undefined};const signature=digest({config,sourceSha256});
  fs.mkdirSync(path.join(out,'trials'),{recursive:true});
@@ -105,7 +110,7 @@ async function main() {
   machine:{node:process.version,platform:process.platform,arch:process.arch,cpu:os.cpus()[0]?.model},
   protocol:'Same generated job and initial order/rotation per seed. Native Classic one pass; geometric contact/fragmentation control one pass; stock SVGnest GA with a wall-clock budget and at least one evaluation; Jev one complete sequential rollout. GA equal-time outcome uses only completed evaluations. Cold NFP caches per method, original one-cycle cache policy within GA. API latency, feature generation and logging included in guided runtime. VM setup and validation included in all methods. No browser worker parallelism.',
   decisionRule:'Primary: fewer unplaced, then fewer sheets at equal runtime. Secondary: utilisation, fitness, time to Jev quality, per-job clustered uncertainty. No model claim until full live suite complete.'};
- if(fs.existsSync(metadataFile)){const old=JSON.parse(fs.readFileSync(metadataFile));assert.equal(old.signature,signature,'Output belongs to a different configuration or source version; choose a new --out');assert.equal(old.machine.node,process.version,'Resume requires same Node version');metadata=old;}
+ if(fs.existsSync(metadataFile)){const old=JSON.parse(fs.readFileSync(metadataFile));metadata=resumeMetadata(old,metadata,fs.readdirSync(path.join(out,'trials')).filter(f=>f.endsWith('.json')).length);if(metadata.signature!==old.signature){json(metadataFile,metadata);console.log('Updated response validation; resuming saved requests and accepted choices.');}}
  else json(metadataFile,metadata);
  console.log(`${opts.live?'LIVE':'CLASSIC ONLY'}: ${metadata.expectedTrials} matched trials; 20–50 concave parts each. Results: ${out}`);
  let index=0;
