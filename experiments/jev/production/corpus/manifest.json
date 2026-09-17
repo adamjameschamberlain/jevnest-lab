@@ -1,0 +1,678 @@
+{
+  "version": 2,
+  "upstreamRevision": "154a8f006a8e72f65d734f2d1e36777f678f31f8",
+  "jobs": [
+    {
+      "id": "shirts-sheet-100",
+      "file": "jobs/shirts-sheet-100.json",
+      "split": "development",
+      "family": "shirts",
+      "parts": 100,
+      "media": "sheet"
+    },
+    {
+      "id": "shirts-roll-100",
+      "file": "jobs/shirts-roll-100.json",
+      "split": "development",
+      "family": "shirts",
+      "parts": 100,
+      "media": "roll"
+    },
+    {
+      "id": "shirts-sheet-250",
+      "file": "jobs/shirts-sheet-250.json",
+      "split": "development",
+      "family": "shirts",
+      "parts": 250,
+      "media": "sheet"
+    },
+    {
+      "id": "shirts-roll-250",
+      "file": "jobs/shirts-roll-250.json",
+      "split": "development",
+      "family": "shirts",
+      "parts": 250,
+      "media": "roll"
+    },
+    {
+      "id": "shirts-sheet-500",
+      "file": "jobs/shirts-sheet-500.json",
+      "split": "development",
+      "family": "shirts",
+      "parts": 500,
+      "media": "sheet"
+    },
+    {
+      "id": "shirts-roll-500",
+      "file": "jobs/shirts-roll-500.json",
+      "split": "development",
+      "family": "shirts",
+      "parts": 500,
+      "media": "roll"
+    },
+    {
+      "id": "albano-sheet-100",
+      "file": "jobs/albano-sheet-100.json",
+      "split": "development",
+      "family": "albano",
+      "parts": 100,
+      "media": "sheet"
+    },
+    {
+      "id": "albano-roll-100",
+      "file": "jobs/albano-roll-100.json",
+      "split": "development",
+      "family": "albano",
+      "parts": 100,
+      "media": "roll"
+    },
+    {
+      "id": "albano-sheet-250",
+      "file": "jobs/albano-sheet-250.json",
+      "split": "development",
+      "family": "albano",
+      "parts": 250,
+      "media": "sheet"
+    },
+    {
+      "id": "albano-roll-250",
+      "file": "jobs/albano-roll-250.json",
+      "split": "development",
+      "family": "albano",
+      "parts": 250,
+      "media": "roll"
+    },
+    {
+      "id": "albano-sheet-500",
+      "file": "jobs/albano-sheet-500.json",
+      "split": "development",
+      "family": "albano",
+      "parts": 500,
+      "media": "sheet"
+    },
+    {
+      "id": "albano-roll-500",
+      "file": "jobs/albano-roll-500.json",
+      "split": "development",
+      "family": "albano",
+      "parts": 500,
+      "media": "roll"
+    },
+    {
+      "id": "blaz-sheet-100",
+      "file": "jobs/blaz-sheet-100.json",
+      "split": "development",
+      "family": "blaz",
+      "parts": 100,
+      "media": "sheet"
+    },
+    {
+      "id": "blaz-roll-100",
+      "file": "jobs/blaz-roll-100.json",
+      "split": "development",
+      "family": "blaz",
+      "parts": 100,
+      "media": "roll"
+    },
+    {
+      "id": "blaz-sheet-250",
+      "file": "jobs/blaz-sheet-250.json",
+      "split": "development",
+      "family": "blaz",
+      "parts": 250,
+      "media": "sheet"
+    },
+    {
+      "id": "blaz-roll-250",
+      "file": "jobs/blaz-roll-250.json",
+      "split": "development",
+      "family": "blaz",
+      "parts": 250,
+      "media": "roll"
+    },
+    {
+      "id": "blaz-sheet-500",
+      "file": "jobs/blaz-sheet-500.json",
+      "split": "development",
+      "family": "blaz",
+      "parts": 500,
+      "media": "sheet"
+    },
+    {
+      "id": "blaz-roll-500",
+      "file": "jobs/blaz-roll-500.json",
+      "split": "development",
+      "family": "blaz",
+      "parts": 500,
+      "media": "roll"
+    },
+    {
+      "id": "swim-sheet-100",
+      "file": "jobs/swim-sheet-100.json",
+      "split": "evaluation",
+      "family": "swim",
+      "parts": 100,
+      "media": "sheet"
+    },
+    {
+      "id": "swim-roll-100",
+      "file": "jobs/swim-roll-100.json",
+      "split": "evaluation",
+      "family": "swim",
+      "parts": 100,
+      "media": "roll"
+    },
+    {
+      "id": "swim-sheet-250",
+      "file": "jobs/swim-sheet-250.json",
+      "split": "evaluation",
+      "family": "swim",
+      "parts": 250,
+      "media": "sheet"
+    },
+    {
+      "id": "swim-roll-250",
+      "file": "jobs/swim-roll-250.json",
+      "split": "evaluation",
+      "family": "swim",
+      "parts": 250,
+      "media": "roll"
+    },
+    {
+      "id": "swim-sheet-500",
+      "file": "jobs/swim-sheet-500.json",
+      "split": "evaluation",
+      "family": "swim",
+      "parts": 500,
+      "media": "sheet"
+    },
+    {
+      "id": "swim-roll-500",
+      "file": "jobs/swim-roll-500.json",
+      "split": "evaluation",
+      "family": "swim",
+      "parts": 500,
+      "media": "roll"
+    },
+    {
+      "id": "shapes-sheet-100",
+      "file": "jobs/shapes-sheet-100.json",
+      "split": "evaluation",
+      "family": "shapes",
+      "parts": 100,
+      "media": "sheet"
+    },
+    {
+      "id": "shapes-roll-100",
+      "file": "jobs/shapes-roll-100.json",
+      "split": "evaluation",
+      "family": "shapes",
+      "parts": 100,
+      "media": "roll"
+    },
+    {
+      "id": "shapes-sheet-250",
+      "file": "jobs/shapes-sheet-250.json",
+      "split": "evaluation",
+      "family": "shapes",
+      "parts": 250,
+      "media": "sheet"
+    },
+    {
+      "id": "shapes-roll-250",
+      "file": "jobs/shapes-roll-250.json",
+      "split": "evaluation",
+      "family": "shapes",
+      "parts": 250,
+      "media": "roll"
+    },
+    {
+      "id": "shapes-sheet-500",
+      "file": "jobs/shapes-sheet-500.json",
+      "split": "evaluation",
+      "family": "shapes",
+      "parts": 500,
+      "media": "sheet"
+    },
+    {
+      "id": "shapes-roll-500",
+      "file": "jobs/shapes-roll-500.json",
+      "split": "evaluation",
+      "family": "shapes",
+      "parts": 500,
+      "media": "roll"
+    },
+    {
+      "id": "mao-sheet-100",
+      "file": "jobs/mao-sheet-100.json",
+      "split": "evaluation",
+      "family": "mao",
+      "parts": 100,
+      "media": "sheet"
+    },
+    {
+      "id": "mao-roll-100",
+      "file": "jobs/mao-roll-100.json",
+      "split": "evaluation",
+      "family": "mao",
+      "parts": 100,
+      "media": "roll"
+    },
+    {
+      "id": "mao-sheet-250",
+      "file": "jobs/mao-sheet-250.json",
+      "split": "evaluation",
+      "family": "mao",
+      "parts": 250,
+      "media": "sheet"
+    },
+    {
+      "id": "mao-roll-250",
+      "file": "jobs/mao-roll-250.json",
+      "split": "evaluation",
+      "family": "mao",
+      "parts": 250,
+      "media": "roll"
+    },
+    {
+      "id": "mao-sheet-500",
+      "file": "jobs/mao-sheet-500.json",
+      "split": "evaluation",
+      "family": "mao",
+      "parts": 500,
+      "media": "sheet"
+    },
+    {
+      "id": "mao-roll-500",
+      "file": "jobs/mao-roll-500.json",
+      "split": "evaluation",
+      "family": "mao",
+      "parts": 500,
+      "media": "roll"
+    },
+    {
+      "id": "dagli-sheet-100",
+      "file": "jobs/dagli-sheet-100.json",
+      "split": "evaluation",
+      "family": "dagli",
+      "parts": 100,
+      "media": "sheet"
+    },
+    {
+      "id": "dagli-roll-100",
+      "file": "jobs/dagli-roll-100.json",
+      "split": "evaluation",
+      "family": "dagli",
+      "parts": 100,
+      "media": "roll"
+    },
+    {
+      "id": "dagli-sheet-250",
+      "file": "jobs/dagli-sheet-250.json",
+      "split": "evaluation",
+      "family": "dagli",
+      "parts": 250,
+      "media": "sheet"
+    },
+    {
+      "id": "dagli-roll-250",
+      "file": "jobs/dagli-roll-250.json",
+      "split": "evaluation",
+      "family": "dagli",
+      "parts": 250,
+      "media": "roll"
+    },
+    {
+      "id": "dagli-sheet-500",
+      "file": "jobs/dagli-sheet-500.json",
+      "split": "evaluation",
+      "family": "dagli",
+      "parts": 500,
+      "media": "sheet"
+    },
+    {
+      "id": "dagli-roll-500",
+      "file": "jobs/dagli-roll-500.json",
+      "split": "evaluation",
+      "family": "dagli",
+      "parts": 500,
+      "media": "roll"
+    },
+    {
+      "id": "dighe-sheet-100",
+      "file": "jobs/dighe-sheet-100.json",
+      "split": "evaluation",
+      "family": "dighe",
+      "parts": 100,
+      "media": "sheet"
+    },
+    {
+      "id": "dighe-roll-100",
+      "file": "jobs/dighe-roll-100.json",
+      "split": "evaluation",
+      "family": "dighe",
+      "parts": 100,
+      "media": "roll"
+    },
+    {
+      "id": "dighe-sheet-250",
+      "file": "jobs/dighe-sheet-250.json",
+      "split": "evaluation",
+      "family": "dighe",
+      "parts": 250,
+      "media": "sheet"
+    },
+    {
+      "id": "dighe-roll-250",
+      "file": "jobs/dighe-roll-250.json",
+      "split": "evaluation",
+      "family": "dighe",
+      "parts": 250,
+      "media": "roll"
+    },
+    {
+      "id": "dighe-sheet-500",
+      "file": "jobs/dighe-sheet-500.json",
+      "split": "evaluation",
+      "family": "dighe",
+      "parts": 500,
+      "media": "sheet"
+    },
+    {
+      "id": "dighe-roll-500",
+      "file": "jobs/dighe-roll-500.json",
+      "split": "evaluation",
+      "family": "dighe",
+      "parts": 500,
+      "media": "roll"
+    },
+    {
+      "id": "fu-sheet-100",
+      "file": "jobs/fu-sheet-100.json",
+      "split": "evaluation",
+      "family": "fu",
+      "parts": 100,
+      "media": "sheet"
+    },
+    {
+      "id": "fu-roll-100",
+      "file": "jobs/fu-roll-100.json",
+      "split": "evaluation",
+      "family": "fu",
+      "parts": 100,
+      "media": "roll"
+    },
+    {
+      "id": "fu-sheet-250",
+      "file": "jobs/fu-sheet-250.json",
+      "split": "evaluation",
+      "family": "fu",
+      "parts": 250,
+      "media": "sheet"
+    },
+    {
+      "id": "fu-roll-250",
+      "file": "jobs/fu-roll-250.json",
+      "split": "evaluation",
+      "family": "fu",
+      "parts": 250,
+      "media": "roll"
+    },
+    {
+      "id": "fu-sheet-500",
+      "file": "jobs/fu-sheet-500.json",
+      "split": "evaluation",
+      "family": "fu",
+      "parts": 500,
+      "media": "sheet"
+    },
+    {
+      "id": "fu-roll-500",
+      "file": "jobs/fu-roll-500.json",
+      "split": "evaluation",
+      "family": "fu",
+      "parts": 500,
+      "media": "roll"
+    },
+    {
+      "id": "han-sheet-100",
+      "file": "jobs/han-sheet-100.json",
+      "split": "evaluation",
+      "family": "han",
+      "parts": 100,
+      "media": "sheet"
+    },
+    {
+      "id": "han-roll-100",
+      "file": "jobs/han-roll-100.json",
+      "split": "evaluation",
+      "family": "han",
+      "parts": 100,
+      "media": "roll"
+    },
+    {
+      "id": "han-sheet-250",
+      "file": "jobs/han-sheet-250.json",
+      "split": "evaluation",
+      "family": "han",
+      "parts": 250,
+      "media": "sheet"
+    },
+    {
+      "id": "han-roll-250",
+      "file": "jobs/han-roll-250.json",
+      "split": "evaluation",
+      "family": "han",
+      "parts": 250,
+      "media": "roll"
+    },
+    {
+      "id": "han-sheet-500",
+      "file": "jobs/han-sheet-500.json",
+      "split": "evaluation",
+      "family": "han",
+      "parts": 500,
+      "media": "sheet"
+    },
+    {
+      "id": "han-roll-500",
+      "file": "jobs/han-roll-500.json",
+      "split": "evaluation",
+      "family": "han",
+      "parts": 500,
+      "media": "roll"
+    },
+    {
+      "id": "jakobs-sheet-100",
+      "file": "jobs/jakobs-sheet-100.json",
+      "split": "evaluation",
+      "family": "jakobs",
+      "parts": 100,
+      "media": "sheet"
+    },
+    {
+      "id": "jakobs-roll-100",
+      "file": "jobs/jakobs-roll-100.json",
+      "split": "evaluation",
+      "family": "jakobs",
+      "parts": 100,
+      "media": "roll"
+    },
+    {
+      "id": "jakobs-sheet-250",
+      "file": "jobs/jakobs-sheet-250.json",
+      "split": "evaluation",
+      "family": "jakobs",
+      "parts": 250,
+      "media": "sheet"
+    },
+    {
+      "id": "jakobs-roll-250",
+      "file": "jobs/jakobs-roll-250.json",
+      "split": "evaluation",
+      "family": "jakobs",
+      "parts": 250,
+      "media": "roll"
+    },
+    {
+      "id": "jakobs-sheet-500",
+      "file": "jobs/jakobs-sheet-500.json",
+      "split": "evaluation",
+      "family": "jakobs",
+      "parts": 500,
+      "media": "sheet"
+    },
+    {
+      "id": "jakobs-roll-500",
+      "file": "jobs/jakobs-roll-500.json",
+      "split": "evaluation",
+      "family": "jakobs",
+      "parts": 500,
+      "media": "roll"
+    },
+    {
+      "id": "marques-sheet-100",
+      "file": "jobs/marques-sheet-100.json",
+      "split": "evaluation",
+      "family": "marques",
+      "parts": 100,
+      "media": "sheet"
+    },
+    {
+      "id": "marques-roll-100",
+      "file": "jobs/marques-roll-100.json",
+      "split": "evaluation",
+      "family": "marques",
+      "parts": 100,
+      "media": "roll"
+    },
+    {
+      "id": "marques-sheet-250",
+      "file": "jobs/marques-sheet-250.json",
+      "split": "evaluation",
+      "family": "marques",
+      "parts": 250,
+      "media": "sheet"
+    },
+    {
+      "id": "marques-roll-250",
+      "file": "jobs/marques-roll-250.json",
+      "split": "evaluation",
+      "family": "marques",
+      "parts": 250,
+      "media": "roll"
+    },
+    {
+      "id": "marques-sheet-500",
+      "file": "jobs/marques-sheet-500.json",
+      "split": "evaluation",
+      "family": "marques",
+      "parts": 500,
+      "media": "sheet"
+    },
+    {
+      "id": "marques-roll-500",
+      "file": "jobs/marques-roll-500.json",
+      "split": "evaluation",
+      "family": "marques",
+      "parts": 500,
+      "media": "roll"
+    },
+    {
+      "id": "poly-sheet-100",
+      "file": "jobs/poly-sheet-100.json",
+      "split": "evaluation",
+      "family": "poly",
+      "parts": 100,
+      "media": "sheet"
+    },
+    {
+      "id": "poly-roll-100",
+      "file": "jobs/poly-roll-100.json",
+      "split": "evaluation",
+      "family": "poly",
+      "parts": 100,
+      "media": "roll"
+    },
+    {
+      "id": "poly-sheet-250",
+      "file": "jobs/poly-sheet-250.json",
+      "split": "evaluation",
+      "family": "poly",
+      "parts": 250,
+      "media": "sheet"
+    },
+    {
+      "id": "poly-roll-250",
+      "file": "jobs/poly-roll-250.json",
+      "split": "evaluation",
+      "family": "poly",
+      "parts": 250,
+      "media": "roll"
+    },
+    {
+      "id": "poly-sheet-500",
+      "file": "jobs/poly-sheet-500.json",
+      "split": "evaluation",
+      "family": "poly",
+      "parts": 500,
+      "media": "sheet"
+    },
+    {
+      "id": "poly-roll-500",
+      "file": "jobs/poly-roll-500.json",
+      "split": "evaluation",
+      "family": "poly",
+      "parts": 500,
+      "media": "roll"
+    },
+    {
+      "id": "trousers-sheet-100",
+      "file": "jobs/trousers-sheet-100.json",
+      "split": "evaluation",
+      "family": "trousers",
+      "parts": 100,
+      "media": "sheet"
+    },
+    {
+      "id": "trousers-roll-100",
+      "file": "jobs/trousers-roll-100.json",
+      "split": "evaluation",
+      "family": "trousers",
+      "parts": 100,
+      "media": "roll"
+    },
+    {
+      "id": "trousers-sheet-250",
+      "file": "jobs/trousers-sheet-250.json",
+      "split": "evaluation",
+      "family": "trousers",
+      "parts": 250,
+      "media": "sheet"
+    },
+    {
+      "id": "trousers-roll-250",
+      "file": "jobs/trousers-roll-250.json",
+      "split": "evaluation",
+      "family": "trousers",
+      "parts": 250,
+      "media": "roll"
+    },
+    {
+      "id": "trousers-sheet-500",
+      "file": "jobs/trousers-sheet-500.json",
+      "split": "evaluation",
+      "family": "trousers",
+      "parts": 500,
+      "media": "sheet"
+    },
+    {
+      "id": "trousers-roll-500",
+      "file": "jobs/trousers-roll-500.json",
+      "split": "evaluation",
+      "family": "trousers",
+      "parts": 500,
+      "media": "roll"
+    }
+  ]
+}

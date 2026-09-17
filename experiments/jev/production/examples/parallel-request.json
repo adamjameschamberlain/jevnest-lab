@@ -1,0 +1,942 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "version": "search-proposal-scores-v2.0",
+    "objective": "Place every copy and minimise sheet count, then occupied extent.",
+    "units": "mm",
+    "media": {
+      "type": "sheet",
+      "width": 2440,
+      "height": 1640
+    },
+    "spacing": 3,
+    "partCount": 100,
+    "evidenceLimits": "Exact short-prefix placements, not complete nests. Fit tests examine only three constrained remaining shape types in the occupied X strip of the last opened sheet, over all their allowed rotations. Positive witnesses are legal-region evidence; missing witnesses can miss boundary-only fits. Previous sheets and untested types are not assessed. Coordinate polygon dumps are intentionally omitted. Questions are independent; no other answer is available.",
+    "proposals": [
+      {
+        "proposalId": "p1",
+        "orderRule": "longest-first",
+        "probeParts": 16,
+        "probeSheets": 1,
+        "probeUnplaced": 0,
+        "occupiedStripLength": 1908.4711,
+        "occupiedStripPackingFraction": 0.6231,
+        "remainingCount": 84,
+        "remainingFamilies": 6,
+        "fitFraction": 1,
+        "earlyConstrainedFraction": 0.6666666666666666,
+        "fitWitnesses": [
+          {
+            "shape": "piece0",
+            "quantity": 9,
+            "firstRemainingPosition": 0,
+            "area": 71200,
+            "concavity": 0.2937,
+            "allowedRotations": [
+              0,
+              180
+            ],
+            "fittingRotations": [
+              0,
+              180
+            ],
+            "observedFit": "positive-area legal region found"
+          },
+          {
+            "shape": "piece7",
+            "quantity": 15,
+            "firstRemainingPosition": 9,
+            "area": 23200,
+            "concavity": 0.1944,
+            "allowedRotations": [
+              0,
+              180
+            ],
+            "fittingRotations": [
+              0,
+              180
+            ],
+            "observedFit": "positive-area legal region found"
+          },
+          {
+            "shape": "piece3",
+            "quantity": 15,
+            "firstRemainingPosition": 39,
+            "area": 18400,
+            "concavity": 0.0417,
+            "allowedRotations": [
+              0,
+              180
+            ],
+            "fittingRotations": [
+              0,
+              180
+            ],
+            "observedFit": "positive-area legal region found"
+          }
+        ],
+        "nextParts": [
+          {
+            "shape": "piece0",
+            "rotation": 180,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 0,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 180,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 0,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 180,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 0,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 0,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 0,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 0,
+            "area": 71200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 0,
+            "area": 23200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 180,
+            "area": 23200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 0,
+            "area": 23200
+          }
+        ],
+        "remainingShapeSummary": [
+          {
+            "shape": "piece0",
+            "quantity": 9,
+            "area": 71200,
+            "width": 360,
+            "height": 280,
+            "concavity": 0.2937,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece7",
+            "quantity": 15,
+            "area": 23200,
+            "width": 360,
+            "height": 80,
+            "concavity": 0.1944,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece3",
+            "quantity": 15,
+            "area": 18400,
+            "width": 160,
+            "height": 120,
+            "concavity": 0.0417,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece4",
+            "quantity": 15,
+            "area": 11200,
+            "width": 320,
+            "height": 40,
+            "concavity": 0.125,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece5",
+            "quantity": 15,
+            "area": 6400,
+            "width": 160,
+            "height": 40,
+            "concavity": 0,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece6",
+            "quantity": 15,
+            "area": 4800,
+            "width": 120,
+            "height": 40,
+            "concavity": 0,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          }
+        ],
+        "summaryTruncated": false
+      },
+      {
+        "proposalId": "p2",
+        "orderRule": "concavity-first",
+        "probeParts": 16,
+        "probeSheets": 1,
+        "probeUnplaced": 0,
+        "occupiedStripLength": 1740.083,
+        "occupiedStripPackingFraction": 0.569,
+        "remainingCount": 84,
+        "remainingFamilies": 7,
+        "fitFraction": 0.6666666666666666,
+        "earlyConstrainedFraction": 1,
+        "fitWitnesses": [
+          {
+            "shape": "piece2",
+            "quantity": 1,
+            "firstRemainingPosition": 0,
+            "area": 137600,
+            "concavity": 0.2037,
+            "allowedRotations": [
+              0,
+              180
+            ],
+            "fittingRotations": [],
+            "observedFit": "no positive-area region found in tested occupied strip"
+          },
+          {
+            "shape": "piece1",
+            "quantity": 8,
+            "firstRemainingPosition": 16,
+            "area": 103200,
+            "concavity": 0.1731,
+            "allowedRotations": [
+              0,
+              180
+            ],
+            "fittingRotations": [
+              0,
+              180
+            ],
+            "observedFit": "positive-area legal region found"
+          },
+          {
+            "shape": "piece7",
+            "quantity": 15,
+            "firstRemainingPosition": 1,
+            "area": 23200,
+            "concavity": 0.1944,
+            "allowedRotations": [
+              0,
+              180
+            ],
+            "fittingRotations": [
+              0,
+              180
+            ],
+            "observedFit": "positive-area legal region found"
+          }
+        ],
+        "nextParts": [
+          {
+            "shape": "piece2",
+            "rotation": 0,
+            "area": 137600
+          },
+          {
+            "shape": "piece7",
+            "rotation": 0,
+            "area": 23200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 0,
+            "area": 23200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 180,
+            "area": 23200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 0,
+            "area": 23200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 0,
+            "area": 23200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 180,
+            "area": 23200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 180,
+            "area": 23200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 0,
+            "area": 23200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 180,
+            "area": 23200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 180,
+            "area": 23200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 180,
+            "area": 23200
+          }
+        ],
+        "remainingShapeSummary": [
+          {
+            "shape": "piece2",
+            "quantity": 1,
+            "area": 137600,
+            "width": 480,
+            "height": 360,
+            "concavity": 0.2037,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece1",
+            "quantity": 8,
+            "area": 103200,
+            "width": 520,
+            "height": 240,
+            "concavity": 0.1731,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece7",
+            "quantity": 15,
+            "area": 23200,
+            "width": 360,
+            "height": 80,
+            "concavity": 0.1944,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece3",
+            "quantity": 15,
+            "area": 18400,
+            "width": 160,
+            "height": 120,
+            "concavity": 0.0417,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece4",
+            "quantity": 15,
+            "area": 11200,
+            "width": 320,
+            "height": 40,
+            "concavity": 0.125,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece5",
+            "quantity": 15,
+            "area": 6400,
+            "width": 160,
+            "height": 40,
+            "concavity": 0,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece6",
+            "quantity": 15,
+            "area": 4800,
+            "width": 120,
+            "height": 40,
+            "concavity": 0,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          }
+        ],
+        "summaryTruncated": false
+      },
+      {
+        "proposalId": "p3",
+        "orderRule": "aspect-first",
+        "probeParts": 16,
+        "probeSheets": 1,
+        "probeUnplaced": 0,
+        "occupiedStripLength": 1637.9664,
+        "occupiedStripPackingFraction": 0.6045,
+        "remainingCount": 84,
+        "remainingFamilies": 7,
+        "fitFraction": 0.6666666666666666,
+        "earlyConstrainedFraction": 0.6666666666666666,
+        "fitWitnesses": [
+          {
+            "shape": "piece2",
+            "quantity": 1,
+            "firstRemainingPosition": 0,
+            "area": 137600,
+            "concavity": 0.2037,
+            "allowedRotations": [
+              0,
+              180
+            ],
+            "fittingRotations": [],
+            "observedFit": "no positive-area region found in tested occupied strip"
+          },
+          {
+            "shape": "piece1",
+            "quantity": 8,
+            "firstRemainingPosition": 16,
+            "area": 103200,
+            "concavity": 0.1731,
+            "allowedRotations": [
+              0,
+              180
+            ],
+            "fittingRotations": [
+              180
+            ],
+            "observedFit": "positive-area legal region found"
+          },
+          {
+            "shape": "piece7",
+            "quantity": 15,
+            "firstRemainingPosition": 54,
+            "area": 23200,
+            "concavity": 0.1944,
+            "allowedRotations": [
+              0,
+              180
+            ],
+            "fittingRotations": [
+              0,
+              180
+            ],
+            "observedFit": "positive-area legal region found"
+          }
+        ],
+        "nextParts": [
+          {
+            "shape": "piece2",
+            "rotation": 0,
+            "area": 137600
+          },
+          {
+            "shape": "piece3",
+            "rotation": 180,
+            "area": 18400
+          },
+          {
+            "shape": "piece3",
+            "rotation": 180,
+            "area": 18400
+          },
+          {
+            "shape": "piece3",
+            "rotation": 0,
+            "area": 18400
+          },
+          {
+            "shape": "piece3",
+            "rotation": 0,
+            "area": 18400
+          },
+          {
+            "shape": "piece3",
+            "rotation": 0,
+            "area": 18400
+          },
+          {
+            "shape": "piece3",
+            "rotation": 0,
+            "area": 18400
+          },
+          {
+            "shape": "piece3",
+            "rotation": 180,
+            "area": 18400
+          },
+          {
+            "shape": "piece3",
+            "rotation": 180,
+            "area": 18400
+          },
+          {
+            "shape": "piece3",
+            "rotation": 180,
+            "area": 18400
+          },
+          {
+            "shape": "piece3",
+            "rotation": 180,
+            "area": 18400
+          },
+          {
+            "shape": "piece3",
+            "rotation": 0,
+            "area": 18400
+          }
+        ],
+        "remainingShapeSummary": [
+          {
+            "shape": "piece2",
+            "quantity": 1,
+            "area": 137600,
+            "width": 480,
+            "height": 360,
+            "concavity": 0.2037,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece1",
+            "quantity": 8,
+            "area": 103200,
+            "width": 520,
+            "height": 240,
+            "concavity": 0.1731,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece7",
+            "quantity": 15,
+            "area": 23200,
+            "width": 360,
+            "height": 80,
+            "concavity": 0.1944,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece3",
+            "quantity": 15,
+            "area": 18400,
+            "width": 160,
+            "height": 120,
+            "concavity": 0.0417,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece4",
+            "quantity": 15,
+            "area": 11200,
+            "width": 320,
+            "height": 40,
+            "concavity": 0.125,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece5",
+            "quantity": 15,
+            "area": 6400,
+            "width": 160,
+            "height": 40,
+            "concavity": 0,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece6",
+            "quantity": 15,
+            "area": 4800,
+            "width": 120,
+            "height": 40,
+            "concavity": 0,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          }
+        ],
+        "summaryTruncated": false
+      },
+      {
+        "proposalId": "p4",
+        "orderRule": "area-perturbed",
+        "probeParts": 16,
+        "probeSheets": 1,
+        "probeUnplaced": 0,
+        "occupiedStripLength": 1909.7934,
+        "occupiedStripPackingFraction": 0.6227,
+        "remainingCount": 84,
+        "remainingFamilies": 6,
+        "fitFraction": 0.6666666666666666,
+        "earlyConstrainedFraction": 0.6666666666666666,
+        "fitWitnesses": [
+          {
+            "shape": "piece0",
+            "quantity": 9,
+            "firstRemainingPosition": 0,
+            "area": 71200,
+            "concavity": 0.2937,
+            "allowedRotations": [
+              0,
+              180
+            ],
+            "fittingRotations": [],
+            "observedFit": "no positive-area region found in tested occupied strip"
+          },
+          {
+            "shape": "piece7",
+            "quantity": 15,
+            "firstRemainingPosition": 9,
+            "area": 23200,
+            "concavity": 0.1944,
+            "allowedRotations": [
+              0,
+              180
+            ],
+            "fittingRotations": [
+              0,
+              180
+            ],
+            "observedFit": "positive-area legal region found"
+          },
+          {
+            "shape": "piece3",
+            "quantity": 15,
+            "firstRemainingPosition": 24,
+            "area": 18400,
+            "concavity": 0.0417,
+            "allowedRotations": [
+              0,
+              180
+            ],
+            "fittingRotations": [
+              0,
+              180
+            ],
+            "observedFit": "positive-area legal region found"
+          }
+        ],
+        "nextParts": [
+          {
+            "shape": "piece0",
+            "rotation": 0,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 0,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 0,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 180,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 180,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 0,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 180,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 180,
+            "area": 71200
+          },
+          {
+            "shape": "piece0",
+            "rotation": 0,
+            "area": 71200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 0,
+            "area": 23200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 180,
+            "area": 23200
+          },
+          {
+            "shape": "piece7",
+            "rotation": 180,
+            "area": 23200
+          }
+        ],
+        "remainingShapeSummary": [
+          {
+            "shape": "piece0",
+            "quantity": 9,
+            "area": 71200,
+            "width": 360,
+            "height": 280,
+            "concavity": 0.2937,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece7",
+            "quantity": 15,
+            "area": 23200,
+            "width": 360,
+            "height": 80,
+            "concavity": 0.1944,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece3",
+            "quantity": 15,
+            "area": 18400,
+            "width": 160,
+            "height": 120,
+            "concavity": 0.0417,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece4",
+            "quantity": 15,
+            "area": 11200,
+            "width": 320,
+            "height": 40,
+            "concavity": 0.125,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece5",
+            "quantity": 15,
+            "area": 6400,
+            "width": 160,
+            "height": 40,
+            "concavity": 0,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          },
+          {
+            "shape": "piece6",
+            "quantity": 15,
+            "area": 4800,
+            "width": 120,
+            "height": 40,
+            "concavity": 0,
+            "allowedRotations": [
+              0,
+              180
+            ]
+          }
+        ],
+        "summaryTruncated": false
+      }
+    ]
+  },
+  "questions": {
+    "p1_space": {
+      "type": "score",
+      "instructions": "For proposal p1 at `proposals[0]`, how usable is the residual space for its remaining shape mixture? Judge the packing consequences from supplied evidence. Fit witnesses describe actual geometry; do not recompute geometry or treat missing witnesses as proof of impossibility.",
+      "criteria": [
+        "The partial nest leaves mostly fragmented or poorly matched space for the remaining shape mixture.",
+        "The partial nest leaves a mixture of useful openings and awkward residual space for the remaining shapes.",
+        "The partial nest leaves coherent usable openings well matched to the remaining shape mixture."
+      ]
+    },
+    "p1_hardParts": {
+      "type": "score",
+      "instructions": "For proposal p1 at `proposals[0]`, how well does this partial nest preserve opportunities for the sampled constrained remaining shapes? Assess future difficulty using their quantities and fit witnesses. This is a risk judgment, not a collision test.",
+      "criteria": [
+        "The sampled constrained shapes have poor remaining opportunities and are likely to force substantial extra material.",
+        "Some sampled constrained shapes retain useful opportunities, but others are at risk of requiring extra material.",
+        "The sampled constrained shapes retain useful opportunities with little evidence of forced extra material."
+      ]
+    },
+    "p1_order": {
+      "type": "score",
+      "instructions": "For proposal p1 at `proposals[0]`, how suitable is the remaining sequence for dealing with constrained shapes before their useful spaces are consumed? Use firstRemainingPosition and nextParts with the shape mixture.",
+      "criteria": [
+        "The remaining sequence postpones constrained shapes while consuming their opportunities with easy shapes.",
+        "The remaining sequence partly addresses constrained shapes early, with some unresolved competition.",
+        "The remaining sequence addresses constrained shapes early and retains flexible filler shapes for later."
+      ]
+    },
+    "p2_space": {
+      "type": "score",
+      "instructions": "For proposal p2 at `proposals[1]`, how usable is the residual space for its remaining shape mixture? Judge the packing consequences from supplied evidence. Fit witnesses describe actual geometry; do not recompute geometry or treat missing witnesses as proof of impossibility.",
+      "criteria": [
+        "The partial nest leaves mostly fragmented or poorly matched space for the remaining shape mixture.",
+        "The partial nest leaves a mixture of useful openings and awkward residual space for the remaining shapes.",
+        "The partial nest leaves coherent usable openings well matched to the remaining shape mixture."
+      ]
+    },
+    "p2_hardParts": {
+      "type": "score",
+      "instructions": "For proposal p2 at `proposals[1]`, how well does this partial nest preserve opportunities for the sampled constrained remaining shapes? Assess future difficulty using their quantities and fit witnesses. This is a risk judgment, not a collision test.",
+      "criteria": [
+        "The sampled constrained shapes have poor remaining opportunities and are likely to force substantial extra material.",
+        "Some sampled constrained shapes retain useful opportunities, but others are at risk of requiring extra material.",
+        "The sampled constrained shapes retain useful opportunities with little evidence of forced extra material."
+      ]
+    },
+    "p2_order": {
+      "type": "score",
+      "instructions": "For proposal p2 at `proposals[1]`, how suitable is the remaining sequence for dealing with constrained shapes before their useful spaces are consumed? Use firstRemainingPosition and nextParts with the shape mixture.",
+      "criteria": [
+        "The remaining sequence postpones constrained shapes while consuming their opportunities with easy shapes.",
+        "The remaining sequence partly addresses constrained shapes early, with some unresolved competition.",
+        "The remaining sequence addresses constrained shapes early and retains flexible filler shapes for later."
+      ]
+    },
+    "p3_space": {
+      "type": "score",
+      "instructions": "For proposal p3 at `proposals[2]`, how usable is the residual space for its remaining shape mixture? Judge the packing consequences from supplied evidence. Fit witnesses describe actual geometry; do not recompute geometry or treat missing witnesses as proof of impossibility.",
+      "criteria": [
+        "The partial nest leaves mostly fragmented or poorly matched space for the remaining shape mixture.",
+        "The partial nest leaves a mixture of useful openings and awkward residual space for the remaining shapes.",
+        "The partial nest leaves coherent usable openings well matched to the remaining shape mixture."
+      ]
+    },
+    "p3_hardParts": {
+      "type": "score",
+      "instructions": "For proposal p3 at `proposals[2]`, how well does this partial nest preserve opportunities for the sampled constrained remaining shapes? Assess future difficulty using their quantities and fit witnesses. This is a risk judgment, not a collision test.",
+      "criteria": [
+        "The sampled constrained shapes have poor remaining opportunities and are likely to force substantial extra material.",
+        "Some sampled constrained shapes retain useful opportunities, but others are at risk of requiring extra material.",
+        "The sampled constrained shapes retain useful opportunities with little evidence of forced extra material."
+      ]
+    },
+    "p3_order": {
+      "type": "score",
+      "instructions": "For proposal p3 at `proposals[2]`, how suitable is the remaining sequence for dealing with constrained shapes before their useful spaces are consumed? Use firstRemainingPosition and nextParts with the shape mixture.",
+      "criteria": [
+        "The remaining sequence postpones constrained shapes while consuming their opportunities with easy shapes.",
+        "The remaining sequence partly addresses constrained shapes early, with some unresolved competition.",
+        "The remaining sequence addresses constrained shapes early and retains flexible filler shapes for later."
+      ]
+    },
+    "p4_space": {
+      "type": "score",
+      "instructions": "For proposal p4 at `proposals[3]`, how usable is the residual space for its remaining shape mixture? Judge the packing consequences from supplied evidence. Fit witnesses describe actual geometry; do not recompute geometry or treat missing witnesses as proof of impossibility.",
+      "criteria": [
+        "The partial nest leaves mostly fragmented or poorly matched space for the remaining shape mixture.",
+        "The partial nest leaves a mixture of useful openings and awkward residual space for the remaining shapes.",
+        "The partial nest leaves coherent usable openings well matched to the remaining shape mixture."
+      ]
+    },
+    "p4_hardParts": {
+      "type": "score",
+      "instructions": "For proposal p4 at `proposals[3]`, how well does this partial nest preserve opportunities for the sampled constrained remaining shapes? Assess future difficulty using their quantities and fit witnesses. This is a risk judgment, not a collision test.",
+      "criteria": [
+        "The sampled constrained shapes have poor remaining opportunities and are likely to force substantial extra material.",
+        "Some sampled constrained shapes retain useful opportunities, but others are at risk of requiring extra material.",
+        "The sampled constrained shapes retain useful opportunities with little evidence of forced extra material."
+      ]
+    },
+    "p4_order": {
+      "type": "score",
+      "instructions": "For proposal p4 at `proposals[3]`, how suitable is the remaining sequence for dealing with constrained shapes before their useful spaces are consumed? Use firstRemainingPosition and nextParts with the shape mixture.",
+      "criteria": [
+        "The remaining sequence postpones constrained shapes while consuming their opportunities with easy shapes.",
+        "The remaining sequence partly addresses constrained shapes early, with some unresolved competition.",
+        "The remaining sequence addresses constrained shapes early and retains flexible filler shapes for later."
+      ]
+    }
+  }
+}

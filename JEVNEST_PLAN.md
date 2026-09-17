@@ -249,5 +249,35 @@ Success requires better validated packing at the same total time, or equivalent
 packing sooner, at a declared acceptable cost. Parallel questions themselves
 are an implementation capability, not evidence of a better nesting policy.
 
-Implementation and representative production files for this next benchmark are
-still outstanding; the current full runner does not satisfy these requirements.
+The v1 full runner does not satisfy these requirements. A separate v2 implementation
+now exists under `experiments/jev/production`; see its README for precise scope.
+
+## Production-scale v2 implementation
+
+- Common lazy NFP engine with bounded reuse by normalised outline and rotation;
+  original placement worker/Clipper/NFP algorithms retained. Clearance envelopes,
+  margins, explicit per-shape rotation restrictions, sheet and real strip objectives.
+- Four comparisons: adapted stock GA, unranked deterministic proposal stream,
+  arithmetic ranking with the same short geometry probes, and Jev proposal ranking.
+- One request contains 12 independent Score judgments for four proposals. Fixed
+  score aggregation selects two full layout evaluations. No request per placed part.
+- 84 bundled, provenance-tracked ESICUP-derived jobs: 14 source families × three
+  part counts × two media types. Development/evaluation split by source family.
+  These are adapted research jobs; actual customer print outlines remain needed.
+- Strict explicit polygon JSON input. Unsupported holes, multipart contours,
+  implicit transforms and unflattened curves are not silently approximated.
+- Fixed wall-clock checkpoints, saved complete incumbents, measured geometry,
+  features, API costs/tokens, raw receipts, failure reporting and source/input hashes.
+  Interrupted trials do not replay cached responses as fresh latency measurements.
+- Default live development run: `npm.cmd run benchmark:production -- --live`.
+  18 jobs, seed 1, four methods, 30/120/300-second checkpoints; up to six nominal
+  search hours and 360 requests. The completed v1 runner and results are preserved.
+
+Implementation verification includes original-worker parity, nine focused tests,
+all 84 input preparations, 12 timed non-model development runs, and a fully validated
+500-part roll (~30 seconds for one initial layout on the build machine).
+See `experiments/jev/production/verification/README.md`.
+The new live model integration is not yet empirically verified; run it using the
+credential on the user's PC, then assess development outcomes before freezing the
+policy and spending on the 66-job held-out suite. A working typed API is not a
+claim that the resulting search policy improves packing or runtime.

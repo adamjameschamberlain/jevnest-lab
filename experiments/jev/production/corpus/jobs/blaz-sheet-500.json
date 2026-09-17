@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 2,
+  "id": "blaz-sheet-500",
+  "split": "development",
+  "units": "mm",
+  "spacing": 3,
+  "margin": 10,
+  "media": {
+    "type": "sheet",
+    "width": 2440,
+    "height": 1640
+  },
+  "provenance": {
+    "kind": "rescaled-public-reference",
+    "family": "blaz",
+    "repository": "https://github.com/ESICUP/datasets",
+    "revision": "154a8f006a8e72f65d734f2d1e36777f678f31f8",
+    "sourcePath": "2d_irregular/blaz/blaz.xml",
+    "originalSha256": "4b4c2822935d725c798fd4668c0bc58c39e84bf6c1736f7b8a62c9b9d3229209",
+    "licence": "CC0-1.0 (repository licence)",
+    "sourceUnitsToMm": 106.66666666666667,
+    "originalQuantities": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "description": "Artificially created data set, based in Blazewicz J., Hawryluk P. and Walkowiak R., 1993, \"Using a tabu search approach for solving the two-dimensional irregular cutting problem\", Annals of Operations Research 41, 313-327, coordinates stated in Oliveira J. F., Gomes A. M. and Ferreira S., 2000, \"A new constructive algorithm for nesting problems\", OR Spectrum 22 (2), 263-284.",
+    "adaptation": "Uniform scaling to 1600 mm source strip width; quantities resampled proportionally to target count; 3 mm spacing and 10 mm border margin added. Sheet variants are derived, not original benchmark instances."
+  },
+  "parts": [
+    {
+      "key": "piece0",
+      "quantity": 72,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          213.3333333,
+          -106.6666667
+        ],
+        [
+          426.6666667,
+          0.0
+        ],
+        [
+          426.6666667,
+          320.0
+        ],
+        [
+          213.3333333,
+          426.6666667
+        ],
+        [
+          0.0,
+          320.0
+        ]
+      ]
+    },
+    {
+      "key": "piece1",
+      "quantity": 71,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          320.0,
+          0.0
+        ],
+        [
+          213.3333333,
+          213.3333333
+        ],
+        [
+          320.0,
+          426.6666667
+        ],
+        [
+          320.0,
+          533.3333333
+        ],
+        [
+          106.6666667,
+          533.3333333
+        ],
+        [
+          -106.6666667,
+          320.0
+        ],
+        [
+          -106.6666667,
+          106.6666667
+        ]
+      ]
+    },
+    {
+      "key": "piece2",
+      "quantity": 72,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          213.3333333,
+          0.0
+        ],
+        [
+          320.0,
+          106.6666667
+        ],
+        [
+          320.0,
+          320.0
+        ],
+        [
+          213.3333333,
+          426.6666667
+        ],
+        [
+          0.0,
+          426.6666667
+        ],
+        [
+          -106.6666667,
+          320.0
+        ],
+        [
+          -106.6666667,
+          106.6666667
+        ]
+      ]
+    },
+    {
+      "key": "piece3",
+      "quantity": 71,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          213.3333333,
+          106.6666667
+        ],
+        [
+          426.6666667,
+          0.0
+        ],
+        [
+          320.0,
+          213.3333333
+        ],
+        [
+          426.6666667,
+          533.3333333
+        ],
+        [
+          213.3333333,
+          426.6666667
+        ],
+        [
+          0.0,
+          533.3333333
+        ],
+        [
+          106.6666667,
+          320.0
+        ]
+      ]
+    },
+    {
+      "key": "piece4",
+      "quantity": 72,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          533.3333333,
+          0.0
+        ],
+        [
+          533.3333333,
+          533.3333333
+        ],
+        [
+          426.6666667,
+          533.3333333
+        ],
+        [
+          320.0,
+          320.0
+        ],
+        [
+          213.3333333,
+          213.3333333
+        ],
+        [
+          0.0,
+          106.6666667
+        ]
+      ]
+    },
+    {
+      "key": "piece5",
+      "quantity": 71,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          213.3333333,
+          320.0
+        ],
+        [
+          -213.3333333,
+          320.0
+        ]
+      ]
+    },
+    {
+      "key": "piece6",
+      "quantity": 71,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          213.3333333,
+          0.0
+        ],
+        [
+          213.3333333,
+          213.3333333
+        ],
+        [
+          0.0,
+          213.3333333
+        ]
+      ]
+    }
+  ]
+}

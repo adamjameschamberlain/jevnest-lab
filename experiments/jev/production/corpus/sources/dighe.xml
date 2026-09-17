@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:nesting xmlns:ns0="http://www.fe.up.pt/~esicup/nesting.xsd"><ns0:name>Dighe1</ns0:name>
+	<ns0:author>DIGHE/JAKIELA</ns0:author>
+	<ns0:date>2006/06/13</ns0:date>
+	<ns0:description>Jigsaw problems (with known optimum), constructed by E. Hopper according to a sample layout in Dighe R. and Jakiela M. J., 1996, "Solving Pattern Nesting Problems with Genetic Algorithms Employing Task Decomposition and Contact Detection", Evolutionary Computation 3, 239-266.</ns0:description>
+	<ns0:verticesOrientation>clockwise</ns0:verticesOrientation>
+	<ns0:coordinatesOrigin>up-left</ns0:coordinatesOrigin>
+	<ns0:problem>
+		<ns0:boards>
+			<ns0:piece id="board0" quantity="1">
+				<ns0:component idPolygon="polygon0" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+		</ns0:boards>
+		<ns0:lot>
+			<ns0:piece id="piece0" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon1" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+			<ns0:piece id="piece1" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon2" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+			<ns0:piece id="piece2" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon3" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+			<ns0:piece id="piece3" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon4" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+			<ns0:piece id="piece4" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon5" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+			<ns0:piece id="piece5" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon6" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+			<ns0:piece id="piece6" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon7" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+			<ns0:piece id="piece7" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon8" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+			<ns0:piece id="piece8" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon9" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+			<ns0:piece id="piece9" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon10" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+			<ns0:piece id="piece10" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon11" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+			<ns0:piece id="piece11" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon12" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+			<ns0:piece id="piece12" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon13" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+			<ns0:piece id="piece13" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon14" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+			<ns0:piece id="piece14" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon15" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+			<ns0:piece id="piece15" quantity="1">
+				<ns0:orientation>
+					<ns0:enumeration angle="0" />
+				</ns0:orientation>
+				<ns0:component idPolygon="polygon16" type="0" xOffset="0" yOffset="0" />
+			</ns0:piece>
+		</ns0:lot>
+	</ns0:problem>
+	<ns0:polygons>
+		<ns0:polygon id="polygon0" nVertices="4">
+			<ns0:lines>
+				<ns0:segment n="1" x0="  0.0" x1="200.0" y0="  0.0" y1="  0.0" />
+				<ns0:segment n="2" x0="200.0" x1="200.0" y0="  0.0" y1="100.0" />
+				<ns0:segment n="3" x0="200.0" x1="  0.0" y0="100.0" y1="100.0" />
+				<ns0:segment n="4" x0="  0.0" x1="  0.0" y0="100.0" y1="  0.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>200</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>100</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon1" nVertices="3">
+			<ns0:lines>
+				<ns0:segment n="1" x0="  0.0" x1=" 35.0" y0="  0.0" y1="  0.0" />
+				<ns0:segment n="2" x0=" 35.0" x1="  0.0" y0="  0.0" y1=" 34.0" />
+				<ns0:segment n="3" x0="  0.0" x1="  0.0" y0=" 34.0" y1="  0.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>35</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>34</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon2" nVertices="3">
+			<ns0:lines>
+				<ns0:segment n="1" x0="  0.0" x1=" 33.0" y0="  0.0" y1="  0.0" />
+				<ns0:segment n="2" x0=" 33.0" x1=" 18.0" y0="  0.0" y1=" 15.0" />
+				<ns0:segment n="3" x0=" 18.0" x1="  0.0" y0=" 15.0" y1="  0.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>33</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>15</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon3" nVertices="4">
+			<ns0:lines>
+				<ns0:segment n="1" x0="  0.0" x1=" 32.0" y0="  0.0" y1="  0.0" />
+				<ns0:segment n="2" x0=" 32.0" x1=" 32.0" y0="  0.0" y1=" 41.0" />
+				<ns0:segment n="3" x0=" 32.0" x1=" 14.0" y0=" 41.0" y1=" 33.0" />
+				<ns0:segment n="4" x0=" 14.0" x1="  0.0" y0=" 33.0" y1="  0.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>32</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>41</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon4" nVertices="6">
+			<ns0:lines>
+				<ns0:segment n="1" x0=" 35.0" x1=" 53.0" y0="  0.0" y1=" 15.0" />
+				<ns0:segment n="2" x0=" 53.0" x1=" 51.0" y0=" 15.0" y1=" 38.0" />
+				<ns0:segment n="3" x0=" 51.0" x1=" 48.0" y0=" 38.0" y1=" 62.0" />
+				<ns0:segment n="4" x0=" 48.0" x1=" 39.0" y0=" 62.0" y1=" 57.0" />
+				<ns0:segment n="5" x0=" 39.0" x1="  0.0" y0=" 57.0" y1=" 34.0" />
+				<ns0:segment n="6" x0="  0.0" x1=" 35.0" y0=" 34.0" y1="  0.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>53</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>57</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon5" nVertices="5">
+			<ns0:lines>
+				<ns0:segment n="1" x0="  2.0" x1=" 17.0" y0=" 15.0" y1="  0.0" />
+				<ns0:segment n="2" x0=" 17.0" x1=" 31.0" y0="  0.0" y1=" 33.0" />
+				<ns0:segment n="3" x0=" 31.0" x1=" 25.0" y0=" 33.0" y1=" 34.0" />
+				<ns0:segment n="4" x0=" 25.0" x1="  0.0" y0=" 34.0" y1=" 38.0" />
+				<ns0:segment n="5" x0="  0.0" x1="  2.0" y0=" 38.0" y1=" 15.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>31</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>38</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon6" nVertices="4">
+			<ns0:lines>
+				<ns0:segment n="1" x0="  0.0" x1=" 39.0" y0="  0.0" y1=" 23.0" />
+				<ns0:segment n="2" x0=" 39.0" x1=" 20.0" y0=" 23.0" y1=" 26.0" />
+				<ns0:segment n="3" x0=" 20.0" x1="  0.0" y0=" 26.0" y1=" 66.0" />
+				<ns0:segment n="4" x0="  0.0" x1="  0.0" y0=" 66.0" y1="  0.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>39</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>66</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon7" nVertices="6">
+			<ns0:lines>
+				<ns0:segment n="1" x0="  3.0" x1=" 28.0" y0="  4.0" y1="  0.0" />
+				<ns0:segment n="2" x0=" 28.0" x1=" 30.0" y0="  0.0" y1=" 18.0" />
+				<ns0:segment n="3" x0=" 30.0" x1=" 32.0" y0=" 18.0" y1=" 39.0" />
+				<ns0:segment n="4" x0=" 32.0" x1=" 25.0" y0=" 39.0" y1=" 37.0" />
+				<ns0:segment n="5" x0=" 25.0" x1="  0.0" y0=" 37.0" y1=" 28.0" />
+				<ns0:segment n="6" x0="  0.0" x1="  3.0" y0=" 28.0" y1="  4.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>32</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>39</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon8" nVertices="4">
+			<ns0:lines>
+				<ns0:segment n="1" x0="  0.0" x1="  6.0" y0="  1.0" y1="  0.0" />
+				<ns0:segment n="2" x0="  6.0" x1=" 24.0" y0="  0.0" y1="  8.0" />
+				<ns0:segment n="3" x0=" 24.0" x1="  2.0" y0="  8.0" y1=" 19.0" />
+				<ns0:segment n="4" x0="  2.0" x1="  0.0" y0=" 19.0" y1="  1.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>24</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>19</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon9" nVertices="3">
+			<ns0:lines>
+				<ns0:segment n="1" x0="  0.0" x1=" 22.0" y0=" 11.0" y1="  0.0" />
+				<ns0:segment n="2" x0=" 22.0" x1="  2.0" y0="  0.0" y1=" 32.0" />
+				<ns0:segment n="3" x0="  2.0" x1="  0.0" y0=" 32.0" y1=" 11.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>22</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>32</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon10" nVertices="3">
+			<ns0:lines>
+				<ns0:segment n="1" x0="  0.0" x1=" 20.0" y0=" 32.0" y1="  0.0" />
+				<ns0:segment n="2" x0=" 20.0" x1=" 20.0" y0="  0.0" y1=" 37.0" />
+				<ns0:segment n="3" x0=" 20.0" x1="  0.0" y0=" 37.0" y1=" 32.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>20</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>37</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon11" nVertices="3">
+			<ns0:lines>
+				<ns0:segment n="1" x0="  1.0" x1=" 26.0" y0="  0.0" y1="  9.0" />
+				<ns0:segment n="2" x0=" 26.0" x1="  0.0" y0="  9.0" y1=" 15.0" />
+				<ns0:segment n="3" x0="  0.0" x1="  1.0" y0=" 15.0" y1="  0.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>26</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>15</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon12" nVertices="5">
+			<ns0:lines>
+				<ns0:segment n="1" x0="  0.0" x1=" 19.0" y0="  3.0" y1="  0.0" />
+				<ns0:segment n="2" x0=" 19.0" x1=" 28.0" y0="  0.0" y1="  5.0" />
+				<ns0:segment n="3" x0=" 28.0" x1=" 27.0" y0="  5.0" y1=" 20.0" />
+				<ns0:segment n="4" x0=" 27.0" x1=" 24.0" y0=" 20.0" y1=" 43.0" />
+				<ns0:segment n="5" x0=" 24.0" x1="  0.0" y0=" 43.0" y1="  3.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>28</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>43</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon13" nVertices="3">
+			<ns0:lines>
+				<ns0:segment n="1" x0=" 20.0" x1=" 44.0" y0="  0.0" y1=" 40.0" />
+				<ns0:segment n="2" x0=" 44.0" x1="  0.0" y0=" 40.0" y1=" 40.0" />
+				<ns0:segment n="3" x0="  0.0" x1=" 20.0" y0=" 40.0" y1="  0.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>44</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>40</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon14" nVertices="4">
+			<ns0:lines>
+				<ns0:segment n="1" x0="  3.0" x1=" 29.0" y0="  6.0" y1="  0.0" />
+				<ns0:segment n="2" x0=" 29.0" x1=" 36.0" y0="  0.0" y1="  2.0" />
+				<ns0:segment n="3" x0=" 36.0" x1="  0.0" y0="  2.0" y1=" 29.0" />
+				<ns0:segment n="4" x0="  0.0" x1="  3.0" y0=" 29.0" y1="  6.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>36</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>29</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon15" nVertices="3">
+			<ns0:lines>
+				<ns0:segment n="1" x0="  0.0" x1=" 36.0" y0=" 27.0" y1="  0.0" />
+				<ns0:segment n="2" x0=" 36.0" x1=" 56.0" y0="  0.0" y1=" 27.0" />
+				<ns0:segment n="3" x0=" 56.0" x1="  0.0" y0=" 27.0" y1=" 27.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>56</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>27</ns0:yMax>
+		</ns0:polygon>
+		<ns0:polygon id="polygon16" nVertices="3">
+			<ns0:lines>
+				<ns0:segment n="1" x0="  0.0" x1=" 20.0" y0="  0.0" y1="  5.0" />
+				<ns0:segment n="2" x0=" 20.0" x1=" 20.0" y0="  5.0" y1=" 27.0" />
+				<ns0:segment n="3" x0=" 20.0" x1="  0.0" y0=" 27.0" y1="  0.0" />
+			</ns0:lines>
+			<ns0:xMin>0</ns0:xMin>
+			<ns0:xMax>20</ns0:xMax>
+			<ns0:yMin>0</ns0:yMin>
+			<ns0:yMax>27</ns0:yMax>
+		</ns0:polygon>
+		</ns0:polygons>
+	</ns0:nesting>

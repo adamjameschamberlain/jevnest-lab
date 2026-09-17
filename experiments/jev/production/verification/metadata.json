@@ -1,0 +1,85 @@
+{
+  "version": 2,
+  "signature": "27b0cec612a812cb9f8261c2d208c3aa6d04b916921141dce80db588bb3c8310",
+  "policyVersion": "search-proposal-scores-v2.0",
+  "settings": {
+    "batchSize": 4,
+    "prefixParts": 16,
+    "fitSamples": 3,
+    "completePerBatch": 2,
+    "maxCalls": 20,
+    "maxBodyBytes": 60000,
+    "weights": {
+      "space": 0.45,
+      "hardParts": 0.35,
+      "order": 0.2
+    }
+  },
+  "config": {
+    "live": false,
+    "suite": "development",
+    "seeds": [
+      1
+    ],
+    "budgets": [
+      5,
+      15
+    ],
+    "jobs": [
+      "shirts-sheet-100",
+      "shirts-roll-500",
+      "albano-sheet-500",
+      "blaz-roll-250"
+    ],
+    "manifest": null,
+    "model": "jev-1.13.0",
+    "maxCalls": 20,
+    "inputPrice": null,
+    "outputPrice": null,
+    "currency": "USD"
+  },
+  "policies": [
+    "classic-ga",
+    "unranked",
+    "control"
+  ],
+  "expectedPolicyRuns": 12,
+  "sourceHashes": {
+    "svgnest.js": "e91613f5fb85fc5368f2491be716cbd406f190db1290fd123ea3ba473f0e5965",
+    "util/placementworker.js": "5571dccd67cf0aee53ed607b7c3b09bdf9835690e60453d920d13ccb137a26a3",
+    "util/geometryutil.js": "692e2fd684c203900322a575f69e2611515b8e53af26506ae3861bb80ebe996a",
+    "util/clipper.js": "2b8f6241f39fede1ebddcd827e82d422b44a6aa764d1b1b934a54a9b1560573f",
+    "benchmarks/runner.js": "249aa44bf600c3f0e84059cb9d161cf19928c9ff020864e956006b41cc7d3ce5",
+    "experiments/jev/replay.cjs": "74368d9c763ed7e35ad7cfbdb0b6207fab7d29dce01609eb5d335b0197bd8d09",
+    "experiments/jev/full/corpus.cjs": "07b592f88f4d18408b5c493cd610324c54eae3a8a0e92ee1ac39cdfec6918420",
+    "experiments/jev/offline.cjs": "0a971365a3459281eaa0eaa23a471ee546889d8708dca80e407c2b05d73266dc",
+    "experiments/jev/production/engine.cjs": "92d90cef3fcf610ba1ad5b720161acc6996ffd73712da6b8c8f0efe2369ccba8",
+    "experiments/jev/production/policy.cjs": "165932394df4796cc2bd092171567dee69006fdaba1320991b165c53e8aed982",
+    "experiments/jev/production/search.cjs": "4668a99b986203411515c822e2ca33617067d7ef717947766b647e18fbb353d1",
+    "experiments/jev/production/report.cjs": "399b22febfb71d03ebe18bd1355672499e5d0216af2aeb0a754d2c57eb1288ee",
+    "scripts/production-jev-benchmark.cjs": "d26a96b3e27674c265db691d2199f5a1edd4cd2982abde8e277ba70fd378c198"
+  },
+  "inputHashes": {
+    "shirts-sheet-100": "e0299ffc8e6d84dc979a90041948d71959ebacee110572f3e52b7e9bb66129bf",
+    "shirts-roll-500": "0e6d55a9acab3fe7fad32be99325b03d28da3e1b2a12c5131f0eed31344610a6",
+    "albano-sheet-500": "84dd3e797b35d70789d9ea1b076ee5498977bd816a71d320c1955fb71ec711c7",
+    "blaz-roll-250": "3499792f5bac9f3ceda045f794c5b4240bb1df756aee8cb8e542bed100480301"
+  },
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "startedAt": "2026-09-17T14:00:49.194Z",
+  "machine": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "logicalCpus": 9
+  },
+  "resources": {
+    "searchThreads": 1,
+    "inFlightRequests": 1,
+    "nfpCacheEntries": 30000
+  },
+  "timing": "Independent cold engine per policy. Setup and all search costs timed. SVG/report/ZIP export recorded separately. No response-cache timing reconstruction. Interrupted policies require a fresh uninterrupted attempt; completed policies are retained.",
+  "primary": "All parts placed; sheets: sheet count then sum occupied X extents; rolls: consumed X length at fixed cross-web width. Only fully validated incumbents by each deadline count.",
+  "finishedAt": "2026-09-17T14:03:49.501Z"
+}

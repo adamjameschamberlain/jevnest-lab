@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 2,
+  "id": "shirts-roll-500",
+  "split": "development",
+  "units": "mm",
+  "spacing": 3,
+  "margin": 10,
+  "media": {
+    "type": "roll",
+    "width": 1640
+  },
+  "provenance": {
+    "kind": "rescaled-public-reference",
+    "family": "shirts",
+    "repository": "https://github.com/ESICUP/datasets",
+    "revision": "154a8f006a8e72f65d734f2d1e36777f678f31f8",
+    "sourcePath": "2d_irregular/shirts/shirts.xml",
+    "originalSha256": "c884de028b34c7788eb3b454660be74e919fa297a29394a35f9b3be13d1fc93d",
+    "licence": "CC0-1.0 (repository licence)",
+    "sourceUnitsToMm": 40.0,
+    "originalQuantities": [
+      8,
+      8,
+      8,
+      15,
+      15,
+      15,
+      15,
+      15
+    ],
+    "description": "Data set from the textile industry, instance initially used in Dowsland K. A., Dowsland W. B. and Bennell J. A., 1998, \"Jostling for position: local improvement for irregular cutting patterns\", Journal of the Operational Research Society 49, 647-658, coordinates stated in Oliveira J. F., Gomes A. M. and Ferreira S., 2000, \"A new constructive algorithm for nesting problems\", OR Spectrum 22 (2), 263-284.",
+    "adaptation": "Uniform scaling to 1600 mm source strip width; quantities resampled proportionally to target count; 3 mm spacing and 10 mm border margin added. Sheet variants are derived, not original benchmark instances."
+  },
+  "parts": [
+    {
+      "key": "piece0",
+      "quantity": 41,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          280.0,
+          40.0
+        ],
+        [
+          280.0,
+          200.0
+        ],
+        [
+          0.0,
+          280.0
+        ],
+        [
+          -40.0,
+          200.0
+        ],
+        [
+          -40.0,
+          160.0
+        ],
+        [
+          -80.0,
+          120.0
+        ],
+        [
+          -40.0,
+          80.0
+        ]
+      ]
+    },
+    {
+      "key": "piece1",
+      "quantity": 40,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          440.0,
+          0.0
+        ],
+        [
+          480.0,
+          80.0
+        ],
+        [
+          440.0,
+          120.0
+        ],
+        [
+          440.0,
+          200.0
+        ],
+        [
+          400.0,
+          240.0
+        ],
+        [
+          240.0,
+          200.0
+        ],
+        [
+          120.0,
+          240.0
+        ],
+        [
+          0.0,
+          200.0
+        ],
+        [
+          -40.0,
+          120.0
+        ]
+      ]
+    },
+    {
+      "key": "piece2",
+      "quantity": 41,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          120.0,
+          0.0
+        ],
+        [
+          120.0,
+          -40.0
+        ],
+        [
+          200.0,
+          0.0
+        ],
+        [
+          320.0,
+          0.0
+        ],
+        [
+          440.0,
+          -40.0
+        ],
+        [
+          480.0,
+          160.0
+        ],
+        [
+          440.0,
+          320.0
+        ],
+        [
+          280.0,
+          280.0
+        ],
+        [
+          0.0,
+          280.0
+        ]
+      ]
+    },
+    {
+      "key": "piece3",
+      "quantity": 75,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          160.0,
+          0.0
+        ],
+        [
+          160.0,
+          80.0
+        ],
+        [
+          120.0,
+          120.0
+        ],
+        [
+          0.0,
+          120.0
+        ]
+      ]
+    },
+    {
+      "key": "piece4",
+      "quantity": 76,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          320.0,
+          0.0
+        ],
+        [
+          280.0,
+          40.0
+        ],
+        [
+          40.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "key": "piece5",
+      "quantity": 76,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          160.0,
+          0.0
+        ],
+        [
+          160.0,
+          40.0
+        ],
+        [
+          0.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "key": "piece6",
+      "quantity": 76,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          120.0,
+          0.0
+        ],
+        [
+          120.0,
+          40.0
+        ],
+        [
+          0.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "key": "piece7",
+      "quantity": 75,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          320.0,
+          0.0
+        ],
+        [
+          320.0,
+          80.0
+        ],
+        [
+          240.0,
+          80.0
+        ],
+        [
+          160.0,
+          40.0
+        ],
+        [
+          120.0,
+          40.0
+        ],
+        [
+          80.0,
+          80.0
+        ],
+        [
+          -40.0,
+          80.0
+        ]
+      ]
+    }
+  ]
+}

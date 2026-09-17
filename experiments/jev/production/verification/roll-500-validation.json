@@ -1,0 +1,30 @@
+{
+  "purpose": "One completed 500-part roll geometry validation; no model calls, not a policy comparison",
+  "job": "shirts-roll-500",
+  "partCount": 500,
+  "runtimeMs": 29802.125697,
+  "metrics": {
+    "unplaced": 0,
+    "bins": 1,
+    "length": 13930.9482768,
+    "occupiedLength": 13910.9482768,
+    "fitness": 1.0000603542411062,
+    "utilisation": 0.7664633277974124
+  },
+  "profile": {
+    "nfpGenerated": 44,
+    "nfpHits": 249956,
+    "nfpMs": 56.08937999999581,
+    "fullEvaluations": 1,
+    "probeEvaluations": 0,
+    "fitChecks": 0,
+    "validationMs": 2730.5713819999983,
+    "cacheEvictions": 0
+  },
+  "validation": {
+    "valid": true,
+    "checks": 125250,
+    "areaTolerance": 0.0001,
+    "violations": []
+  }
+}

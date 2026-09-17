@@ -1,0 +1,349 @@
+{
+  "schemaVersion": 2,
+  "id": "albano-sheet-100",
+  "split": "development",
+  "units": "mm",
+  "spacing": 3,
+  "margin": 10,
+  "media": {
+    "type": "sheet",
+    "width": 2440,
+    "height": 1640
+  },
+  "provenance": {
+    "kind": "rescaled-public-reference",
+    "family": "albano",
+    "repository": "https://github.com/ESICUP/datasets",
+    "revision": "154a8f006a8e72f65d734f2d1e36777f678f31f8",
+    "sourcePath": "2d_irregular/albano/albano.xml",
+    "originalSha256": "d612f29754a5e6dced3112e2f15e30c7db93dd0f5d526451416632c68c4f05e1",
+    "licence": "CC0-1.0 (repository licence)",
+    "sourceUnitsToMm": 0.32653061224489793,
+    "originalQuantities": [
+      2,
+      2,
+      4,
+      4,
+      4,
+      4,
+      2,
+      2
+    ],
+    "description": "Data set from the textile industry, scanned by E. Hopper from sample layout in Albano A. and Sappupo G., 1980, \"Optimal Allocation of two-dimensional irregular shapes using heuristic search methods\", IEEE Transactions on Systems, Man and Cybernetics, SMC-10, 242-248.",
+    "adaptation": "Uniform scaling to 1600 mm source strip width; quantities resampled proportionally to target count; 3 mm spacing and 10 mm border margin added. Sheet variants are derived, not original benchmark instances."
+  },
+  "parts": [
+    {
+      "key": "piece0",
+      "quantity": 9,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          28.0816327
+        ],
+        [
+          315.4285714,
+          46.3673469
+        ],
+        [
+          647.5102041,
+          0.0
+        ],
+        [
+          713.4693878,
+          77.7142857
+        ],
+        [
+          892.7346939,
+          70.8571429
+        ],
+        [
+          979.5918367,
+          250.4489796
+        ],
+        [
+          920.4897959,
+          293.877551
+        ],
+        [
+          920.4897959,
+          444.0816327
+        ],
+        [
+          979.5918367,
+          487.5102041
+        ],
+        [
+          892.7346939,
+          667.1020408
+        ],
+        [
+          713.4693878,
+          660.244898
+        ],
+        [
+          647.5102041,
+          737.9591837
+        ],
+        [
+          315.4285714,
+          691.5918367
+        ],
+        [
+          0.0,
+          709.877551
+        ]
+      ]
+    },
+    {
+      "key": "piece1",
+      "quantity": 8,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          990.6938776,
+          0.0
+        ],
+        [
+          990.6938776,
+          85.2244898
+        ],
+        [
+          0.0,
+          85.2244898
+        ]
+      ]
+    },
+    {
+      "key": "piece2",
+      "quantity": 17,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          56.4897959
+        ],
+        [
+          575.0204082,
+          0.0
+        ],
+        [
+          712.8163265,
+          212.244898
+        ],
+        [
+          712.8163265,
+          329.7959184
+        ],
+        [
+          575.0204082,
+          542.0408163
+        ],
+        [
+          0.0,
+          485.5510204
+        ]
+      ]
+    },
+    {
+      "key": "piece3",
+      "quantity": 16,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          24.1632653,
+          0.0
+        ],
+        [
+          284.0816327,
+          38.8571429
+        ],
+        [
+          544.0,
+          0.0
+        ],
+        [
+          568.1632653,
+          40.8163265
+        ],
+        [
+          284.0816327,
+          99.5918367
+        ],
+        [
+          0.0,
+          40.8163265
+        ]
+      ]
+    },
+    {
+      "key": "piece4",
+      "quantity": 17,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          134.2040816,
+          21.2244898
+        ],
+        [
+          261.2244898,
+          0.0
+        ],
+        [
+          388.244898,
+          21.2244898
+        ],
+        [
+          522.4489796,
+          0.0
+        ],
+        [
+          489.7959184,
+          120.1632653
+        ],
+        [
+          261.2244898,
+          93.3877551
+        ],
+        [
+          32.6530612,
+          120.1632653
+        ]
+      ]
+    },
+    {
+      "key": "piece5",
+      "quantity": 17,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          305.6326531,
+          0.0
+        ],
+        [
+          305.6326531,
+          215.1836735
+        ],
+        [
+          0.0,
+          215.1836735
+        ]
+      ]
+    },
+    {
+      "key": "piece6",
+      "quantity": 8,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          18.2857143,
+          23.8367347
+        ],
+        [
+          348.0816327,
+          46.6938776
+        ],
+        [
+          617.4693878,
+          0.0
+        ],
+        [
+          713.7959184,
+          94.0408163
+        ],
+        [
+          840.1632653,
+          78.6938776
+        ],
+        [
+          873.7959184,
+          302.3673469
+        ],
+        [
+          847.0204082,
+          446.0408163
+        ],
+        [
+          0.0,
+          446.0408163
+        ]
+      ]
+    },
+    {
+      "key": "piece7",
+      "quantity": 8,
+      "rotations": [
+        0.0,
+        180.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          816.0,
+          0.0
+        ],
+        [
+          883.2653061,
+          126.3673469
+        ],
+        [
+          856.1632653,
+          304.9795918
+        ],
+        [
+          701.3877551,
+          315.755102
+        ],
+        [
+          626.9387755,
+          376.1632653
+        ],
+        [
+          346.4489796,
+          345.7959184
+        ],
+        [
+          0.0,
+          367.3469388
+        ]
+      ]
+    }
+  ]
+}

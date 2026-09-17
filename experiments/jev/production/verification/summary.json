@@ -1,0 +1,57 @@
+{
+  "version": 2,
+  "status": "finished",
+  "live": false,
+  "expectedPolicyRuns": 12,
+  "recordedPolicyRuns": 12,
+  "policies": {
+    "classic-ga": {
+      "attempts": 4,
+      "failed": 0,
+      "noLayout": 1,
+      "callCapped": 0,
+      "medianFirstValidMs": 7206.613383999997,
+      "fullEvaluations": 45,
+      "nfpGenerated": 486,
+      "apiCalls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0
+    },
+    "unranked": {
+      "attempts": 4,
+      "failed": 0,
+      "noLayout": 1,
+      "callCapped": 0,
+      "medianFirstValidMs": 7041.079235000012,
+      "fullEvaluations": 37,
+      "nfpGenerated": 568,
+      "apiCalls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0
+    },
+    "control": {
+      "attempts": 4,
+      "failed": 0,
+      "noLayout": 1,
+      "callCapped": 0,
+      "medianFirstValidMs": 7576.187927999999,
+      "fullEvaluations": 34,
+      "nfpGenerated": 1001,
+      "apiCalls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0
+    }
+  },
+  "summaries": [],
+  "comparisons": [],
+  "estimatedApiCost": null,
+  "currency": null,
+  "limitations": [
+    "Public references are rescaled and have altered quantities/spacing; they are not actual print-production jobs.",
+    "Finite polygon precision; holes and curves must not be silently discarded. Input accepts explicit simple polygon jobs only.",
+    "The same proposal stream is used for unranked/control/Jev. GA is a separate search comparator.",
+    "Searches run sequentially with one CPU search thread and at most one API request in flight; questions within that request run in parallel at the service.",
+    "Failed trials remain visible and are excluded from quality claims, not silently treated as successful fallbacks.",
+    "Bootstrap requires a complete suite and at least ten source families in the comparison group."
+  ]
+}

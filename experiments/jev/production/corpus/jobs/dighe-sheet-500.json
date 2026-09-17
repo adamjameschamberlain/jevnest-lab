@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 2,
+  "id": "dighe-sheet-500",
+  "split": "evaluation",
+  "units": "mm",
+  "spacing": 3,
+  "margin": 10,
+  "media": {
+    "type": "sheet",
+    "width": 2440,
+    "height": 1640
+  },
+  "provenance": {
+    "kind": "rescaled-public-reference",
+    "family": "dighe",
+    "repository": "https://github.com/ESICUP/datasets",
+    "revision": "154a8f006a8e72f65d734f2d1e36777f678f31f8",
+    "sourcePath": "2d_irregular/dighe/dighe1.xml",
+    "originalSha256": "4a759e101ca77b2b7a224784dad401c23973094899d5239346131c4c55c7c426",
+    "licence": "CC0-1.0 (repository licence)",
+    "sourceUnitsToMm": 16.0,
+    "originalQuantities": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "description": "Jigsaw problems (with known optimum), constructed by E. Hopper according to a sample layout in Dighe R. and Jakiela M. J., 1996, \"Solving Pattern Nesting Problems with Genetic Algorithms Employing Task Decomposition and Contact Detection\", Evolutionary Computation 3, 239-266.",
+    "adaptation": "Uniform scaling to 1600 mm source strip width; quantities resampled proportionally to target count; 3 mm spacing and 10 mm border margin added. Sheet variants are derived, not original benchmark instances."
+  },
+  "parts": [
+    {
+      "key": "piece0",
+      "quantity": 32,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          560.0,
+          0.0
+        ],
+        [
+          0.0,
+          544.0
+        ]
+      ]
+    },
+    {
+      "key": "piece1",
+      "quantity": 31,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          528.0,
+          0.0
+        ],
+        [
+          288.0,
+          240.0
+        ]
+      ]
+    },
+    {
+      "key": "piece2",
+      "quantity": 31,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          512.0,
+          0.0
+        ],
+        [
+          512.0,
+          656.0
+        ],
+        [
+          224.0,
+          528.0
+        ]
+      ]
+    },
+    {
+      "key": "piece3",
+      "quantity": 31,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          560.0,
+          0.0
+        ],
+        [
+          848.0,
+          240.0
+        ],
+        [
+          816.0,
+          608.0
+        ],
+        [
+          768.0,
+          992.0
+        ],
+        [
+          624.0,
+          912.0
+        ],
+        [
+          0.0,
+          544.0
+        ]
+      ]
+    },
+    {
+      "key": "piece4",
+      "quantity": 32,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          32.0,
+          240.0
+        ],
+        [
+          272.0,
+          0.0
+        ],
+        [
+          496.0,
+          528.0
+        ],
+        [
+          400.0,
+          544.0
+        ],
+        [
+          0.0,
+          608.0
+        ]
+      ]
+    },
+    {
+      "key": "piece5",
+      "quantity": 31,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          624.0,
+          368.0
+        ],
+        [
+          320.0,
+          416.0
+        ],
+        [
+          0.0,
+          1056.0
+        ]
+      ]
+    },
+    {
+      "key": "piece6",
+      "quantity": 31,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          48.0,
+          64.0
+        ],
+        [
+          448.0,
+          0.0
+        ],
+        [
+          480.0,
+          288.0
+        ],
+        [
+          512.0,
+          624.0
+        ],
+        [
+          400.0,
+          592.0
+        ],
+        [
+          0.0,
+          448.0
+        ]
+      ]
+    },
+    {
+      "key": "piece7",
+      "quantity": 31,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          0.0,
+          16.0
+        ],
+        [
+          96.0,
+          0.0
+        ],
+        [
+          384.0,
+          128.0
+        ],
+        [
+          32.0,
+          304.0
+        ]
+      ]
+    },
+    {
+      "key": "piece8",
+      "quantity": 32,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          0.0,
+          176.0
+        ],
+        [
+          352.0,
+          0.0
+        ],
+        [
+          32.0,
+          512.0
+        ]
+      ]
+    },
+    {
+      "key": "piece9",
+      "quantity": 31,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          0.0,
+          512.0
+        ],
+        [
+          320.0,
+          0.0
+        ],
+        [
+          320.0,
+          592.0
+        ]
+      ]
+    },
+    {
+      "key": "piece10",
+      "quantity": 31,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          16.0,
+          0.0
+        ],
+        [
+          416.0,
+          144.0
+        ],
+        [
+          0.0,
+          240.0
+        ]
+      ]
+    },
+    {
+      "key": "piece11",
+      "quantity": 31,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          0.0,
+          48.0
+        ],
+        [
+          304.0,
+          0.0
+        ],
+        [
+          448.0,
+          80.0
+        ],
+        [
+          432.0,
+          320.0
+        ],
+        [
+          384.0,
+          688.0
+        ]
+      ]
+    },
+    {
+      "key": "piece12",
+      "quantity": 32,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          320.0,
+          0.0
+        ],
+        [
+          704.0,
+          640.0
+        ],
+        [
+          0.0,
+          640.0
+        ]
+      ]
+    },
+    {
+      "key": "piece13",
+      "quantity": 31,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          48.0,
+          96.0
+        ],
+        [
+          464.0,
+          0.0
+        ],
+        [
+          576.0,
+          32.0
+        ],
+        [
+          0.0,
+          464.0
+        ]
+      ]
+    },
+    {
+      "key": "piece14",
+      "quantity": 31,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          0.0,
+          432.0
+        ],
+        [
+          576.0,
+          0.0
+        ],
+        [
+          896.0,
+          432.0
+        ]
+      ]
+    },
+    {
+      "key": "piece15",
+      "quantity": 31,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          320.0,
+          80.0
+        ],
+        [
+          320.0,
+          432.0
+        ]
+      ]
+    }
+  ]
+}

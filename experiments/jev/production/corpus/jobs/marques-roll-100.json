@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 2,
+  "id": "marques-roll-100",
+  "split": "evaluation",
+  "units": "mm",
+  "spacing": 3,
+  "margin": 10,
+  "media": {
+    "type": "roll",
+    "width": 1640
+  },
+  "provenance": {
+    "kind": "rescaled-public-reference",
+    "family": "marques",
+    "repository": "https://github.com/ESICUP/datasets",
+    "revision": "154a8f006a8e72f65d734f2d1e36777f678f31f8",
+    "sourcePath": "2d_irregular/marques/marques.xml",
+    "originalSha256": "78caaaf48d804dd0776c281c44d9dac0606a3e873bdac934671b8b491523acbd",
+    "licence": "CC0-1.0 (repository licence)",
+    "sourceUnitsToMm": 15.384615384615385,
+    "originalQuantities": [
+      4,
+      4,
+      2,
+      2,
+      4,
+      4,
+      2,
+      2
+    ],
+    "description": "Data set from the textile industry, scanned by E. Hopper from sample layout in Marques V. M. M., Bispo C. F .G. and Sentieiro J. J. S., 1991, \"A system for the compaction of two-dimensional irregular shapes based on simulated annealing\", Proceedings of the 1991 International Conference on Industrial Electronics, Control and Instrumentation - IECON '91, Kobe, Japan, Oct. 1991, pp. 1911-1916.",
+    "adaptation": "Uniform scaling to 1600 mm source strip width; quantities resampled proportionally to target count; 3 mm spacing and 10 mm border margin added. Sheet variants are derived, not original benchmark instances."
+  },
+  "parts": [
+    {
+      "key": "piece0",
+      "quantity": 17,
+      "rotations": [
+        0.0,
+        90.0,
+        180.0,
+        270.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          323.0769231,
+          0.0
+        ],
+        [
+          323.0769231,
+          338.4615385
+        ],
+        [
+          215.3846154,
+          430.7692308
+        ],
+        [
+          107.6923077,
+          430.7692308
+        ],
+        [
+          0.0,
+          338.4615385
+        ]
+      ]
+    },
+    {
+      "key": "piece1",
+      "quantity": 17,
+      "rotations": [
+        0.0,
+        90.0,
+        180.0,
+        270.0
+      ],
+      "points": [
+        [
+          0.0,
+          76.9230769
+        ],
+        [
+          30.7692308,
+          0.0
+        ],
+        [
+          169.2307692,
+          30.7692308
+        ],
+        [
+          292.3076923,
+          0.0
+        ],
+        [
+          323.0769231,
+          76.9230769
+        ],
+        [
+          261.5384615,
+          61.5384615
+        ],
+        [
+          169.2307692,
+          92.3076923
+        ],
+        [
+          61.5384615,
+          61.5384615
+        ]
+      ]
+    },
+    {
+      "key": "piece2",
+      "quantity": 8,
+      "rotations": [
+        0.0,
+        90.0,
+        180.0,
+        270.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          507.6923077,
+          0.0
+        ],
+        [
+          507.6923077,
+          215.3846154
+        ],
+        [
+          461.5384615,
+          215.3846154
+        ],
+        [
+          400.0,
+          261.5384615
+        ],
+        [
+          200.0,
+          230.7692308
+        ],
+        [
+          0.0,
+          261.5384615
+        ]
+      ]
+    },
+    {
+      "key": "piece3",
+      "quantity": 8,
+      "rotations": [
+        0.0,
+        90.0,
+        180.0,
+        270.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          61.5384615,
+          0.0
+        ],
+        [
+          61.5384615,
+          600.0
+        ],
+        [
+          0.0,
+          600.0
+        ]
+      ]
+    },
+    {
+      "key": "piece4",
+      "quantity": 17,
+      "rotations": [
+        0.0,
+        90.0,
+        180.0,
+        270.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          153.8461538,
+          0.0
+        ],
+        [
+          153.8461538,
+          169.2307692
+        ],
+        [
+          0.0,
+          169.2307692
+        ]
+      ]
+    },
+    {
+      "key": "piece5",
+      "quantity": 17,
+      "rotations": [
+        0.0,
+        90.0,
+        180.0,
+        270.0
+      ],
+      "points": [
+        [
+          30.7692308,
+          307.6923077
+        ],
+        [
+          0.0,
+          276.9230769
+        ],
+        [
+          30.7692308,
+          153.8461538
+        ],
+        [
+          0.0,
+          30.7692308
+        ],
+        [
+          30.7692308,
+          0.0
+        ],
+        [
+          61.5384615,
+          153.8461538
+        ]
+      ]
+    },
+    {
+      "key": "piece6",
+      "quantity": 8,
+      "rotations": [
+        0.0,
+        90.0,
+        180.0,
+        270.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          446.1538462,
+          0.0
+        ],
+        [
+          415.3846154,
+          184.6153846
+        ],
+        [
+          446.1538462,
+          338.4615385
+        ],
+        [
+          384.6153846,
+          400.0
+        ],
+        [
+          384.6153846,
+          507.6923077
+        ],
+        [
+          276.9230769,
+          569.2307692
+        ],
+        [
+          246.1538462,
+          538.4615385
+        ],
+        [
+          215.3846154,
+          538.4615385
+        ],
+        [
+          184.6153846,
+          569.2307692
+        ],
+        [
+          61.5384615,
+          523.0769231
+        ],
+        [
+          61.5384615,
+          400.0
+        ],
+        [
+          0.0,
+          338.4615385
+        ],
+        [
+          30.7692308,
+          184.6153846
+        ]
+      ]
+    },
+    {
+      "key": "piece7",
+      "quantity": 8,
+      "rotations": [
+        0.0,
+        90.0,
+        180.0,
+        270.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          507.6923077,
+          0.0
+        ],
+        [
+          569.2307692,
+          92.3076923
+        ],
+        [
+          538.4615385,
+          200.0
+        ],
+        [
+          430.7692308,
+          200.0
+        ],
+        [
+          384.6153846,
+          230.7692308
+        ],
+        [
+          215.3846154,
+          200.0
+        ],
+        [
+          0.0,
+          230.7692308
+        ]
+      ]
+    }
+  ]
+}

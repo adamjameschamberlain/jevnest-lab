@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 2,
+  "id": "shapes-roll-500",
+  "split": "evaluation",
+  "units": "mm",
+  "spacing": 3,
+  "margin": 10,
+  "media": {
+    "type": "roll",
+    "width": 1640
+  },
+  "provenance": {
+    "kind": "rescaled-public-reference",
+    "family": "shapes",
+    "repository": "https://github.com/ESICUP/datasets",
+    "revision": "154a8f006a8e72f65d734f2d1e36777f678f31f8",
+    "sourcePath": "2d_irregular/shapes/shapes0.xml",
+    "originalSha256": "d2b5c6d10626a670c7e0b5d9a0505691b04be28a80c316536b89e9b0db66b98f",
+    "licence": "CC0-1.0 (repository licence)",
+    "sourceUnitsToMm": 40.0,
+    "originalQuantities": [
+      15,
+      7,
+      9,
+      12
+    ],
+    "description": "Artificially created data set, coordinates stated in Oliveira J. F., Gomes A. M. and Ferreira S., 2000, \"A new constructive algorithm for nesting problems\", OR Spectrum 22 (2), 263-284.",
+    "adaptation": "Uniform scaling to 1600 mm source strip width; quantities resampled proportionally to target count; 3 mm spacing and 10 mm border margin added. Sheet variants are derived, not original benchmark instances."
+  },
+  "parts": [
+    {
+      "key": "piece0",
+      "quantity": 175,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          80.0,
+          0.0
+        ],
+        [
+          80.0,
+          120.0
+        ],
+        [
+          480.0,
+          120.0
+        ],
+        [
+          480.0,
+          0.0
+        ],
+        [
+          560.0,
+          0.0
+        ],
+        [
+          560.0,
+          200.0
+        ],
+        [
+          0.0,
+          200.0
+        ]
+      ]
+    },
+    {
+      "key": "piece1",
+      "quantity": 81,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          240.0,
+          -240.0
+        ],
+        [
+          480.0,
+          0.0
+        ],
+        [
+          240.0,
+          240.0
+        ]
+      ]
+    },
+    {
+      "key": "piece2",
+      "quantity": 105,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          240.0,
+          0.0
+        ],
+        [
+          240.0,
+          -80.0
+        ],
+        [
+          280.0,
+          -80.0
+        ],
+        [
+          440.0,
+          80.0
+        ],
+        [
+          440.0,
+          160.0
+        ],
+        [
+          320.0,
+          160.0
+        ],
+        [
+          320.0,
+          40.0
+        ],
+        [
+          80.0,
+          40.0
+        ],
+        [
+          80.0,
+          160.0
+        ],
+        [
+          0.0,
+          160.0
+        ]
+      ]
+    },
+    {
+      "key": "piece3",
+      "quantity": 139,
+      "rotations": [
+        0.0
+      ],
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          80.0,
+          0.0
+        ],
+        [
+          80.0,
+          -80.0
+        ],
+        [
+          160.0,
+          -80.0
+        ],
+        [
+          160.0,
+          0.0
+        ],
+        [
+          240.0,
+          0.0
+        ],
+        [
+          240.0,
+          80.0
+        ],
+        [
+          160.0,
+          80.0
+        ],
+        [
+          160.0,
+          160.0
+        ],
+        [
+          80.0,
+          160.0
+        ],
+        [
+          80.0,
+          80.0
+        ],
+        [
+          0.0,
+          80.0
+        ]
+      ]
+    }
+  ]
+}

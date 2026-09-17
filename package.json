@@ -13,7 +13,9 @@
     "jev:replay": "node scripts/replay-jev.cjs",
     "benchmark:full": "node scripts/full-jev-benchmark.cjs",
     "benchmark:jev": "node scripts/full-jev-benchmark.cjs --live",
-    "test:jev-full": "node --test tests/jev-full.test.cjs"
+    "test:jev-full": "node --test tests/jev-full.test.cjs",
+    "benchmark:production": "node scripts/production-jev-benchmark.cjs",
+    "test:production": "node --test tests/jev-production.test.cjs"
   },
   "engines": {
     "node": ">=20"
