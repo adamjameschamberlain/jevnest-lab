@@ -1,5 +1,8 @@
 # Offline Jev candidate-choice experiment
 
+**For the complete 100-trial concave comparison, use [full/README.md](full/README.md):**
+`npm.cmd run benchmark:jev`. The sections below document the earlier isolated-choice experiment.
+
 This is the next step after the Classic corpus: ask Jev to select one candidate
 from an existing recorded decision. It does not modify SVGnest or run Jev in the
 browser worker. The replay command tests each recorded choice independently, regenerates subsequent

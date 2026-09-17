@@ -175,3 +175,15 @@ Never commit an API key. Use environment variables/local secrets only.
   on held-out jobs with total runtime accounted for.
 
 See `experiments/jev/README.md` for the commands and current feature limitations.
+
+## Full experiment runner
+
+`npm.cmd run benchmark:jev` runs 100 matched trials on 20 fixed jobs containing
+20–50 concave parts each. It compares native Classic, a deterministic geometric
+control, stock SVGnest GA, and a complete sequential Jev rollout. Every changed
+choice regenerates subsequent candidate geometry. Timings include model calls
+and feature costs; equal-time comparisons use completed GA results only.
+
+The runner prompts locally for a hidden key, checkpoints successful calls and
+completed trials, and writes a full results ZIP. Live results remain unknown until
+this command is run with the user's key. See `experiments/jev/full/README.md`.
