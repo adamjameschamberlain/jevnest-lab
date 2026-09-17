@@ -187,3 +187,7 @@ and feature costs; equal-time comparisons use completed GA results only.
 The runner prompts locally for a hidden key, checkpoints successful calls and
 completed trials, and writes a full results ZIP. Live results remain unknown until
 this command is run with the user's key. See `experiments/jev/full/README.md`.
+
+Local full-suite baseline completed: 100 trials / 779 complete layouts, saved at
+`experiments/jev/results/full-classic-369cd4c/`. Native bounding/scoring accounted
+for about 0.16% of cold runtime. Full Jev outcomes remain pending a keyed live run.

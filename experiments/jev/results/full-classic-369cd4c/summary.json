@@ -1,0 +1,56 @@
+{
+  "status": "classic-only-no-model-conclusion",
+  "expectedTrials": 100,
+  "completedTrials": 100,
+  "completedNests": 779,
+  "policies": {
+    "classic": {
+      "n": 100,
+      "meanUtilisation": 0.4968327891427185,
+      "meanBins": 3.52,
+      "medianRuntimeMs": 1189.3347379999832,
+      "allValid": true
+    },
+    "contact": {
+      "n": 100,
+      "meanUtilisation": 0.49838821206086725,
+      "meanBins": 3.51,
+      "medianRuntimeMs": 1225.5934544999836,
+      "allValid": true
+    },
+    "ga": {
+      "n": 100,
+      "meanUtilisation": 0.5086677281306098,
+      "meanBins": 3.44,
+      "medianRuntimeMs": 2255.829603499995,
+      "allValid": true
+    }
+  },
+  "profiling": {
+    "classicMeanNfpMs": 1455.7253425299996,
+    "classicMeanScoreLoopMs": 2.4034681800064748,
+    "classicMeanEvaluationMs": 1506.4459169100023,
+    "scoreLoopShareOfColdRuntime": 0.0015922982862260863,
+    "theoreticalSpeedupRemovingWholeScoreLoop": 1.0015948377436321,
+    "note": "Score loop includes bounding-box construction and comparison. Jev still needs candidate features, so this zero-cost removal ceiling is optimistic. Runtime includes VM setup; GA is stock algorithm in Node, without browser worker parallelism."
+  },
+  "pairedAgainstGaAtJevBudget": {
+    "n": 0,
+    "wins": 0,
+    "ties": 0,
+    "losses": 0,
+    "meanUtilisationDeltaPoints": null,
+    "jobClusterBootstrap95Percent": null,
+    "fasterToSameQuality": 0,
+    "gaDidNotReachJevQuality": 0
+  },
+  "proceedDecision": "INCOMPLETE: no proceed/stop conclusion until the full live suite finishes.",
+  "limitations": [
+    "Synthetic concave polygons, 90-degree rotations, zero spacing, no holes. Not evidence on all production jobs.",
+    "Full Jev rollout changes placement selection only; order and rotations match Classic first evaluation. GA may change both.",
+    "Candidate feature extraction and original score computation remain costs of the Jev policy.",
+    "API timeout/failure stops rather than silently substituting Classic. Successful calls are cached for resume; resumed timing reconstructs original API latency.",
+    "Any GA evaluation finishing after a deadline is excluded from that deadline comparison."
+  ],
+  "pairs": []
+}

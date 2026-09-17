@@ -58,8 +58,9 @@ Browser scheduling/rendering and WebWorker parallelism are excluded from every
 method. Do not compare these absolute times with the earlier browser benchmark.
 
 The report measures NFP generation, bounding/scoring loops, feature generation,
-API latency, token usage and complete runtime. VM setup and guided request/logging
-overhead count. The score-loop timer includes bounding construction and candidate
+API latency, token usage and complete runtime. VM setup, final validation and guided request/logging
+overhead count. GA validates each improving incumbent; its validation cost is
+recorded separately as well as included in total time. The score-loop timer includes bounding construction and candidate
 comparison; it is deliberately broader than the arithmetic `2*width+height`.
 Native Classic runs with candidate capture off. Guided policies pay for capture,
 features and the original bounding calculations they consume. Jev does not bypass
@@ -112,3 +113,11 @@ complete bounded requests, valid geometry, and seeded stock GA parity.
 ```powershell
 npm.cmd run test:jev-full
 ```
+
+## Completed local baseline
+
+[Archived results](../results/full-classic-369cd4c/README.md): 100 trials and 779
+complete layouts; Classic 49.68%, geometric control 49.84%, GA 50.87% mean
+utilisation. Bounding/scoring was about 0.16% of native runtime. This archived
+revision has a documented validation-timing asymmetry; the live runner now counts
+validation for every policy. No full live Jev outcome has been measured here.

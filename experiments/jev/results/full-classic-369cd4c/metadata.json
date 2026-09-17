@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "signature": "d95e38b289008cc07239d91cc4a7710cd470aca99e42969dbf9b35fc3f4c91a4",
+  "config": {
+    "live": false,
+    "jobs": 20,
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "seconds": 2,
+    "minEvaluations": 1,
+    "model": "jev-1.13.0"
+  },
+  "expectedTrials": 100,
+  "sourceSha256": {
+    "svgnest.js": "e91613f5fb85fc5368f2491be716cbd406f190db1290fd123ea3ba473f0e5965",
+    "util/placementworker.js": "5571dccd67cf0aee53ed607b7c3b09bdf9835690e60453d920d13ccb137a26a3",
+    "util/geometryutil.js": "692e2fd684c203900322a575f69e2611515b8e53af26506ae3861bb80ebe996a",
+    "util/clipper.js": "2b8f6241f39fede1ebddcd827e82d422b44a6aa764d1b1b934a54a9b1560573f",
+    "benchmarks/runner.js": "249aa44bf600c3f0e84059cb9d161cf19928c9ff020864e956006b41cc7d3ce5",
+    "experiments/jev/offline.cjs": "d12e2c1c27b6142f373368b9cf103de8a34ae1c946fc46364d85fc53d654cc5a",
+    "experiments/jev/replay.cjs": "74368d9c763ed7e35ad7cfbdb0b6207fab7d29dce01609eb5d335b0197bd8d09",
+    "experiments/jev/full/corpus.cjs": "07b592f88f4d18408b5c493cd610324c54eae3a8a0e92ee1ac39cdfec6918420",
+    "experiments/jev/full/engine.cjs": "d10369b187593f21fad7fcc43ef69787e4d622b1c688da97463002230385be6c",
+    "experiments/jev/full/features.cjs": "86fc53c392b2ce5611dfe8c530d36cad3b151669243fa6a13fbb52c054fe38f5",
+    "experiments/jev/full/report.cjs": "92fcc416c7825dfd13c312807391bd96a6bb3da9ec2a8a3022350628d50b500c",
+    "scripts/full-jev-benchmark.cjs": "804cdb96b7628302d9602f45a4398b485c5c5b4633ea5195695682daf8aa4fc1"
+  },
+  "startedAt": "2026-09-17T11:22:24.245Z",
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "machine": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor"
+  },
+  "protocol": "Same generated job and initial order/rotation per seed. Native Classic one pass; geometric contact/fragmentation control one pass; stock SVGnest GA with a wall-clock budget and at least one evaluation; Jev one complete sequential rollout. GA equal-time outcome uses only completed evaluations. Cold NFP caches per method, original one-cycle cache policy within GA. API latency, feature generation and logging included in guided runtime. VM setup included in all methods. No browser worker parallelism.",
+  "decisionRule": "Primary: fewer unplaced, then fewer sheets at equal runtime. Secondary: utilisation, fitness, time to Jev quality, per-job clustered uncertainty. No model claim until full live suite complete.",
+  "finishedAt": "2026-09-17T11:31:37.759Z"
+}

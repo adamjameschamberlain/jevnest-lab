@@ -36,7 +36,7 @@ async function secret() {
 }
 function pack() {const files={};function visit(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())visit(p);else if(e.name!=='results.zip')files[path.relative(out,p).split(path.sep).join('/')]=new Uint8Array(fs.readFileSync(p));}}visit(out);fs.writeFileSync(path.join(out,'results.zip'),zipSync(files,{level:6}));}
 function saveSheets(dir,policy,value,geometry) {renderSheets(value.result,geometry).forEach((s,i)=>fs.writeFileSync(path.join(dir,`${policy}-sheet-${i+1}.svg`),s));}
-function single(job,seed) {const start=performance.now(),e=createEngine(job.geometry,seed),value=e.evaluate(e.ga.population[0]);const runtimeMs=performance.now()-start;return {...value,runtimeMs,validation:e.validate(value.result)};}
+function single(job,seed) {const start=performance.now(),e=createEngine(job.geometry,seed),value=e.evaluate(e.ga.population[0]);const v=performance.now(),validation=e.validate(value.result),validationMs=performance.now()-v;const runtimeMs=performance.now()-start;return {...value,runtimeMs,validation,validationMs};}
 async function guided(job,seed,policy,dir,apiKey) {
  const start=performance.now(),e=createEngine(job.geometry,seed);
  const responseFile=path.join(dir,'choices.ndjson'),requestFile=path.join(dir,'requests.ndjson');
@@ -75,23 +75,24 @@ async function guided(job,seed,policy,dir,apiKey) {
   if(policy==='jev')append(path.join(dir,'decisions.ndjson'),{decision:d,selectedCandidateId:choice,features:f.rows});
   return choice;
  });
+ const v=performance.now(),validation=e.validate(value.result),validationMs=performance.now()-v;
  const observedRuntimeMs=performance.now()-start,runtimeMs=observedRuntimeMs+cacheMs;
  return {...value,decisions:undefined,runtimeMs,observedRuntimeMs,timingReconstructed:cachedCalls>0,cacheMs,apiMs,featureMs,calls,cachedCalls,decisionCount:decisions,disagreements,inputTokens,outputTokens,tournamentDecisions,
-  validation:e.validate(value.result)};
+  validation,validationMs};
 }
 function ga(job,seed,target) {
  const start=performance.now(),e=createEngine(job.geometry,seed),deadline=Math.max(opts.seconds*1000,target?.runtimeMs??0);
- let best=null,evaluations=0;const trace=[],profiles={nfpMs:0,scoreLoopsMs:0,evaluationMs:0,nfpGenerated:0,nfpReused:0};
+ let best=null,evaluations=0,validationMs=0;const trace=[],profiles={nfpMs:0,scoreLoopsMs:0,evaluationMs:0,nfpGenerated:0,nfpReused:0};
  do {
   const individual=e.nextIndividual(),r=e.evaluate(individual);individual.fitness=r.metrics.fitness;evaluations++;
-  if(!best||r.metrics.fitness<best.metrics.fitness){e.validate(r.result);best=r;}
+  if(!best||r.metrics.fitness<best.metrics.fitness){const v=performance.now();r.validation=e.validate(r.result);validationMs+=performance.now()-v;best=r;}
   for(const k of Object.keys(profiles))profiles[k]+=r.profile[k];
   trace.push({evaluation:evaluations,elapsedMs:performance.now()-start,metrics:best.metrics});
  }while((evaluations<opts.minEvaluations||performance.now()-start<deadline)&&evaluations<10000);
  const runtimeMs=performance.now()-start;
  const atJevBudget=target?trace.filter(r=>r.elapsedMs<=target.runtimeMs).at(-1)??null:null;
  const timeToJevQualityMs=target?trace.find(r=>quality(r.metrics,target.metrics)<=0)?.elapsedMs??null:null;
- return {...best,profile:profiles,runtimeMs,evaluations,budgetMs:deadline,capReached:evaluations===10000,atJevBudget,timeToJevQualityMs,trace,validation:e.validate(best.result)};
+ return {...best,profile:profiles,runtimeMs,evaluations,budgetMs:deadline,capReached:evaluations===10000,atJevBudget,timeToJevQualityMs,trace,validationMs,validation:best.validation};
 }
 async function main() {
  const apiKey=opts.live?await secret():null;
@@ -102,7 +103,7 @@ async function main() {
  const metadataFile=path.join(out,'metadata.json');
  let metadata={version:1,signature,config,expectedTrials:opts.jobs*opts.seeds.length,sourceSha256,startedAt:new Date().toISOString(),endpoint:ENDPOINT,
   machine:{node:process.version,platform:process.platform,arch:process.arch,cpu:os.cpus()[0]?.model},
-  protocol:'Same generated job and initial order/rotation per seed. Native Classic one pass; geometric contact/fragmentation control one pass; stock SVGnest GA with a wall-clock budget and at least one evaluation; Jev one complete sequential rollout. GA equal-time outcome uses only completed evaluations. Cold NFP caches per method, original one-cycle cache policy within GA. API latency, feature generation and logging included in guided runtime. VM setup included in all methods. No browser worker parallelism.',
+  protocol:'Same generated job and initial order/rotation per seed. Native Classic one pass; geometric contact/fragmentation control one pass; stock SVGnest GA with a wall-clock budget and at least one evaluation; Jev one complete sequential rollout. GA equal-time outcome uses only completed evaluations. Cold NFP caches per method, original one-cycle cache policy within GA. API latency, feature generation and logging included in guided runtime. VM setup and validation included in all methods. No browser worker parallelism.',
   decisionRule:'Primary: fewer unplaced, then fewer sheets at equal runtime. Secondary: utilisation, fitness, time to Jev quality, per-job clustered uncertainty. No model claim until full live suite complete.'};
  if(fs.existsSync(metadataFile)){const old=JSON.parse(fs.readFileSync(metadataFile));assert.equal(old.signature,signature,'Output belongs to a different configuration or source version; choose a new --out');assert.equal(old.machine.node,process.version,'Resume requires same Node version');metadata=old;}
  else json(metadataFile,metadata);
