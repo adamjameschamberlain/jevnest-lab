@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="1100" viewBox="0 0 1150 1100">
+  <rect id="sheet" x="0" y="0" width="100" height="80" fill="#f5f7fa" stroke="#526071" stroke-width="0.4"/>
+  <rect width="38" height="25" id="part-0" transform="translate(200 20)" fill="#3478be" stroke="#263646" stroke-width="0.3"/>
+  <rect width="20" height="42" id="part-1" transform="translate(410 20)" fill="#e79d36" stroke="#263646" stroke-width="0.3"/>
+  <circle cx="15" cy="15" r="15" id="part-2" transform="translate(620 20)" fill="#4da786" stroke="#263646" stroke-width="0.3"/>
+  <ellipse cx="19" cy="12" rx="19" ry="12" id="part-3" transform="translate(830 20)" fill="#b65b79" stroke="#263646" stroke-width="0.3"/>
+  <path d="M0 0 L35 0 L17 32 Z" id="part-4" transform="translate(200 230)" fill="#7d6cc4" stroke="#263646" stroke-width="0.3"/>
+  <path d="M0 0 H38 V12 H12 V36 H0 Z" id="part-5" transform="translate(410 230)" fill="#3478be" stroke="#263646" stroke-width="0.3"/>
+  <path d="M0 0 C12 -8 32 -8 36 10 L30 27 Q15 38 0 24 Z" id="part-6" transform="translate(620 230)" fill="#e79d36" stroke="#263646" stroke-width="0.3"/>
+  <rect width="38" height="25" id="part-7" transform="translate(830 230)" fill="#4da786" stroke="#263646" stroke-width="0.3"/>
+  <rect width="20" height="42" id="part-8" transform="translate(200 440)" fill="#b65b79" stroke="#263646" stroke-width="0.3"/>
+  <circle cx="15" cy="15" r="15" id="part-9" transform="translate(410 440)" fill="#7d6cc4" stroke="#263646" stroke-width="0.3"/>
+  <ellipse cx="19" cy="12" rx="19" ry="12" id="part-10" transform="translate(620 440)" fill="#3478be" stroke="#263646" stroke-width="0.3"/>
+  <path d="M0 0 L35 0 L17 32 Z" id="part-11" transform="translate(830 440)" fill="#e79d36" stroke="#263646" stroke-width="0.3"/>
+  <path d="M0 0 H38 V12 H12 V36 H0 Z" id="part-12" transform="translate(200 650)" fill="#4da786" stroke="#263646" stroke-width="0.3"/>
+  <path d="M0 0 C12 -8 32 -8 36 10 L30 27 Q15 38 0 24 Z" id="part-13" transform="translate(410 650)" fill="#b65b79" stroke="#263646" stroke-width="0.3"/>
+</svg>

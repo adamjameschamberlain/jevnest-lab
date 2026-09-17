@@ -1,5 +1,9 @@
 # Phase 1: Classic placement capture
 
+For the automated SVG corpus, run `npm run benchmark` after setup. See
+[the benchmark guide](benchmarks/README.md). The console workflow below remains
+available for manually inspecting an individual SVG.
+
 Candidate capture is opt-in. It observes the existing decisions; it does not
 change the geometry, candidate order, rotations, comparisons, tie-breaking,
 fitness calculation, or placement objects. No Jev dependency or network call is

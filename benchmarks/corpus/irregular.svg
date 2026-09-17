@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="1100" viewBox="0 0 1150 1100">
+  <rect id="sheet" x="0" y="0" width="100" height="80" fill="#f5f7fa" stroke="#526071" stroke-width="0.4"/>
+  <polygon points="0,0 29,0 36,13 25,25 8,28 -3,12" id="part-0" transform="translate(200 20)" fill="#3478be" stroke="#263646" stroke-width="0.3"/>
+  <polygon points="0,0 20,0 27,13 16,30 8,33 -3,12" id="part-1" transform="translate(410 20)" fill="#e79d36" stroke="#263646" stroke-width="0.3"/>
+  <polygon points="0,0 34,0 41,13 30,20 8,23 -3,12" id="part-2" transform="translate(620 20)" fill="#4da786" stroke="#263646" stroke-width="0.3"/>
+  <polygon points="0,0 17,0 24,13 13,18 8,21 -3,12" id="part-3" transform="translate(830 20)" fill="#b65b79" stroke="#263646" stroke-width="0.3"/>
+  <polygon points="0,0 24,0 31,13 20,26 8,29 -3,12" id="part-4" transform="translate(200 230)" fill="#7d6cc4" stroke="#263646" stroke-width="0.3"/>
+  <polygon points="0,0 32,0 39,13 28,29 8,32 -3,12" id="part-5" transform="translate(410 230)" fill="#3478be" stroke="#263646" stroke-width="0.3"/>
+  <polygon points="0,0 29,0 36,13 25,25 8,28 -3,12" id="part-6" transform="translate(620 230)" fill="#e79d36" stroke="#263646" stroke-width="0.3"/>
+  <polygon points="0,0 20,0 27,13 16,30 8,33 -3,12" id="part-7" transform="translate(830 230)" fill="#4da786" stroke="#263646" stroke-width="0.3"/>
+  <polygon points="0,0 34,0 41,13 30,20 8,23 -3,12" id="part-8" transform="translate(200 440)" fill="#b65b79" stroke="#263646" stroke-width="0.3"/>
+  <polygon points="0,0 17,0 24,13 13,18 8,21 -3,12" id="part-9" transform="translate(410 440)" fill="#7d6cc4" stroke="#263646" stroke-width="0.3"/>
+  <polygon points="0,0 24,0 31,13 20,26 8,29 -3,12" id="part-10" transform="translate(620 440)" fill="#3478be" stroke="#263646" stroke-width="0.3"/>
+  <polygon points="0,0 32,0 39,13 28,29 8,32 -3,12" id="part-11" transform="translate(830 440)" fill="#e79d36" stroke="#263646" stroke-width="0.3"/>
+</svg>

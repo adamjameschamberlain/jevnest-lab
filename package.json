@@ -1,0 +1,13 @@
+{
+  "name": "jevnest-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SVGnest Classic baseline and placement-policy experiments",
+  "scripts": {
+    "test": "node tests/placement-instrumentation.test.cjs",
+    "benchmark:setup": "playwright install chromium",
+    "benchmark": "node scripts/run-corpus.cjs"
+  },
+  "engines": { "node": ">=20" },
+  "devDependencies": { "playwright": "1.62.1" }
+}

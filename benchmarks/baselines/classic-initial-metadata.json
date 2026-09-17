@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "policy": "classic",
+  "startedAt": "2026-09-17T10:03:58.770Z",
+  "repositoryRevision": "0d4d689a255980b37402a7d4a71757b32210be31",
+  "workingTreeDirty": true,
+  "sourceSha256": {
+    "svgnest.js": "e91613f5fb85fc5368f2491be716cbd406f190db1290fd123ea3ba473f0e5965",
+    "svgparser.js": "ec37b4cbd6445385b1adfe278c4c590f517786881b4b9833494a46eab77a6d69",
+    "util/placementworker.js": "5571dccd67cf0aee53ed607b7c3b09bdf9835690e60453d920d13ccb137a26a3",
+    "util/geometryutil.js": "692e2fd684c203900322a575f69e2611515b8e53af26506ae3861bb80ebe996a",
+    "util/clipper.js": "2b8f6241f39fede1ebddcd827e82d422b44a6aa764d1b1b934a54a9b1560573f",
+    "util/parallel.js": "5f907c18346ac44cddc2611bb663c1e23dc5a7342411675f348a0f4d2afba4e6",
+    "util/json.js": "b49812ec1043eccb7258e91c5eea868318481f1642036f7cf88f6162703277e3",
+    "util/eval.js": "9e707987eb0b7d3d55679f43772a6d12283194ca91a22220ab7dbacc725d2c39",
+    "util/pathsegpolyfill.js": "fcc53b0d9dd8098dd4260e648480e055a986ebc5718889fd2b2d5161a2ca51b2",
+    "util/matrix.js": "999ddeab9054501b05223d2076f28ef38f066a1467dfcb97debfaa4d16e17614",
+    "util/domparser.js": "c57ce44b6a193b91bf527fac70f7660328d1c7a91be1df5d9b59c2f48c3eb049",
+    "benchmarks/runner.html": "ac828df0d619b50951647e89627e3244128b55267831aa19901aca2342acfa6b",
+    "benchmarks/runner.js": "249aa44bf600c3f0e84059cb9d161cf19928c9ff020864e956006b41cc7d3ce5",
+    "scripts/run-corpus.cjs": "a6a20d6af11b807a0192a90de9331b2749f04a16b1b78bcb8bf26d258f2764a9",
+    "benchmarks/corpus/manifest.json": "6b2265f2486ad144f4f88509a7d745999c60e4cd26ed3630d31e8226e9c3dfba"
+  },
+  "seedAlgorithm": "LCG uint32: state = 1664525 * state + 1013904223; random = state / 2^32",
+  "evaluations": 20,
+  "seeds": [
+    1,
+    42
+  ],
+  "maxWorkers": 4,
+  "config": {
+    "curveTolerance": 0.3,
+    "spacing": 0,
+    "rotations": 4,
+    "populationSize": 10,
+    "mutationRate": 10,
+    "useHoles": false,
+    "exploreConcave": false
+  },
+  "platform": "linux",
+  "arch": "x64",
+  "node": "v24.19.0",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "logicalCpus": 9,
+  "timing": "Two measured cold-page passes per case/seed; alternating order. No warmup or repeated timing samples. Wall time includes 100ms scheduling, rendering and capture. Evaluation sums exclude scheduling waits and adapter export. Validation runs after timing.",
+  "areaConvention": "worker outer polygons, including spacing offsets; no hole subtraction. Corpus uses spacing=0 and no holes.",
+  "corpus": [
+    {
+      "id": "rectangles",
+      "file": "rectangles.svg",
+      "binId": "sheet",
+      "sheet": {
+        "width": 100,
+        "height": 80
+      },
+      "expectedParts": 18,
+      "expectedUnplaced": 0,
+      "sha256": "fa31ee6b193f9733fd1aef65220518e299a75f9a7edf9de0a05380faa8358e42"
+    },
+    {
+      "id": "irregular",
+      "file": "irregular.svg",
+      "binId": "sheet",
+      "sheet": {
+        "width": 100,
+        "height": 80
+      },
+      "expectedParts": 12,
+      "expectedUnplaced": 0,
+      "sha256": "3c0809604ad5efb25abd942ce6b23c08192c9aeb9f5a855b4a149e55242be41d"
+    },
+    {
+      "id": "concave",
+      "file": "concave.svg",
+      "binId": "sheet",
+      "sheet": {
+        "width": 100,
+        "height": 80
+      },
+      "expectedParts": 12,
+      "expectedUnplaced": 0,
+      "sha256": "9db700a10a427dac8948170d4dabc2274f8caa1383688caf200b275967d836cb"
+    },
+    {
+      "id": "mixed-curves",
+      "file": "mixed-curves.svg",
+      "binId": "sheet",
+      "sheet": {
+        "width": 100,
+        "height": 80
+      },
+      "expectedParts": 14,
+      "expectedUnplaced": 0,
+      "sha256": "c84bca6198bbf769613beb5171365cbec2aa37bdae89ee1e6c5d9ab91ffb7377"
+    },
+    {
+      "id": "overflow",
+      "file": "overflow.svg",
+      "binId": "sheet",
+      "sheet": {
+        "width": 70,
+        "height": 55
+      },
+      "expectedParts": 8,
+      "expectedUnplaced": 1,
+      "sha256": "f6e91a4e136cdf7b1f43346da3d86c94671f506b37da20402166cf519d28c910"
+    }
+  ],
+  "browser": "153.0.8010.0",
+  "playwright": "1.62.1",
+  "finishedAt": "2026-09-17T10:05:05.237Z",
+  "completed": true
+}

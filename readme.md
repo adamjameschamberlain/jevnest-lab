@@ -1,3 +1,19 @@
+## JevNest experiment: Classic benchmark
+
+On `experiment/jev-placement-policy`, run the actual SVG corpus with:
+
+```powershell
+npm.cmd ci
+npm.cmd run benchmark:setup
+npm.cmd run benchmark
+```
+
+Use `npm` instead of `npm.cmd` outside Windows. Requires Node.js 20+.
+See [the benchmark guide](benchmarks/README.md) for setup, outputs and adding SVGs.
+The placement instrumentation remains opt-in; no Jev integration is included.
+
+---
+
 # ![SVGNest](http://svgnest.com/github/logo2.png)
 
 **SVGNest**: A browser-based vector nesting tool.
